@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <meta  content="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="shopping-cart.css">
+    <meta charset="utf-8" />
+    <meta content="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="shopping-cart.css" />
   </head>
   <body>
     <header class="top-header">
       <div class="header-upper-half">
         <div class="name-slogan">
-          <h1 class="shop-name">Bart's Hypermarket <span style="font-size: 8px">Rodrigo Sanchez</span> </h1>
+          <h1 class="shop-name">
+            Bart's Hypermarket
+            <span style="font-size: 8px">Rodrigo Sanchez</span>
+          </h1>
           <p class="slogan">For the Earth Product Enthusiasts out there</p>
         </div>
         <div class="go-to-cart">
@@ -55,229 +58,217 @@
       </div>
     </header>
 
-
     <div class="Cart-container">
+      <div class="Header">
+        <h1 style="text-align: center; margin-top: 1pc">Shopping cart</h1>
+      </div>
+      <div class="Action">
+        <h3
+          style="
+            color: red;
+            padding-bottom: 1pc;
+            text-align: right;
+            text-decoration: underline;
+          "
+        >
+          Remove all items
+        </h3>
+      </div>
 
-          <div class="Header">
-            <h1 style="text-align: center; margin-top: 1pc">Shopping cart</h1>
+      <div class="summary">
+        <h3 style="text-align: center; margin-bottom: 0.4pc; margin-top: 0.6pc">
+          Checkout Summary
+        </h3>
+        <hr style="width: 75%" />
+        <table style="table-layout: fixed; width: 100%; margin-top: 10px">
+          <tr>
+            <th>Number of items:</th>
+            <td>$10</td>
+          </tr>
+          <tr>
+            <th>Subtotal:</th>
+            <td>$119.2</td>
+          </tr>
+          <tr>
+            <th>QST:</th>
+            <td>$11.92</td>
+          </tr>
+          <tr>
+            <th>GST:</th>
+            <td>$5.96</td>
+          </tr>
+          <tr>
+            <th>Total price</th>
+            <td>$138.27</td>
+          </tr>
+        </table>
+      </div>
+
+      <article class="shop">
+        <div class="Cart-Items">
+          <div class="image-box">
+            <img
+              src="img/orange_juice.png"
+              style="height: 80px; width: 70px; padding: 5%"
+            />
           </div>
-          <div class="Action" >
-            <h3 style="color: red; padding-bottom:1pc; text-align: right; text-decoration: underline"> Remove all items </h3>
+          <div class="about">
+            <h1 class="title">Orange Juice</h1>
+            <h3 class="subtitle">250ml</h3>
           </div>
 
-          <div class="summary">
-            <h3 style="text-align: center; margin-bottom: 0.4pc; margin-top: 0.6pc"> Checkout Summary </h3>
-            <hr style="width:75%"/>
-            <table style="table-layout: fixed; width: 100%; margin-top: 10px">
-              <tr>
-                 <th>Number of items:  </th>
-                  <td> $10</td>
-              </tr>
-              <tr>
-                 <th> Subtotal: </th>
-                  <td> $119.2</td>
-              </tr>
-              <tr>
-                 <th>QST: </th>
-                  <td> $11.92</td>
-              </tr>
-              <tr>
-                 <th>GST: </th>
-                  <td> $5.96 </td>
-              </tr>
-              <tr>
-                 <th>Total price </th>
-                  <td> $138.27</td>
-              </tr>
-            </table>
+          <div class="counter">
+            <div class="btn">-</div>
+            <div class="count">3</div>
+            <div class="btn">+</div>
           </div>
-
-          <article class="shop" >
-              <div class="Cart-Items">
-                 <div class="image-box">
-                     <img src="img/orange_juice.png" style="height:80px;width:70px; padding: 5%" />
-                 </div>
-                 <div class="about">
-                     <h1 class="title" >Orange Juice</h1>
-                     <h3 class="subtitle">250ml</h3>
-
-                 </div>
-
-                 <div class="counter">
-                     <div class="btn">-</div>
-                     <div class="count">3</div>
-                     <div class="btn">+</div>
-                 </div>
-                 <div class="prices">
-                     <div class="amount">$1.49</div>
-                     <div class="save"><u>Save for later</u></div>
-                     <div class="remove"><u>Remove</u></div>
-                 </div>
-              </div>
-
-        </article>
-        <article class="shop" >
-            <div class="Cart-Items">
-               <div class="image-box">
-                   <img src="img/grape_juice.jpg" style="height:80px;width:70px; padding: 5%" />
-               </div>
-               <div class="about">
-                   <h1 class="title" >Grape Juice</h1>
-                   <h3 class="subtitle">250ml</h3>
-
-               </div>
-
-               <div class="counter">
-                   <div class="btn">-</div>
-                   <div class="count">1</div>
-                   <div class="btn">+</div>
-               </div>
-               <div class="prices">
-                   <div class="amount">$3.49</div>
-                   <div class="save"><u>Save for later</u></div>
-                   <div class="remove"><u>Remove</u></div>
-               </div>
-            </div>
-
+          <div class="prices">
+            <div class="amount">$1.49</div>
+            <div class="save"><u>Save for later</u></div>
+            <div class="remove"><u>Remove</u></div>
+          </div>
+        </div>
       </article>
-      <article class="shop" >
-          <div class="Cart-Items">
-             <div class="image-box">
-                 <img src="img/apple_juice.png" style="height:80px;width:70px; padding: 5%" />
-             </div>
-             <div class="about">
-                 <h1 class="title" >Apple Juice</h1>
-                 <h3 class="subtitle">250ml</h3>
-
-             </div>
-
-             <div class="counter">
-                 <div class="btn">-</div>
-                 <div class="count">2</div>
-                 <div class="btn">+</div>
-             </div>
-             <div class="prices">
-                 <div class="amount">$2.99</div>
-                 <div class="save"><u>Save for later</u></div>
-                 <div class="remove"><u>Remove</u></div>
-             </div>
+      <article class="shop">
+        <div class="Cart-Items">
+          <div class="image-box">
+            <img
+              src="img/grape_juice.jpg"
+              style="height: 80px; width: 70px; padding: 5%"
+            />
+          </div>
+          <div class="about">
+            <h1 class="title">Grape Juice</h1>
+            <h3 class="subtitle">250ml</h3>
           </div>
 
-    </article>
-
-        <article class="shop" >
-          <div class="Cart-Items">
-              <div class="image-box">
-                <img src="img/bananas.png" style="height:80px; width: 70px;padding-top: 10%" />
-              </div>
-              <div class="about">
-                  <h1 class="title"> Bananas  </h1>
-                  <h3 class="subtitle"> 100g </h3>
-
-              </div>
-              <div class="counter">
-                  <div class="btn">-</div>
-                  <div class="count">2</div>
-                  <div class="btn">+</div>
-              </div>
-              <div class="prices">
-                   <div class="amount">$1.99</div>
-                   <div class="save"><u>Save for later</u></div>
-                   <div class="remove"><u>Remove</u></div>
-               </div>
+          <div class="counter">
+            <div class="btn">-</div>
+            <div class="count">1</div>
+            <div class="btn">+</div>
+          </div>
+          <div class="prices">
+            <div class="amount">$3.49</div>
+            <div class="save"><u>Save for later</u></div>
+            <div class="remove"><u>Remove</u></div>
+          </div>
+        </div>
+      </article>
+      <article class="shop">
+        <div class="Cart-Items">
+          <div class="image-box">
+            <img
+              src="img/apple_juice.png"
+              style="height: 80px; width: 70px; padding: 5%"
+            />
+          </div>
+          <div class="about">
+            <h1 class="title">Apple Juice</h1>
+            <h3 class="subtitle">250ml</h3>
           </div>
 
-        </article>
+          <div class="counter">
+            <div class="btn">-</div>
+            <div class="count">2</div>
+            <div class="btn">+</div>
+          </div>
+          <div class="prices">
+            <div class="amount">$2.99</div>
+            <div class="save"><u>Save for later</u></div>
+            <div class="remove"><u>Remove</u></div>
+          </div>
+        </div>
+      </article>
 
-        <article class="shop" >
-              <div class="Cart-Items">
-                 <div class="image-box">
-                     <img src="img/lettuce.jpg" style="height:80px;width:70px; padding: 5%" />
-                 </div>
-                 <div class="about">
-                     <h1 class="title" > Lettuce </h1>
-                     <h3 class="subtitle"> 100g </h3>
+      <article class="shop">
+        <div class="Cart-Items">
+          <div class="image-box">
+            <img
+              src="img/bananas.png"
+              style="height: 80px; width: 70px; padding-top: 10%"
+            />
+          </div>
+          <div class="about">
+            <h1 class="title">Bananas</h1>
+            <h3 class="subtitle">100g</h3>
+          </div>
+          <div class="counter">
+            <div class="btn">-</div>
+            <div class="count">2</div>
+            <div class="btn">+</div>
+          </div>
+          <div class="prices">
+            <div class="amount">$1.99</div>
+            <div class="save"><u>Save for later</u></div>
+            <div class="remove"><u>Remove</u></div>
+          </div>
+        </div>
+      </article>
 
-                 </div>
+      <article class="shop">
+        <div class="Cart-Items">
+          <div class="image-box">
+            <img
+              src="img/lettuce.jpg"
+              style="height: 80px; width: 70px; padding: 5%"
+            />
+          </div>
+          <div class="about">
+            <h1 class="title">Lettuce</h1>
+            <h3 class="subtitle">100g</h3>
+          </div>
 
-                 <div class="counter">
-                     <div class="btn">-</div>
-                     <div class="count">1</div>
-                     <div class="btn">+</div>
-                 </div>
-                 <div class="prices">
-                     <div class="amount">$3.27</div>
-                     <div class="save"><u>Save for later</u></div>
-                     <div class="remove"><u>Remove</u></div>
-                 </div>
-              </div>
+          <div class="counter">
+            <div class="btn">-</div>
+            <div class="count">1</div>
+            <div class="btn">+</div>
+          </div>
+          <div class="prices">
+            <div class="amount">$3.27</div>
+            <div class="save"><u>Save for later</u></div>
+            <div class="remove"><u>Remove</u></div>
+          </div>
+        </div>
+      </article>
 
-        </article>
+      <article class="shop">
+        <div class="Cart-Items">
+          <div class="image-box">
+            <img
+              src="img/Axlot.png"
+              style="height: 80px; width: 70px; padding: 5%"
+            />
+          </div>
+          <div class="about">
+            <h1 class="title">Axolotl</h1>
+            <h3 class="subtitle">1</h3>
+          </div>
 
-        <article class="shop" >
-              <div class="Cart-Items">
-                 <div class="image-box">
-                     <img src="img/Axlot.png" style="height:80px;width:70px; padding: 5%" />
-                 </div>
-                 <div class="about">
-                     <h1 class="title" > Axlot </h1>
-                     <h3 class="subtitle"> 1 </h3>
+          <div class="counter">
+            <div class="btn">-</div>
+            <div class="count">1</div>
+            <div class="btn">+</div>
+          </div>
+          <div class="prices">
+            <div class="amount">$100</div>
+            <div class="save"><u>Save for later</u></div>
+            <div class="remove"><u>Remove</u></div>
+          </div>
+        </div>
+      </article>
 
-                 </div>
+      <hr />
 
-                 <div class="counter">
-                     <div class="btn">-</div>
-                     <div class="count">1</div>
-                     <div class="btn">+</div>
-                 </div>
-                 <div class="prices">
-                     <div class="amount">$100</div>
-                     <div class="save"><u>Save for later</u></div>
-                     <div class="remove"><u>Remove</u></div>
-                 </div>
-              </div>
-
-        </article>
-
-                <hr/>
-
-
-
-             <div class="checkout" >
-                 <div class="total">
-                     <div>
-                         <div class="Subtotal">Sub-Total</div>
-                         <div class="items">4 items</div>
-                     </div>
-                     <div class="total-amount">$138.27</div>
-                 </div>
-                 <button class="button">Checkout</button>
-             </div>
-
-       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <div class="checkout">
+        <div class="total">
+          <div>
+            <div class="Subtotal">Sub-Total</div>
+            <div class="items">4 items</div>
+          </div>
+          <div class="total-amount">$138.27</div>
+        </div>
+        <button class="button">Checkout</button>
+      </div>
+    </div>
   </body>
 </html>
