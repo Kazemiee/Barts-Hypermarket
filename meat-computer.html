@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="style.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" id="style" />
     <link href="img/Axlot.png" rel="icon" />
     <script type="text/javascript" src="product.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -93,46 +93,67 @@
           </li>
           <!--style="display: none" needs to be there or else it will take 2 clicks to show extra details-->
           <div id="extra-details" style="display: none">
-            <p>Taste: Tastes like human brain</p>
-            <p>1 MEAT Computer Mass: 3000gr</p>
-            <p>1 MEAT Computer Carbohyrate: 0gr</p>
-            <p>Is Biodegradable</p>
-            <br />
-            <p>
-              Some people would mistakenly call the times we live in grim or
-              dark but clearly, today is a time of prosperity like no other.
-              Nothing shows this fact off like the latest model of the MEAT
-              Computer.
+            <div id="not-schizophrenia" style="display: block">
+              <p>Taste: Tastes like human brain</p>
+              <p>1 MEAT Computer Mass: 3000gr</p>
+              <p>1 MEAT Computer Carbohyrate: 0gr</p>
+              <p>Is Biodegradable</p>
               <br />
-              The MEAT Model X can achieve a calculation speed of 10 PFLOPS at
-              very little energy cost. Traditional computers would take the
-              amount of energy required to power a Capital LightRacer starship
-              for an hour if they were to try and match what a MEAT Model X can
-              do in a day. Evolution has built a better computer than engineers
-              ever could.
-            </p>
-            <br />
-            <p>
-              You are entitled to exchange your purchased Meat Computer for a
-              brand new one if you experience:
-            </p>
-            <li>
-              <ul>
-                Attempts at communication
-              </ul>
-              <ul>
-                Strange Noises
-              </ul>
-              <ul>
-                Unexpected Shutdowns
-              </ul>
-            </li>
-            <h5>Disclaimer:</h5>
-            <h5>
-              From now on we will refrain from using brains from state provided
-              prisoners and will solely use lab-grown brains.
-            </h5>
-            <h5>We are sorry for any distress we may have caused.</h5>
+              <p>
+                Some people would mistakenly call the times we live in grim or
+                dark but clearly, today is a time of prosperity like no other.
+                Nothing shows this fact off like the latest model of the MEAT
+                Computer.
+                <br />
+                The MEAT Model X can achieve a calculation speed of 10 PFLOPS at
+                very little energy cost. Traditional computers would take the
+                amount of energy required to power a Capital LightRacer starship
+                for an hour if they were to try and match what a MEAT Model X
+                can do in a day. Evolution has built a better computer than
+                engineers ever could.
+              </p>
+              <br />
+              <p>
+                You are entitled to exchange your purchased Meat Computer for a
+                brand new one if you experience:
+              </p>
+              <li>
+                <ul>
+                  Attempts at communication
+                </ul>
+                <ul>
+                  Strange Noises
+                </ul>
+                <ul>
+                  Unexpected Shutdowns
+                </ul>
+              </li>
+              <h5>Disclaimer:</h5>
+              <h5>
+                From now on we will refrain from using brains from state
+                provided prisoners and will solely use lab-grown brains.
+              </h5>
+              <h5>We are sorry for any distress we may have caused.</h5>
+            </div>
+
+            <button onclick="TogglePsychosis()">You are being fed lies</button>
+            <div id="schizophrenia" style="display: none">
+              <h1>Don't you think something is wrong here?</h1>
+              <h3>You are being lied to.</h3>
+              <h3>The information you were fed doesn't add up.</h3>
+              <p>
+                If humans no longer exist on Earth then how do we have human
+                brains to compute with? Were humans exiled from Earth? These
+                computrers wouldn't be earth products then.
+              </p>
+              <h3>Aren't you human?</h3>
+              <p>
+                You are <mark>NOT</mark> experiencing psychosis. Time doesn't
+                work the way you think it does.
+              </p>
+              <h2>Join the People's Revolution</h2>
+              <h2>You have nothing to lose but your brain</h2>
+            </div>
           </div>
           <h3>Buy your own Meat Computer X today!</h3>
           <h3 class="price">Price: $100000 99% off</h3>
