@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="clothing-aisle.css" rel="stylesheet" />
+    <link href="login.css" rel="stylesheet" />
     <link rel="icon" href="img/Axlot.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Boisghur Shishani ID: 40170574" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clothing Aisle</title>
+    <title>Sign-Up</title>
   </head>
   <body>
     <header class="top-header">
@@ -17,7 +17,7 @@
           <p class="slogan">For the Earth Product Enthusiasts out there</p>
         </div>
         <div class="go-to-cart">
-          <a href="shopping-cart.html">Go to Cart</a>
+          <a href="#">Go to Cart</a>
         </div>
       </div>
       <form action="#">
@@ -70,76 +70,53 @@
       </div>
     </header>
     <main class="page-content">
-      <article class="aisles">
-        <h2>Clothing Items</h2>
-        <h3 style="color:rgb(209, 102, 209)">(All products are fit for most bipedal species, and some others)</h3>
+      <article class="sign-up">
+        <h2>Sign-Up</h2>
         <div class="article-container">
-          <ul class="aisles-list">
-            <li>
-              <p class="item">
-                <img src=img/tShirt.jpg width = 20% alt = "Image of a T-shirt">
-                <a class="clothing" href="clothing_aisle/tShirt.html">T-shirt</a> 
-                <a class="price">$50</a>
-              </p>
-            </li>
-            <li>
-              <p class="item">
-                <img src=img/Jeans.jpg width = 20% alt = "Image of jeans">
-                <a class="clothing" href="clothing_aisle/jeans.html">Jeans</a>
-                <a class="price">$500</a>
-              </p>
-            </li>
-            <li>
-              <p class="item">
-                <img src=img/Shoes.jpg width = 20% alt = "Image of shoes">
-                <a class="clothing" href="clothing_aisle/shoes.html">Shoe (x2)</a>
-                <a class="price">$1000</a>
-              </p>
-            </li>
-            <li>
-              <p class="item">
-                <img src=img/Skirt.jpg width = 20% alt = "Image of a skirt">
-                <a class="clothing" href="axolotl.html">Skirt</a> 
-                <a class="price">$5000</a>
-              </p>
-            </li>
-            <li>
-              <p class="item">
-                <img src=img/Tie.jpg width = 20% alt = "Image of a necktie">
-                <a class="clothing" href="axolotl.html">Necktie</a>
-                <a class="price">$5000</a>
-              </p>
-            </li>
-          </ul>
+            <p class="text">First Name:</p>
+          <input
+            type="text"
+            class="text"
+            name="fName"
+            placeholder="John"
+          />
+          <p class="text">Last Name:</p>
+          <input
+            type="text"
+            class="text"
+            name="lName"
+            placeholder="Doe"
+          />
+          <p class="text">Phone Number:</p>
+          <input
+            type="text"
+            class="text"
+            name="phone number"
+            placeholder="ex: +4381739553"
+          />
+          <p class="text">Email:</p>
+          <input
+            type="email"
+            class="text"
+            name="email"
+            placeholder="ex: Harambe@isalive.com"
+          />
+          <p class="text">Password:</p>
+          <input
+            type="text"
+            class="text"
+            name="password"
+            placeholder="ex: ApesTogetherStrong"
+          />
+          <div class="buttons">
+            <input type="submit" name="submit" value="submit"/>
+            <a href="login.html"> <button class="go-login" style="padding: 3px 3px;">
+                Go to login
+            </button>
+            </a>
+          </div>
         </div>
       </article>
-
-      <aside class="aside-great-deals">
-        <h4>Great Deals</h4>
-        <div>
-          <ul class="new-products-list">
-            <li>
-              <p>
-                <img src=img/Hat.jpg width = 40% alt = "Image of a hat">
-                <a href="axolotl.html">Hat</a> 20% off!
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <img src=img/Ring.jpg width = 40% alt = "Image of a ring">
-                <a href="axolotl.html">Ring</a> 50% off!
-              </p>
-            </li>
-            <li>
-              <p>
-                <img src=img/Glasses.jpg width = 40% alt = "Image of eye-glasses">
-                <a href="axolotl.html">eye-glasses</a> 10% off!
-              </p>
-            </li>
-          </ul>
-        </div>
-      </aside>
     </main>
     <footer class="bottom-nav">
       <nav>
