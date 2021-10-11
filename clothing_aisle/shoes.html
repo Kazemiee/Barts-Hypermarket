@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="../style.css" rel="stylesheet" />
+    <script type="text/javascript" src="../product.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Mark Kandaleft ID: 40126013" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoes</title>
+  </head>
+  <body>
+    <header class="top-header">
+      <div class="header-upper-half">
+        <div class="name-slogan">
+          <h1 class="shop-name">Bart's Hypermarket</h1>
+          <p class="slogan">For the Earth Product Enthusiasts out there</p>
+        </div>
+        <div class="go-to-cart">
+          <a href="../shopping-cart.html">Go to Cart</a>
+        </div>
+      </div>
+      <form action="#">
+        <div class="search-bar">
+          <div class="text-div">
+            <input type="text" name="search bar" size="20" />
+          </div>
+          <div class="search-div">
+            <input type="submit" value="Search" />
+          </div>
+        </div>
+      </form>
+      <div class="header-bottom-half">
+        <nav class="top-nav">
+          <a href="../index.html">Home</a>
+          <section>
+            <div class="drop-menu">
+              <a href="#">Aisles</a>
+              <div class="drop-content">
+                <a href="../meat-aisle.html">Meat</a>
+                <a href="../bread-aisle.html">Bread</a>
+                <a href="../dairy-aisle.html"> Dairy</a>
+                <a href="#">Electronics</a>
+                <a href="../clothing-aisle.html">Clothing</a>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="drop-menu">
+              <a href="#">Popular</a>
+              <div class="drop-content">
+                <a href="../axolotl.html">Axolotl</a>
+                <a href="../axolotl.html">Axolotl</a>
+                <a href="../axolotl.html">Axolotl</a>
+                <a href="../axolotl.html">Axolotl</a>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="drop-menu">
+              <a href="#">Account</a>
+              <div class="drop-content">
+                <a href="../login.html">Log In</a>
+                <a href="#">Sign Up</a>
+              </div>
+            </div>
+          </section>
+          <a href="#">Best Value</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <article class="article-product">
+        <h2>Shoes</h2>
+        <div class="article-container">
+          <img src=../img/Shoes.jpg width = 40% alt = "Image of a T-shirt">
+          <button onclick="ShowExtraDetails()">Show Extra Details</button>
+          <!--style="display: none" needs to be there or else it will take 2 clicks to show extra details-->
+          <div id="extra-details" style="display: none">
+            <p>Holes: 1 (each shoe)</p>
+            <p>Protective human armor</p>
+            <p></p>
+            <br />
+            <p>
+              This product must be ordered in pairs where each shoe will be a mirror image of its pair. This is because of the strange form of human feet.
+              Shoes were an important cultural aspect of humans around the world. Some humans, such as Michael Jordan, were named after shoes as the humans believed
+               this would grant them special powers and abilities in athletic competitions. These shoes were made to protect human feet, however these can still be 
+               used by tentacled species by simply placing your tentacles inside the shoe's hole and tightening and tying the straps attached. 
+            </p>
+            <p>
+              During the Humans final century on earth creasing a pair of shoes was considered an act of terrorism and was punishable by life-time imprisonment. However, it is important to remember that the average human
+               lifetime was only around 150 years.
+            </p>
+            <p>Please keep in mind that all sizes are shown in human measurements</p>
+          </div>
+          <h3>Buy your own Shoes today!</h3>
+          <h3 class="price">Price: $500</h3>
+          <h3 class="price">Pay: $500</h3>
+          <form action="#">
+            <label for="size">Size</label>
+            <select name="size">
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+            </select>
+            <input type="number" min="0" value="1" name="Add x to cart" size="20" />
+            <input class="add-to-cart" type="submit" value="Add x To Cart" />
+          </form>
+        </div>
+      </article>
+
+      <aside class="aside-great-deals">
+        <h4>Great Deals</h4>
+        <div>
+          <ul class="new-products-list">
+            <li>
+              <p>
+                <img src=../img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="../axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <img src=../img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="../axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+            <li>
+              <p>
+                <img src=../img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="../axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+            <li>
+              <p>
+                <img src=../img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="../axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+            <li>
+              <p>
+                <img src=../img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="../axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="bottom-nav">
+      <nav>
+        <a href="#">About Us </a>
+        <a href="#">Store Locations </a>
+        <a href="#">Careers </a>
+        <a href="#">Shareholder Relations </a>
+        <a href="#">Corporate Website </a>
+      </nav>
+      <p class="copyright">Copyright &copy; Today by Me</p>
+    </footer>
+  </body>
+</html>
