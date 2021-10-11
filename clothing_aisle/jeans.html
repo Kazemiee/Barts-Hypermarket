@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="../style.css" rel="stylesheet" />
+    <script type="text/javascript" src="../product.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Mark Kandaleft ID: 40126013" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T-shirt</title>
+  </head>
+  <body>
+    <header class="top-header">
+      <div class="header-upper-half">
+        <div class="name-slogan">
+          <h1 class="shop-name">Bart's Hypermarket</h1>
+          <p class="slogan">For the Earth Product Enthusiasts out there</p>
+        </div>
+        <div class="go-to-cart">
+          <a href="../shopping-cart.html">Go to Cart</a>
+        </div>
+      </div>
+      <form action="#">
+        <div class="search-bar">
+          <div class="text-div">
+            <input type="text" name="search bar" size="20" />
+          </div>
+          <div class="search-div">
+            <input type="submit" value="Search" />
+          </div>
+        </div>
+      </form>
+      <div class="header-bottom-half">
+        <nav class="top-nav">
+          <a href="../index.html">Home</a>
+          <section>
+            <div class="drop-menu">
+              <a href="#">Aisles</a>
+              <div class="drop-content">
+                <a href="../meat-aisle.html">Meat</a>
+                <a href="../bread-aisle.html">Bread</a>
+                <a href="../dairy-aisle.html"> Dairy</a>
+                <a href="#">Electronics</a>
+                <a href="../clothing-aisle.html">Clothing</a>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="drop-menu">
+              <a href="#">Popular</a>
+              <div class="drop-content">
+                <a href="../axolotl.html">Axolotl</a>
+                <a href="../axolotl.html">Axolotl</a>
+                <a href="../axolotl.html">Axolotl</a>
+                <a href="../axolotl.html">Axolotl</a>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="drop-menu">
+              <a href="#">Account</a>
+              <div class="drop-content">
+                <a href="../login.html">Log In</a>
+                <a href="#">Sign Up</a>
+              </div>
+            </div>
+          </section>
+          <a href="#">Best Value</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <article class="article-product">
+        <h2>Jeans</h2>
+        <div class="article-container">
+          <img src=../img/tShirt.jpg width = 40% alt = "Image of a T-shirt">
+          <button onclick="ShowExtraDetails()">Show Extra Details</button>
+          <!--style="display: none" needs to be there or else it will take 2 clicks to show extra details-->
+          <div id="extra-details" style="display: none">
+            <p>Holes: 4</p>
+            <p>Stylish human clothing</p>
+            <p></p>
+            <br />
+            <p>
+              Despite being a bipedal species, the humans wore this item with only one opening for both of their legs. This item was thought
+              to be highly sought after during the humans rule over the planet Earth C-137. Many intergalactic species can still fit in this 
+              item thanks to the multiple holes. For all tripedal species and above, do not worry, This item will fit you as well provided you
+               put the majority of your limbs through the largest hole in the bottom.
+            </p>
+            <p>
+              The T-shirt was worn by both genders, however it is believed that this item was only available to the socioeconomic elites and therefore is a very valuable collectors item
+            </p>
+          </div>
+          <h3>Buy your own T-shirt today!</h3>
+          <h3 class="price">Price: $3000</h3>
+          <h3 class="price">Pay: $3000</h3>
+          <form action="#">
+            <select>
+              <option value="small">S</option>
+              <option value="medium">M</option>
+              <option value="Large">L</option>
+            </select>
+            <input type="number" min="0" value="1" name="Add x to cart" size="20" />
+            <input class="add-to-cart" type="submit" value="Add x To Cart" />
+          </form>
+        </div>
+      </article>
+
+      <aside class="aside-great-deals">
+        <h4>Great Deals</h4>
+        <div>
+          <ul class="new-products-list">
+            <li>
+              <p>
+                <img src=../img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="../axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <img src=../img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="../axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+            <li>
+              <p>
+                <img src=../img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="../axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+            <li>
+              <p>
+                <img src=../img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="../axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+            <li>
+              <p>
+                <img src=../img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="../axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="bottom-nav">
+      <nav>
+        <a href="#">About Us </a>
+        <a href="#">Store Locations </a>
+        <a href="#">Careers </a>
+        <a href="#">Shareholder Relations </a>
+        <a href="#">Corporate Website </a>
+      </nav>
+      <p class="copyright">Copyright &copy; Today by Me</p>
+    </footer>
+  </body>
+</html>
