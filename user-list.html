@@ -19,34 +19,34 @@
       <nav class="top-nav">
         <a href="#">Product List</a>
         <a href="#">Edit a Product</a>
-        <a href="user-list.html">User</a>
+        <a href="user-list.html">User List</a>
         <a href="#">Edit a Profile</a>
         <a href="#">Orders</a>
         <a href="edit-order-profile.html">Edit an Order</a>
       </nav>
     </header>
     <main>
-      <h2>Enter Changes Below</h2>
-      <div class="product-form">
-        <form action="#">
-          <div>
-            <h3>Product Name</h3>
-            <img src=img/Axlot.png width = 20% alt = "Image of an Axolotl">
-          </div>
-          Product Type:
-          <select>
-            <option value="super-axolotl">
-              Genetically Modified Super-Axolotl
-            </option>
-            <option value="normal-axolotl">Normal Axolotl</option>
-          </select>
-          <div>Cart Quantity: XXXX</div>
-          <div>
-            Change Cart Quantity
-            <input type="text" name="Change cart quantity" size="20" />
-          </div>
-          <input class="save" type="submit" value="Save Changes" />
-        </form>
+      <h2>View User List Below</h2>
+      <div class="user-list">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone Number</th>
+                <th>E-mail</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>0001</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>+4381739553</td>
+                <td>Harambe@isalive.com</td>
+                <td><a href="#">Edit</a>  <a href="#">Delete</a></td><!--add link to P10 and create delete function -->
+            </tr>
+        </table>
+        <a href="#"><button>Add a User</button></a><!--add link to P10 -->
       </div>
     </main>
     <footer></footer>
