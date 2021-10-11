@@ -2,13 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="style.css" rel="stylesheet" />
-    <link href="img/Axlot.png" rel="icon" />
-    <script type="text/javascript" src="product.js"></script>
+    <link href="../style.css" rel="stylesheet" />
+    <script type="text/javascript" src="../product.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="Matthew Kazemie ID: 40190450" />
+    <meta name="author" content="Boisghur Shishani ID: 40170574" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Axolotl</title>
+    <title>Jeans</title>
   </head>
   <body>
     <header class="top-header">
@@ -18,7 +17,7 @@
           <p class="slogan">For the Earth Product Enthusiasts out there</p>
         </div>
         <div class="go-to-cart">
-          <a href="shopping-cart.html">Go to Cart</a>
+          <a href="../shopping-cart.html">Go to Cart</a>
         </div>
       </div>
       <form action="#">
@@ -33,16 +32,16 @@
       </form>
       <div class="header-bottom-half">
         <nav class="top-nav">
-          <a href="index.html">Home</a>
+          <a href="../index.html">Home</a>
           <section>
             <div class="drop-menu">
               <a href="#">Aisles</a>
               <div class="drop-content">
-                <a href="meat-aisle.html">Meat</a>
-                <a href="bread-aisle.html">Bread</a>
-                <a href="dairy-aisle.html"> Dairy</a>
+                <a href="../meat-aisle.html">Meat</a>
+                <a href="../bread-aisle.html">Bread</a>
+                <a href="../dairy-aisle.html"> Dairy</a>
                 <a href="#">Electronics</a>
-                <a href="clothing-aisle.html">Clothing</a>
+                <a href="../clothing-aisle.html">Clothing</a>
               </div>
             </div>
           </section>
@@ -50,11 +49,10 @@
             <div class="drop-menu">
               <a href="#">Popular</a>
               <div class="drop-content">
-                <a href="axolotl.html">Axolotl</a>
-                <a href="bread_aisle/baguette.html">Baguette</a>
-                <a href="axolotl.html">Axolotl</a>
-                <a href="axolotl.html">Axolotl</a>
-                <a href="axolotl.html">Axolotl</a>
+                <a href="../axolotl.html">Axolotl</a>
+                <a href="../axolotl.html">Axolotl</a>
+                <a href="../axolotl.html">Axolotl</a>
+                <a href="../axolotl.html">Axolotl</a>
               </div>
             </div>
           </section>
@@ -62,8 +60,8 @@
             <div class="drop-menu">
               <a href="#">Account</a>
               <div class="drop-content">
-                <a href="login.html">Log In</a>
-                <a href="sign-up.html">Sign Up</a>
+                <a href="../login.html">Log In</a>
+                <a href="#">Sign Up</a>
               </div>
             </div>
           </section>
@@ -74,41 +72,38 @@
 
     <main class="page-content">
       <article class="article-product">
-        <h2>Axolotl</h2>
+        <h2>Jeans</h2>
         <div class="article-container">
-          <img src=img/Axlot.png width = 40% alt = "Image of an Axolotl">
+          <img src=../img/Jeans.jpg width = 40% alt = "Image of a T-shirt">
           <button onclick="ShowExtraDetails()">Show Extra Details</button>
           <!--style="display: none" needs to be there or else it will take 2 clicks to show extra details-->
           <div id="extra-details" style="display: none">
-            <p>Taste: Tastes like freshwater fish</p>
-            <p>1 Axolotl Mass: 300gr</p>
-            <p>1 Axolotl Carbohyrate: 0gr</p>
+            <p>Holes: 3</p>
+            <p>Protective human armor</p>
+            <p></p>
             <br />
             <p>
-              By 2020 <strong>Anno Domini</strong>, these creatures were
-              considered critically endangered but thanks to cloning technology
-              created by<mark>DO NOT READ THIS</mark> in the earth year<mark
-                >THIS YEAR HAS MANY DIGITS</mark
-              >, we can now deliver to you the experience of Axolotl. Anybody
-              with an interest in ancient human cuisine will be very happy
-              preparing their own Axolotl.
+              Human believed that this item would grant them strength and protection in battle. The material is only 1mm (human measurement) thick
+              however it is tough enough to protect against the primitive human weapons such as nuclear bombs and guns. Some humans would wear jeans
+               that were ripped as a symbol of their strength and courage. This was done to prove that noone could defeat them in battle even with their 
+               obvious weakness.  
             </p>
             <p>
-              These creatures have talents that include regenerating body parts
-              and being inbred.
+              It is believed that the more rips you had in your jeans the more powerful and respected you were within your society. Our products do 
+              not come with rips, however you can easily add them yourself.
             </p>
           </div>
-          <h3>Buy your own Axolotl today!</h3>
-          <h3 class="price">Price: $10000 99% off</h3>
-          <h3 class="price">Pay: $100</h3>
+          <h3>Buy your own Jeans today!</h3>
+          <h3 class="price">Price: $500</h3>
+          <h3 class="price">Pay: $500</h3>
           <form action="#">
-            <select>
-              <option value="super-axolotl">
-                Genetically Modified Super-Axolotl
-              </option>
-              <option value="normal-axolotl">Normal Axolotl</option>
+            <label for="size">Size</label>
+            <select name="size">
+              <option value="small">S</option>
+              <option value="medium">M</option>
+              <option value="Large">L</option>
             </select>
-            <input type="text" name="Add x to cart" size="20" />
+            <input type="number" min="0" value="1" name="Add x to cart" size="20" />
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
           </form>
         </div>
@@ -120,34 +115,33 @@
           <ul class="new-products-list">
             <li>
               <p>
-                <img src=img/Axlot.png width = 40% alt = "Image of an Axolotl">
-                <a href="axolotl.html">Axolotl</a> 99% off!
+                <img src=../img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="../axolotl.html">Axolotl</a> 99% off!
               </p>
             </li>
 
             <li>
               <p>
-                <img src=img/baguette.jpg width = 40% alt = "Image of a
-                Baguette">
-                <a href="bread_aisle/baguette.html">Baguette</a> 0% off!
+                <img src=../img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="../axolotl.html">Axolotl</a> 99% off!
               </p>
             </li>
             <li>
               <p>
-                <img src=img/Axlot.png width = 40% alt = "Image of an Axolotl">
-                <a href="axolotl.html">Axolotl</a> 99% off!
+                <img src=../img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="../axolotl.html">Axolotl</a> 99% off!
               </p>
             </li>
             <li>
               <p>
-                <img src=img/Axlot.png width = 40% alt = "Image of an Axolotl">
-                <a href="axolotl.html">Axolotl</a> 99% off!
+                <img src=../img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="../axolotl.html">Axolotl</a> 99% off!
               </p>
             </li>
             <li>
               <p>
-                <img src=img/Axlot.png width = 40% alt = "Image of an Axolotl">
-                <a href="axolotl.html">Axolotl</a> 99% off!
+                <img src=../img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="../axolotl.html">Axolotl</a> 99% off!
               </p>
             </li>
           </ul>
