@@ -6,6 +6,10 @@
 body {
   background-color: lightgray;
 }
+.top-header-top {
+  display: flex;
+  justify-content: space-between;
+}
 .product-form {
   margin: 1%;
   border: 5px solid gray;
