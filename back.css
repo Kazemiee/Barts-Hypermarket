@@ -6,6 +6,11 @@
 body {
   background-color: lightgray;
 }
+table,
+th,
+td {
+  border: 1px solid black;
+}
 .top-header-top {
   display: flex;
   justify-content: space-between;
