@@ -1,0 +1,17 @@
+* {
+  margin: 0%;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: lightgray;
+}
+.product-form {
+  margin: 1%;
+  border: 5px solid gray;
+}
+
+.top-header {
+  background-color: lightsteelblue;
+  border-bottom: 5px solid gray;
+}
