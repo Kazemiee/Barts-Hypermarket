@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet" />
+    <script type="text/javascript" src="product.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Mark Kandaleft ID: 40126013" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toast</title>
+  </head>
+  <body>
+    <header class="top-header">
+      <div class="header-upper-half">
+        <div class="name-slogan">
+          <h1 class="shop-name">Bart's Hypermarket</h1>
+          <p class="slogan">For the Earth Product Enthusiasts out there</p>
+        </div>
+        <div class="go-to-cart">
+          <a href="shopping-cart.html">Go to Cart</a>
+        </div>
+      </div>
+      <form action="#">
+        <div class="search-bar">
+          <div class="text-div">
+            <input type="text" name="search bar" size="20" />
+          </div>
+          <div class="search-div">
+            <input type="submit" value="Search" />
+          </div>
+        </div>
+      </form>
+      <div class="header-bottom-half">
+        <nav class="top-nav">
+          <a href="index.html">Home</a>
+          <section>
+            <div class="drop-menu">
+              <a href="#">Aisles</a>
+              <div class="drop-content">
+                <a href="meat-aisle.html">Meat</a>
+                <a href="bread-aisle.html">Bread</a>
+                <a href="dairy-aisle.html"> Dairy</a>
+                <a href="#">Electronics</a>
+                <a href="#">Clothing</a>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="drop-menu">
+              <a href="#">Popular</a>
+              <div class="drop-content">
+                <a href="axolotl.html">Axolotl</a>
+                <a href="axolotl.html">Axolotl</a>
+                <a href="axolotl.html">Axolotl</a>
+                <a href="axolotl.html">Axolotl</a>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="drop-menu">
+              <a href="#">Account</a>
+              <div class="drop-content">
+                <a href="login.html">Log In</a>
+                <a href="#">Sign Up</a>
+              </div>
+            </div>
+          </section>
+          <a href="#">Best Value</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <article class="article-product">
+        <h2>American Toast</h2>
+        <div class="article-container">
+          <img src=img/toast.jpg width = 40% alt = "Image of a toast">
+          <button onclick="ShowExtraDetails()">Show Extra Details</button>
+          <!--style="display: none" needs to be there or else it will take 2 clicks to show extra details-->
+          <div id="extra-details" style="display: none">
+            <p>flavorless and lacking nutritionals</p>
+            <p>1 toast Mass: 200gr</p>
+            <p>1 baguette Carbohyrate: 50g</p>
+            <br />
+            <p>
+              The <strong>saddest</strong> form of bread with no taste, no texture. The toast was made by a machine 
+              for machine kind of people. Plain toast and ketchup is a receipe known by doctors to give depression.
+              We can now deliver to you the experience of a toast. Anybody
+              with an interest in depression will be very happy.
+            </p>
+            <p>
+              Toast can actually be used to wipe tears after eating toast.
+            </p>
+          </div>
+          <h3>Buy your own toast today!</h3>
+          <h3 class="price">Price: $0</h3>
+          <h3 class="price">Pay: just take it</h3>
+          <form action="#">
+            <select>
+              <option value="super-axolotl">
+                toast
+              </option>
+              <option value="normal-axolotl">still toast</option>
+            </select>
+            <input type="text" name="Add x to cart" size="20" />
+            <input class="add-to-cart" type="submit" value="Add x To Cart" />
+          </form>
+        </div>
+      </article>
+
+      <aside class="aside-great-deals">
+        <h4>Great Deals</h4>
+        <div>
+          <ul class="new-products-list">
+            <li>
+              <p>
+                <img src=img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <img src=img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+            <li>
+              <p>
+                <img src=img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+            <li>
+              <p>
+                <img src=img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+            <li>
+              <p>
+                <img src=img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="bottom-nav">
+      <nav>
+        <a href="#">About Us </a>
+        <a href="#">Store Locations </a>
+        <a href="#">Careers </a>
+        <a href="#">Shareholder Relations </a>
+        <a href="#">Corporate Website </a>
+      </nav>
+      <p class="copyright">Copyright &copy; Today by Me</p>
+    </footer>
+  </body>
+</html>
