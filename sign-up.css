@@ -157,16 +157,18 @@ body {
     width:100%;
     margin-inline: 0 auto;
     padding-inline: 0;
+    
   }
   table {
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
-    padding-top: 20px;
+    margin-top: 15px;
+
   }
   button{
     width:100%;
-    padding: 5px;
+    padding: 6px;
   }
 
   
