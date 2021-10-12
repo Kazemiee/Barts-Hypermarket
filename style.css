@@ -223,3 +223,6 @@ button:focus {
 }
 Might use something like this later
 */
+@media (max-width: 800px) {
+  /*Use this to specify for mobile devices*/
+}
