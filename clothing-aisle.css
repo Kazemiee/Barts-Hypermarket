@@ -233,6 +233,7 @@ body {
   */
   .price {
     padding-top: 55px;
+    text-decoration: none;
     padding-right:10px;
     float: right;
     font-size: 40px;
