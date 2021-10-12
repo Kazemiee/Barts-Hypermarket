@@ -169,6 +169,7 @@ body {
   button{
     width:100%;
     padding: 6px;
+    vertical-align: top;
   }
 
   
