@@ -2,19 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="clothing-aisle.css" rel="stylesheet" />
-    <link rel="icon" href="img/Axlot.png" />
+    <link href="style.css" rel="stylesheet" />
+    <script type="text/javascript" src="product.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="Boisghur Shishani ID: 40170574" />
+    <meta name="author" content="Rodrigo Sanchez ID: 40090092" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clothing Aisle</title>
+    <title>Axolotl</title>
   </head>
   <body>
     <header class="top-header">
       <div class="header-upper-half">
         <div class="name-slogan">
-          <h1 class="shop-name">Bart's Hypermarket
-            <span style="font-size: 8px">Boisghur Shishani</span></h1>
+          <h1 class="shop-name">Bart's Hypermarket</h1>
           <p class="slogan">For the Earth Product Enthusiasts out there</p>
         </div>
         <div class="go-to-cart">
@@ -43,7 +42,6 @@
                 <a href="dairy-aisle.html"> Dairy</a>
                 <a href="electronic-aisle.html">Electronics</a>
                 <a href="clothing-aisle.html">Clothing</a>
-                <a href="fruit-aisle.html">Fruit</a>
                 <a href="vegetable.html">Vegetables</a>
               </div>
             </div>
@@ -52,11 +50,10 @@
             <div class="drop-menu">
               <a href="#">Popular</a>
               <div class="drop-content">
-                <a href="clothing_aisle/jeans.html">Jeans</a>
-                <a href="bread_aisle/baguette.html">Baguette</a>
-                <a href="milk.html">Milk</a>
                 <a href="axolotl.html">Axolotl</a>
-                <a href="vegetable-aisle.html">Vegetables</a>
+                <a href="axolotl.html">Axolotl</a>
+                <a href="axolotl.html">Axolotl</a>
+                <a href="axolotl.html">Axolotl</a>
               </div>
             </div>
           </section>
@@ -73,50 +70,45 @@
         </nav>
       </div>
     </header>
+
     <main class="page-content">
-      <article class="aisles">
-        <h2>Clothing Items</h2>
-        <h3 style="color:rgb(209, 102, 209)">(All products are fit for most bipedal species, and some others)</h3>
+      <article class="article-product">
+        <h2>Milk</h2>
         <div class="article-container">
-          <ul class="aisles-list">
-            <li>
-              <div class="item">
-                <a href="clothing_aisle/tShirt.html"><img src=img/tShirt.jpg width = 20% alt = "Image of a T-shirt">
-                  T-shirt</a> 
-                <p class="price">$3000</p>
-              </div>
-            </li>
-            <li>
-              <div class="item">
-                <a href="clothing_aisle/jeans.html"><img src=img/Jeans.jpg width = 20% alt = "Image of jeans">
-                Jeans</a>
-                <p class="price">$1000</p>
-              </div>
-            </li>
-            <li>
-              <div class="item">
-                <a href="clothing_aisle/shoes.html"><img src=img/Shoes.jpg width = 20% alt = "Image of shoes">
-                Shoe (x2)</a>
-                <p class="price">$500</p>
-              </div>
-            </li>
-            <li>
-              <div class="item">
-                <a href="clothing_aisle/skirt.html"><img src=img/Skirt.jpg width = 20% alt = "Image of a skirt">
-                Skirt</a> 
-                <p class="price">$200</p>
-              </div>
-            </li>
-            <li>
-              <div class="item">
-                <a href="clothing_aisle/necktie.html"><img src=img/Tie.jpg width = 20% alt = "Image of a necktie">
-                Necktie</a>
-                <p class="price">$150</p>
-              </div>
-            </li>
-          </ul>
+          <img src=img/whipped-cream.png width = 40% alt = "Image of milk">
+          <button onclick="ShowExtraDetails()">Show Extra Details</button>
+          <!--style="display: none" needs to be there or else it will take 2 clicks to show extra details-->
+          <div id="extra-details" style="display: none">
+            <p>Taste: Like biting a cloud of sugar</p>
+            <p>Whipped cream 500g </p>
+            <p>Carbohyrate: 3gr; 43gr fat</p>
+            <br />
+            <p>
+              Whipped cream is liquid heavy cream that is whipped by a whisk or mixer until it is light and fluffy and
+              holds its shape, or by the expansion of dissolved gas, forming a firm colloid. It is often sweetened, typically
+              with white sugar, and sometimes flavored with vanilla.
+            </p>
+            <p>
+              Everyone knows why you really are buying it for though!
+            </p>
+          </div>
+          <h3>Buy some whipped cream</h3>
+          <h3 class="price">Price: $320000 10% off</h3>
+          <h3 class="price">Pay: $32000</h3>
+          <form action="#">
+            <select>
+              <option value="super-axolotl">
+                Super whipped cream
+              </option>
+              <option value="normal-axolotl">Regular whipped cream</option>
+            </select>
+            <input type="text" name="Add x to cart" size="20" />
+            <input class="add-to-cart" type="submit" value="Add x To Cart" />
+          </form>
         </div>
       </article>
+
+
 
       <aside class="aside-great-deals">
         <h4>Great Deals</h4>
@@ -124,27 +116,40 @@
           <ul class="new-products-list">
             <li>
               <p>
-                <a href="/clothing_aisle/hat.html"><img src=img/Hat.jpg width = 40% alt = "Image of a hat">
-                Hat</a> 20% off!
+                <img src=img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="axolotl.html">Axolotl</a> 99% off!
               </p>
             </li>
 
             <li>
               <p>
-                <a href="/clothing_aisle/ring.html"><img src=img/Ring.jpg width = 40% alt = "Image of a ring">
-                Ring</a> 50% off!
+                <img src=img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="axolotl.html">Axolotl</a> 99% off!
               </p>
             </li>
             <li>
               <p>
-                <a href="/clothing_aisle/eyeglasses.html"><img src=img/Glasses.jpg width = 40% alt = "Image of eye-glasses">
-                Eye-Glasses</a> 10% off!
+                <img src=img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+            <li>
+              <p>
+                <img src=img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="axolotl.html">Axolotl</a> 99% off!
+              </p>
+            </li>
+            <li>
+              <p>
+                <img src=img/Axlot.png width = 40% alt = "Image of an Axolotl">
+                <a href="axolotl.html">Axolotl</a> 99% off!
               </p>
             </li>
           </ul>
         </div>
       </aside>
     </main>
+
     <footer class="bottom-nav">
       <nav>
         <a href="#">About Us </a>
