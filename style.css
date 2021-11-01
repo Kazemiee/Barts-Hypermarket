@@ -144,7 +144,7 @@ article {
   position: relative;
   left: 0px;
   top: 0px;
-  width: 70%;
+  width: 99%;
 }
 
 /* For some reason I think this looks pretty
@@ -156,9 +156,10 @@ aside div {
   border: 4px solid rgb(152, 210, 212);
 }
 /* I used trial and error here to get something not horrible looking
+display: none since the aside is probably not worth it
 */
 aside {
-  display: inline-block;
+  display: none;
   position: relative;
   left: 0%;
   top: 0%;
