@@ -256,11 +256,12 @@ body {
     padding-block: 5px;
   }
   .price {
-    padding-top: 55px;
     float: right;
     font-size: 40px;
     color: mediumvioletred;
   }
+/*
+    padding-top: 55px; */
 
   h2 {
     font-size: 50px;
