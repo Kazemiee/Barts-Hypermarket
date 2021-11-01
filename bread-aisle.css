@@ -228,10 +228,11 @@ body {
   }
 
   .bread {
-    font-size: 40px;
     color: mediumvioletred;
-    padding-bottom: 10em;
   }
+/*
+    padding-bottom: 10em;
+*/
   .bread2 {
     font-size: 20px;
     color: mediumvioletred;
@@ -257,10 +258,10 @@ body {
   }
   .price {
     float: right;
-    font-size: 40px;
     color: mediumvioletred;
   }
 /*
+    font-size: 40px;
     padding-top: 55px; */
 
   h2 {
