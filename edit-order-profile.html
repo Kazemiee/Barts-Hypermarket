@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Matthew Kazemie  ID: 40190450" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="edit-order-profile.js"></script>
     <title>Edit Order Profile</title>
   </head>
   <body>
@@ -28,25 +29,47 @@
     <main>
       <h2>Enter Changes Below</h2>
       <div class="product-form">
-        <form action="#">
+        <div>
           <div>
             <h3>Product Name</h3>
             <img src=img/Axlot.png width = 20% alt = "Image of an Axolotl">
           </div>
-          Product Type:
-          <select>
-            <option value="super-axolotl">
+          <div>
+            <br />
+            <label for="product-type">Product Type:</label>
+            <div id="product-type">XXXX</div>
+          </div>
+          Change Product Type:
+          <select id="new-product-type">
+            <option value="Genetically Modified Super-Axolotl">
               Genetically Modified Super-Axolotl
             </option>
-            <option value="normal-axolotl">Normal Axolotl</option>
+            <option value="Normal Axolotl">Normal Axolotl</option>
           </select>
-          <div>Cart Quantity: XXXX</div>
+          <div>
+            <br />
+            <label for="cart-quantity">Cart Quantity:</label>
+            <div id="cart-quantity">XXXX</div>
+          </div>
           <div>
             Change Cart Quantity
-            <input type="number" name="Change cart quantity" size="20" />
+            <input
+              type="number"
+              name="Change cart quantity"
+              size="20"
+              id="new-cart-quantity"
+            />
           </div>
-          <input class="save" type="submit" value="Save Changes" />
-        </form>
+          <button onclick="ChangeOrderProfile()">Save Changes</button>
+          <form action="#">
+            <div style="display: none" id="hidden-information">
+              This doesn't do anything right now
+              <div id="product-type-hidden">XXXX</div>
+              <div id="cart-quantity-hidden">XXXX</div>
+            </div>
+            <input class="save" type="submit" value="Submit" />
+          </form>
+        </div>
       </div>
     </main>
     <footer></footer>
