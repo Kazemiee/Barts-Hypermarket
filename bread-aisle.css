@@ -157,7 +157,7 @@ body {
   /* I used trial and error here to get something not horrible looking
   */
   aside {
-    display: inline-block;
+    display: none;
     position: relative;
     left: 0%;
     top: 0%;
