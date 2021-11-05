@@ -276,8 +276,6 @@
             <script>
               function priceAxolotl(a) {
                 if(a>=0){
-                Axolotl = parseInt(a);
-
                 amount6= parseInt(a);
                 price = 100*amount6;
                 price = price.toFixed(2);
@@ -336,19 +334,19 @@
               </tr>
               <tr>
                 <th>Subtotal:</th>
-                <td id="subTotal" >$</td>
+                <td id="subTotal" >$11.2</td>
               </tr>
               <tr>
                 <th >QST:</th>
-                <td id="qst">$</td>
+                <td id="qst">$11.92</td>
               </tr>
               <tr>
                 <th >GST:</th>
-                <td id="gst">$</td>
+                <td id="gst">$5.96</td>
               </tr>
               <tr>
                 <th >Total price</th>
-                <td id="totalPrice" >$</td>
+                <td id="totalPrice" >$130.27</td>
               </tr>
 
             </table>
@@ -365,23 +363,31 @@
               num4 = document.getElementById("amount4").innerText.match(/\d+\.+\d*/);
               num5 = document.getElementById("amount5").innerText.match(/\d+\.+\d*/);
               num6 = document.getElementById("amount6").innerText.match(/\d+\.+\d*/);
-              console.log(num1, num2, num3, num4, num5, num6);
+
               //Number(x) turns object x into number
+              item1 = Number(num1/1.49);
+              item2 = Number(num2/3.49);
+              item3 = Number(num3/2.99);
+              item4 = Number(num4/1.99);
+              item5 = Number(num5/3.27);
+              item6 = Number(num6/100);
 
+              items = item1 + item2 + item3 + item4 + item5 +item6;
+              document.getElementById("items").innerHTML = items ;
+              console.log(num1, num2, num3, num4, num5, num6, item1, item2, item3, item4, item5, item6, items);
               cart = Number(num1)+ Number(num2) + Number(num3) + Number(num4) + Number(num5) + Number(num6);
-
               cart= Math.round(cart * 100) / 100;
               var tax1 = Math.round(cart*qst * 100) / 100;
               var tax2 = Math.round(cart*gst * 100) / 100;
+
               document.getElementById("subTotal").innerHTML = cart;
               document.getElementById("qst").innerHTML = tax1;
               document.getElementById("gst").innerHTML = tax2 ;
-              console.log(tax1, tax2);
+
               var total = Math.round((cart+tax1+tax2)*100)/100;
               document.getElementById("totalPrice").innerHTML = total;
+              }
 
-
-            }
                //alert(cart);
                document.onkeypress = function(key_dtl) {
               key_dtl = key_dtl || window.event;
@@ -395,8 +401,6 @@
         </div>
 
       </div>
-
-
 
       <div class="d-flex justify-content-center" style="padding-bottom: 3vh;" >
         <br>
