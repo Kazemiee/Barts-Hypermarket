@@ -21,3 +21,38 @@ function TogglePsychosis() {
     style.href = "style.css";
   }
 }
+
+function AddToQuantity(unitPrice) {
+  var qPlus = document.getElementById("quantity").value;
+  qPlus++;
+  document.getElementById("quantity").value = qPlus;
+  ChangeQuantity(unitPrice, qPlus);
+  //console.log(qPlus);
+}
+function SubtractFromQuantity(unitPrice) {
+  var qMinus = document.getElementById("quantity").value;
+  if (qMinus > 1) {
+    qMinus--;
+    document.getElementById("quantity").value = qMinus;
+    ChangeQuantity(unitPrice, qMinus);
+  }
+  //console.log(qMinus);
+}
+function ChangeQuantityKeyUp(unitPrice) {
+  var q = document.getElementById("quantity").value;
+  if (q <= 1) {
+    q = 1;
+    document.getElementById("quantity").value = q;
+  }
+  ChangeQuantity(unitPrice, q);
+  //console.log(q);
+}
+
+function ChangeQuantity(unitPrice, quantity) {
+  var price = document.getElementById("price-displayed");
+  price.innerHTML = "Pay: " + unitPrice * quantity + "$";
+  //console.log(unitPrice);
+  //console.log(quantity);
+}
+
+//onmouseout="ChangeQuantityKeyUp(100)"
