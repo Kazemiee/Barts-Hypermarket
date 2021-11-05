@@ -161,14 +161,28 @@
           </div>
           <h3>Buy your own Meat Computer X today!</h3>
           <h3 class="price">Price: $100000 99% off</h3>
-          <h3 class="price">Pay: $1000</h3>
+          <h3 class="price">
+            <div id="price-displayed">Pay: $1000</div>
+          </h3>
           <form action="#">
+            <input
+              type="number"
+              name="Add x to cart"
+              size="20"
+              id="quantity"
+              min="1"
+              onkeyup="ChangeQuantityKeyUp(1000)"
+            />
             <select>
+              </option>
               <option value="normal">Normal MEAT Model X</option>
             </select>
-            <input type="number" name="Add x to cart" size="20" />
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
           </form>
+          <div>
+            <button onclick="AddToQuantity(1000)">Add</button>
+            <button onclick="SubtractFromQuantity(1000)">Subtract</button>
+          </div>
         </div>
       </article>
 
