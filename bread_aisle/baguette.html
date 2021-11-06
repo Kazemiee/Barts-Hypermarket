@@ -97,8 +97,16 @@
           </div>
           <h3>Buy your own baguette today!</h3>
           <h3 class="price">Price: $5000</h3>
-          <h3 class="price">Pay: $5000</h3>
+          <h3 class="price"><div id="price-displayed">Pay: $5000</div></h3>
           <form action="#">
+            <input
+                   type="number"
+                   name="Add x to cart"
+                   size="20"
+                   id="quantity"
+                   min="1"
+                   onkeyup="ChangeQuantityKeyUp(5000)"
+            />
             <select>
               <option value="super-axolotl">
                 Super baguette
@@ -108,6 +116,9 @@
             <input type="number" min="0" value="1" name="Add x to cart" size="20" />
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
           </form>
+          <div>
+            <button onclick="AddToQuantity(5000)">Add</button>
+            <button onclick="SubstractFromQuantity(5000)">Substract</button>
         </div>
       </article>
 
