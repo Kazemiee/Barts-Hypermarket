@@ -50,7 +50,7 @@ function ChangeQuantityKeyUp(unitPrice) {
 
 function ChangeQuantity(unitPrice, quantity) {
   var price = document.getElementById("price-displayed");
-  price.innerHTML = "Pay: " + unitPrice * quantity + "$";
+  price.innerHTML = "Pay: " +"$"+ unitPrice * quantity + ;
   //console.log(unitPrice);
   //console.log(quantity);
 }
