@@ -98,6 +98,10 @@
           <h3 class="price">Price: $200</h3>
           <h3 class="price"><div id="price-displayed">Pay: $200</div></h3>
           <form action="#">
+            <select>
+              <option value="super-axolotl">Warm naan</option>
+              <option value="normal-axolotl">Cold naan</option>
+            </select>
             <input
               type="number"
               name="Add x to cart"
@@ -106,17 +110,6 @@
               min="1"
               onkeyup="ChangeQuantityKeyUp(200)"
               />
-            <select>
-              <option value="super-axolotl">Warm naan</option>
-              <option value="normal-axolotl">Cold naan</option>
-            </select>
-            <input
-              type="number"
-              min="0"
-              value="1"
-              name="Add x to cart"
-              size="20"
-            />
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
           </form>
           <div>
