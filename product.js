@@ -55,8 +55,8 @@ function ChangeQuantity(unitPrice, quantity) {
   //console.log(quantity);
 }
 
-function DeleteProduct() {
-  var x = document.getElementById("product-row");
+function DeleteProduct(int) {
+  var x = document.getElementById("product-row"+int);
   if (x.style.display === "none") {
     x.style.display = "table-row";
   } else {
