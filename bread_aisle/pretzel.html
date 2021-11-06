@@ -96,21 +96,26 @@
           </div>
           <h3>Buy your own pretzel today!</h3>
           <h3 class="price">Price: $568</h3>
-          <h3 class="price">Pay: $568</h3>
+          <h3 class="price"><div id="price-displayed">Pay: $568</div></h3>
           <form action="#">
-            <select>
-              <option value="super-axolotl">salted pretzel</option>
-              <option value="normal-axolotl">pretzeled salt</option>
-            </select>
             <input
               type="number"
               min="0"
               value="1"
               name="Add x to cart"
               size="20"
+              onkeyup="ChangeQuantityKeyUp(568)"
             />
+            <select>
+              <option value="super-axolotl">salted pretzel</option>
+              <option value="normal-axolotl">pretzeled salt</option>
+            </select>
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
           </form>
+          <div>
+            <button onclick="AddToQuantity(568)">Add</button>	
+            <button onclick="SubstractFromQuantity(568)">Substract</button>
+          </div>
         </div>
       </article>
 
