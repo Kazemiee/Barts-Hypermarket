@@ -5,6 +5,7 @@
     <meta content="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="shopping-cart.css" >
+    <script src="shopping-cart.js"></script>
 
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 
     <link rel="icon" href="img/Axlot.png" />
   </head>
-  <body>
+  <body onload="amountCounter()" onchange="amountCounter()">
       <script type="text/javascript">
         let qst = 0.07;
         let gst = 0.08;
@@ -75,28 +76,15 @@
         </div>
       </header>
 
-
-
-    <div class="Cart-container">
+    <div class="Cart-container"  >
       <div class="Header">
-        <h1 style="text-align: center; margin-top: 3pc; margin-bottom: 3pc;">Shopping cart</h1>
+        <h1 style="text-align: center; margin-top: 3pc; margin-bottom: 3pc;" onclick="logger()">Shopping cart</h1>
       </div>
-      <div class="row">
-        <div class="col-lg-9">
+      <div class="row" >
+        <div class="col-lg-9" id="container">
 
 
-          <article class="shop container-lg">
-            <script>
-              function priceOrange(a) {
-                if(a>=0){
-                amount= parseInt(a);
-                price = 1.49*amount;
-                price = price.toFixed(2);
-                document.getElementById("amount").innerHTML = "$"+price;}
-                else
-                  document.getElementById("amount").innerHTML = "$"+NaN;
-              }
-            </script>
+          <article class="shop container-lg" >
             <div class="Cart-Items">
               <div class="image-box">
                 <img
@@ -107,36 +95,21 @@
                 <h1 class="title">Orange Juice</h1>
                 <h3 class="subtitle">1L</h3>
               </div>
-
               <div class="counter">
-
-              <input placeholder="1" type="number" id="orange" name="orange"
+              <input class="price" placeholder="1" type="number" id="orange" name="orange"
               onkeyup="priceOrange(document.getElementById('orange').value)"
                 style="width: 60px; height:30px" onchange="update()" >
               </div>
               <div class="prices">
-                <div class="amount"><a id="amount">$1.49</a></div>
+                <div class="amount" id="amount1">$1.49</div>
                 <div class="save"><u>Save for later</u></div>
-                <div class="remove"><u>Remove</u></div>
+                <div class="remove"><u onclick="removeItem(this)">Remove</u></div>
               </div>
             </div>
           </article>
 
           <article class="shop container-lg">
-            <script>
-              function priceGrape(a) {
-                if(a>=0){
-                amount2= parseInt(a);
-                  price = 3.49*amount2;
-                  price = price.toFixed(2);
-                  document.getElementById("amount2").innerHTML = "$"+price;
-                }
-                else {
-                  document.getElementById("amount2").innerHTML = "$"+NaN;
-                }
 
-              }
-            </script>
 
             <div class="Cart-Items">
               <div class="image-box">
@@ -150,30 +123,18 @@
                 <h3 class="subtitle">1L</h3>
               </div>
               <div class="counter">
-                <input placeholder="1" type="number" id="grape" name="grape" onkeyup="priceGrape(document.getElementById('grape').value)"
+                <input class="price" placeholder="1" type="number" id="grape" name="grape" onkeyup="priceGrape(document.getElementById('grape').value)"
                   style="width: 60px; height:30px" onchange="update()" >
               </div>
               <div class="prices">
                 <div class="amount" id="amount2">$3.49</div>
                 <div class="save"><u>Save for later</u></div>
-                <div class="remove"><u>Remove</u></div>
+                <div class="remove"><u onclick="removeItem(this)">Remove</u></div>
               </div>
             </div>
           </article>
 
           <article class="shop container-lg">
-            <script>
-              function priceApple(a) {
-                if(a>=0){
-                amount3= parseInt(a);
-                price = 2.99*amount3;
-                price = price.toFixed(2);
-                document.getElementById("amount3").innerHTML = "$"+price;}
-                else {
-                  document.getElementById("amount3").innerHTML = "$"+NaN;
-                }
-              }
-            </script>
             <div class="Cart-Items">
               <div class="image-box">
                 <img
@@ -187,30 +148,19 @@
               </div>
 
               <div class="counter">
-                <input placeholder="1" type="number" id="apple" name="apple" onkeyup="priceApple(document.getElementById('apple').value)"
+                <input class="price" placeholder="1" type="number" id="apple" name="apple" onkeyup="priceApple(document.getElementById('apple').value)"
                   style="width: 60px; height:30px" onchange="update()">
               </div>
               <div class="prices">
                 <div class="amount" id="amount3">$2.99</div>
                 <div class="save"><u>Save for later</u></div>
-                <div class="remove"><u>Remove</u></div>
+                <div class="remove"><u onclick="removeItem(this)">Remove</u></div>
               </div>
             </div>
           </article>
 
           <article class="shop container-lg">
-            <script>
-              function priceBanana(a) {
-                if(a>=0){
-                amount4= parseInt(a);
 
-                price = 1.99*amount4;
-                price = price.toFixed(2);
-                document.getElementById("amount4").innerHTML = "$"+price;}
-                else
-                  document.getElementById("amount4").innerHTML = "$"+NaN;
-              }
-              </script>
             <div class="Cart-Items">
               <div class="image-box">
                 <img
@@ -223,31 +173,19 @@
                 <h3 class="subtitle">100g</h3>
               </div>
               <div class="counter">
-                <input placeholder="1" type="number" id="banana" name="banana" onkeyup="priceBanana(document.getElementById('banana').value)"
+                <input class="price" placeholder="1" type="number" id="banana" name="banana" onkeyup="priceBanana(document.getElementById('banana').value)"
                   style="width: 60px; height:30px" onchange="update()" >
               </div>
               <div class="prices">
                 <div class="amount" id="amount4">$1.99</div>
                 <div class="save"><u>Save for later</u></div>
-                <div class="remove"><u>Remove</u></div>
+                <div class="remove"><u onclick="removeItem(this)">Remove</u></div>
               </div>
             </div>
           </article>
 
 
           <article class="shop container-lg">
-            <script>
-              function priceLettuce(a) {
-                if(a>=0){
-                amount5= parseInt(a);
-                price = 3.27*amount5;
-                price = price.toFixed(2);
-                document.getElementById("amount5").innerHTML = "$"+price;}
-                else
-                  document.getElementById("amount5").innerHTML = "$"+NaN;
-              }
-              </script>
-
             <div class="Cart-Items">
               <div class="image-box">
                 <img
@@ -261,29 +199,19 @@
               </div>
 
               <div class="counter">
-                <input placeholder="1" type="number" id="lettuce" name="lettuce" onkeyup="priceLettuce(document.getElementById('lettuce').value)"
+                <input class="price" placeholder="1" type="number" id="lettuce" name="lettuce" onkeyup="priceLettuce(document.getElementById('lettuce').value)"
                   style="width: 60px; height:30px" onchange="update()" >
               </div>
               <div class="prices">
                 <div class="amount" id="amount5">$3.27</div>
                 <div class="save"><u>Save for later</u></div>
-                <div class="remove"><u>Remove</u></div>
+                <div class="remove"><u onclick="removeItem(this)">Remove</u></div>
               </div>
             </div>
           </article>
 
           <article class="shop container-lg">
-            <script>
-              function priceAxolotl(a) {
-                if(a>=0){
-                amount6= parseInt(a);
-                price = 100*amount6;
-                price = price.toFixed(2);
-                document.getElementById("amount6").innerHTML = "$"+price;}
-                else
-                document.getElementById("amount6").innerHTML = "$"+NaN;
-              }
-              </script>
+
             <div class="Cart-Items">
               <div class="image-box">
                 <img
@@ -297,14 +225,14 @@
               </div>
 
               <div class="counter">
-                <input placeholder="1" type="number" id="axolotl" name="axolotl" onkeyup="priceAxolotl(document.getElementById('axolotl').value)"
-
+                <input class="price" placeholder="1" type="number" id="axolotl" name="axolotl"
+                onkeyup="priceAxolotl(document.getElementById('axolotl').value)"
                   style="width: 60px; height:30px" onchange="update()" >
               </div>
               <div class="prices">
                 <div class="amount" id="amount6">$100.00</div>
                 <div class="save"><u>Save for later</u></div>
-                <div class="remove"><u>Remove</u></div>
+                <div class="remove"><u onclick="removeItem(this)">Remove</u></div>
               </div>
             </div>
           </article>
@@ -314,9 +242,9 @@
         <div class="col-lg-3" style="text-align: center">
           <div style="">
             <br>
-            <button class="continueShopping" type="button" name="button"> Continue shopping</button>
+            <a class="continueShopping" href="index.html"> Continue shopping</a>
             <br><br>
-            <button class="removeAll" type="button" name="button"> Remove All</button>
+            <button class="removeAll" type="button" name="button" onclick="removeAll()"> Remove All</button>
           </div>
 
 
@@ -350,53 +278,7 @@
               </tr>
 
             </table>
-            <script type="text/javascript">
-              //Calls inner function every 5000ms
-              //setInterval(function update(){
-                //  console.log("logged every 5000ms");
-                //}
-              //}, 5000);
-              function update(){
-              num1 = document.getElementById("amount").innerText.match(/\d+\.+\d*/);
-              num2 = document.getElementById("amount2").innerText.match(/\d+\.+\d*/);
-              num3 = document.getElementById("amount3").innerText.match(/\d+\.+\d*/);
-              num4 = document.getElementById("amount4").innerText.match(/\d+\.+\d*/);
-              num5 = document.getElementById("amount5").innerText.match(/\d+\.+\d*/);
-              num6 = document.getElementById("amount6").innerText.match(/\d+\.+\d*/);
 
-              //Number(x) turns object x into number
-              item1 = Number(num1/1.49);
-              item2 = Number(num2/3.49);
-              item3 = Number(num3/2.99);
-              item4 = Number(num4/1.99);
-              item5 = Number(num5/3.27);
-              item6 = Number(num6/100);
-
-              items = item1 + item2 + item3 + item4 + item5 +item6;
-              document.getElementById("items").innerHTML = items ;
-              console.log(num1, num2, num3, num4, num5, num6, item1, item2, item3, item4, item5, item6, items);
-              cart = Number(num1)+ Number(num2) + Number(num3) + Number(num4) + Number(num5) + Number(num6);
-              cart= Math.round(cart * 100) / 100;
-              var tax1 = Math.round(cart*qst * 100) / 100;
-              var tax2 = Math.round(cart*gst * 100) / 100;
-
-              document.getElementById("subTotal").innerHTML = cart;
-              document.getElementById("qst").innerHTML = tax1;
-              document.getElementById("gst").innerHTML = tax2 ;
-
-              var total = Math.round((cart+tax1+tax2)*100)/100;
-              document.getElementById("totalPrice").innerHTML = total;
-              }
-
-               //alert(cart);
-               document.onkeypress = function(key_dtl) {
-              key_dtl = key_dtl || window.event;
-             var uni_code = key_dtl.keyCode || key_dtl.which;
-             console.log("logged");
-
-
-             }
-            </script>
           </div>
         </div>
 
@@ -404,7 +286,7 @@
 
       <div class="d-flex justify-content-center" style="padding-bottom: 3vh;" >
         <br>
-        <button class="button">Checkout</button>
+        <button class="button" id="checkout" >Checkout</button>
 
       </div>
     </div>
