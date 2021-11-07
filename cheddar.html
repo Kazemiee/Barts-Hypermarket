@@ -93,7 +93,7 @@
           </div>
           <h3>Buy some cheddar cheese</h3>
           <h3 class="price">Price: 480000 10% off</h3>
-          <h3 class="price">Pay: $48000</h3>
+          <h3 class="price">Pay: $<a id="priceDiscount">48000</a></h3>
           <form action="#">
             <select>
               <option value="super-axolotl">
@@ -101,8 +101,17 @@
               </option>
               <option value="normal-axolotl">Regular cheddar</option>
             </select>
-            <input type="text" name="Add x to cart" size="20" />
-            <input class="add-to-cart" type="submit" value="Add x To Cart" />
+            <input placeholder="1" type="number" name="Add x to cart" size="20" id="amount"
+                    min="1" onchange="update(this.value)" />
+            <input class="add-to-cart" type="submit" value="Add x To Cart" onclick="AddToCart()" />
+            <script type="text/javascript">
+              function update(a){
+                amount = Number(a);
+                document.getElementById('priceDiscount').innerHTML = amount*48000;
+
+                console.log(document.getElementById('priceDiscount').value, test, amount);
+              }
+            </script>
           </form>
         </div>
       </article>
