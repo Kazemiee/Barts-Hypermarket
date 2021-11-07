@@ -1,6 +1,6 @@
-console.log(localStorage.getItem("UnitPrice"));
-console.log(localStorage.getItem("Quantity"));
-console.log(document.getElementById("price-displayed"));
+//console.log(localStorage.getItem("UnitPrice"));
+//console.log(localStorage.getItem("Quantity"));
+//console.log(document.getElementById("price-displayed"));
 
 ChangeQuantity(
   localStorage.getItem("UnitPrice"),
