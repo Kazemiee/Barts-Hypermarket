@@ -91,7 +91,23 @@
           </div>
           <h3>Buy your stolen TV today!</h3>
           <h3 class="price">Price: $200.99 </h3>
+          
+          <h3 class="price">
+            <div id="price-displayed">Pay: 200.99$</div>
+          </h3>
+          
           <form action="#">
+            
+             <input
+              type="number"
+              name="Add x to cart"
+              size="20"
+              id="quantity"
+              min="1"
+              onkeyup="ChangeQuantityKeyUp(200.99)"
+              onclick="ChangeQuantityKeyUp(200.99)"
+            />
+            
             <select>
               <option value="super-axolotl">
                 Stolen TV
@@ -101,6 +117,12 @@
             <input type="number" name="Add x to cart" size="20" />
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
           </form>
+          
+           <div>
+            <button onclick="AddToQuantity(200.99)">Add</button>
+            <button onclick="SubtractFromQuantity(200.99)">Subtract</button>
+          </div>
+          
         </div>
       </article>
 
