@@ -97,12 +97,11 @@
               </div>
               <div class="counter">
               <input class="price" placeholder="1" type="number" id="orange" name="orange"
-              onkeyup="priceOrange(document.getElementById('orange').value)"
-                style="width: 60px; height:30px" onchange="update()" >
+                        onchange="priceOrange(this.value)" onblur="update()" style="width: 60px; height:30px"  >
               </div>
               <div class="prices">
                 <div class="amount" id="amount1">$1.49</div>
-                <div class="save"><u>Save for later</u></div>
+                <div class="save"><u onclick="saveForLater(this)">Save for later</u></div>
                 <div class="remove"><u onclick="removeItem(this)">Remove</u></div>
               </div>
             </div>
@@ -123,12 +122,12 @@
                 <h3 class="subtitle">1L</h3>
               </div>
               <div class="counter">
-                <input class="price" placeholder="1" type="number" id="grape" name="grape" onkeyup="priceGrape(document.getElementById('grape').value)"
-                  style="width: 60px; height:30px" onchange="update()" >
+                <input class="price" placeholder="1" type="number" id="grape" name="grape" onchange="priceGrape(this.value)"
+                  style="width: 60px; height:30px" onblur="update()" >
               </div>
               <div class="prices">
                 <div class="amount" id="amount2">$3.49</div>
-                <div class="save"><u>Save for later</u></div>
+                <div class="save"><u onclick="saveForLater(this)">Save for later</u></div>
                 <div class="remove"><u onclick="removeItem(this)">Remove</u></div>
               </div>
             </div>
@@ -148,12 +147,12 @@
               </div>
 
               <div class="counter">
-                <input class="price" placeholder="1" type="number" id="apple" name="apple" onkeyup="priceApple(document.getElementById('apple').value)"
-                  style="width: 60px; height:30px" onchange="update()">
+                <input class="price" placeholder="1" type="number" id="apple" name="apple" onchange="priceApple(this.value)"
+                  style="width: 60px; height:30px" onblur="update()">
               </div>
               <div class="prices">
                 <div class="amount" id="amount3">$2.99</div>
-                <div class="save"><u>Save for later</u></div>
+                <div class="save"><u onclick="saveForLater(this)">Save for later</u></div>
                 <div class="remove"><u onclick="removeItem(this)">Remove</u></div>
               </div>
             </div>
@@ -173,12 +172,12 @@
                 <h3 class="subtitle">100g</h3>
               </div>
               <div class="counter">
-                <input class="price" placeholder="1" type="number" id="banana" name="banana" onkeyup="priceBanana(document.getElementById('banana').value)"
-                  style="width: 60px; height:30px" onchange="update()" >
+                <input class="price" placeholder="1" type="number" id="banana" name="banana" onchange="priceBanana(this.value)"
+                  style="width: 60px; height:30px" onblur="update()" >
               </div>
               <div class="prices">
                 <div class="amount" id="amount4">$1.99</div>
-                <div class="save"><u>Save for later</u></div>
+                <div class="save"><u onclick="saveForLater(this)">Save for later</u></div>
                 <div class="remove"><u onclick="removeItem(this)">Remove</u></div>
               </div>
             </div>
@@ -199,12 +198,12 @@
               </div>
 
               <div class="counter">
-                <input class="price" placeholder="1" type="number" id="lettuce" name="lettuce" onkeyup="priceLettuce(document.getElementById('lettuce').value)"
-                  style="width: 60px; height:30px" onchange="update()" >
+                <input class="price" placeholder="1" type="number" id="lettuce" name="lettuce" onchange="priceLettuce(this.value)"
+                  style="width: 60px; height:30px" onblur="update()" >
               </div>
               <div class="prices">
                 <div class="amount" id="amount5">$3.27</div>
-                <div class="save"><u>Save for later</u></div>
+                <div class="save"><u onclick="saveForLater(this)">Save for later</u></div>
                 <div class="remove"><u onclick="removeItem(this)">Remove</u></div>
               </div>
             </div>
@@ -226,12 +225,12 @@
 
               <div class="counter">
                 <input class="price" placeholder="1" type="number" id="axolotl" name="axolotl"
-                onkeyup="priceAxolotl(document.getElementById('axolotl').value)"
-                  style="width: 60px; height:30px" onchange="update()" >
+                onchange="priceAxolotl(this.value)"
+                  style="width: 60px; height:30px" onblur="update()" >
               </div>
               <div class="prices">
                 <div class="amount" id="amount6">$100.00</div>
-                <div class="save"><u>Save for later</u></div>
+                <div class="save"><u onclick="saveForLater(this)">Save for later</u></div>
                 <div class="remove"><u onclick="removeItem(this)">Remove</u></div>
               </div>
             </div>
