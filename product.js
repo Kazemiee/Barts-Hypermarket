@@ -64,6 +64,7 @@ function ChangeQuantity(unitPrice, quantity) {
   localStorage.setItem("Quantity", quantity);
   localStorage.setItem("Price", price);
   localStorage.setItem("UnitPrice", unitPrice);
+  price.innerHTML = "Pay: " + "$" + (unitPrice * quantity).toLocaleString();
   //console.log(unitPrice);
   //console.log(quantity);
 }

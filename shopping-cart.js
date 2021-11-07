@@ -10,25 +10,34 @@ var items=0;
 var articles = document.getElementsByTagName("ARTICLE");
 var inputs = document.getElementsByClassName("price");
 var amount = document.getElementsByClassName("amount");
+var saved= [];
 //var input = input.getElementsByTagName("INPUT");
 var numAmount = [];
-
-
+const orangePrice = 1.49;
+var cloneArticlePrices = Object.assign(amount);
+var articlePrices = [];
+for (var i = 0; i < cloneArticlePrices.length; i++) {
+    articlePrices[i] = Number(cloneArticlePrices[i].innerText.match(/\d+\.+\d*/));
+}
 
 //var numAmount = document.getElementById("amount1").innerText.match(/\d+\.+\d*/);
 
 
 
-document.onkeypress = function(key_dtl) {
-  key_dtl = key_dtl || window.event;
- var uni_code = key_dtl.keyCode || key_dtl.which;
- console.log("logged", amount.length, numAmount.length);
- amountCounter();
- }
+// document.onkeypress = function(key_dtl) {
+//   key_dtl = key_dtl || window.event;
+//  var uni_code = key_dtl.keyCode || key_dtl.which;
+//  console.log("logged", amount.length, numAmount.length, saved.length);
+//
+//
+//  }
+
+
 
  function logger(){
    //console.log("clicked", document.getElementById("amount").innerText.match(/\d+\.+\d*/));
-   console.log("articles", articles,"inputs", inputs, "amounts", amount, "numAmount", numAmount);
+   //console.log("articles", articles,"inputs", inputs, "amounts", amount, "numAmount", numAmount, "Saved items", saved);
+   console.log( Number(cloneArticlePrices[1].innerText.match(/\d+\.+\d*/)), articlePrices[0]);
    if(document.getElementById("amount") == null ){
      console.log("Null");
    }
@@ -38,6 +47,10 @@ document.onkeypress = function(key_dtl) {
    }
  }
 
+function pricing(a){
+
+}
+
 function priceOrange(a) {
      if(a>=0){
      amount1= parseInt(a);
@@ -45,8 +58,27 @@ function priceOrange(a) {
      price = price.toFixed(2);
      document.getElementById("amount1").innerHTML = "$"+price;}
      else
-       document.getElementById("amount1").innerHTML = "$"+NaN;
+       document.getElementById("amount1").innerHTML = "$"+0;
 }
+
+
+
+// function priceOrange(a) {
+//       nextNode = a.parentNode.nextSibling.nextSibling;
+//       priceAmount = nextNode.getElementsByClassName("amount");
+//       quantity = parseInt(a.value);
+//       const parsedAmount = Number(priceAmount[0].innerText.match(/\d+\.+\d*/));
+//       console.log("parsed",parsedAmount);
+//      if(quantity>=0 ){
+//      price = (quantity*orangePrice).toFixed(2);
+//      priceAmount[0].innerHTML = "$"+price;
+//    }
+//      else{
+//        document.getElementById("amount").innerHTML = "$"+0;
+//      }
+//
+//        console.log("a", a.parentNode, "next sibling",nextNode, "value", quantity, "price amount", parsedAmount);
+//  }
 
 function priceGrape(a) {
      if(a>=0){
@@ -56,7 +88,7 @@ function priceGrape(a) {
        document.getElementById("amount2").innerHTML = "$"+price;
      }
      else {
-       document.getElementById("amount2").innerHTML = "$"+NaN;
+       document.getElementById("amount2").innerHTML = "$"+0;
      }
 
    }
@@ -69,7 +101,7 @@ function priceApple(a) {
      price = price.toFixed(2);
      document.getElementById("amount3").innerHTML = "$"+price;}
      else {
-       document.getElementById("amount3").innerHTML = "$"+NaN;
+       document.getElementById("amount3").innerHTML = "$"+0;
      }
    }
 
@@ -81,7 +113,7 @@ function priceBanana(a) {
      price = price.toFixed(2);
      document.getElementById("amount4").innerHTML = "$"+price;}
      else
-       document.getElementById("amount4").innerHTML = "$"+NaN;
+       document.getElementById("amount4").innerHTML = "$"+0;
    }
 
 
@@ -92,7 +124,7 @@ function priceLettuce(a) {
      price = price.toFixed(2);
      document.getElementById("amount5").innerHTML = "$"+price;}
      else
-       document.getElementById("amount5").innerHTML = "$"+NaN;
+       document.getElementById("amount5").innerHTML = "$"+0;
    }
 
 
@@ -103,7 +135,7 @@ function priceAxolotl(a) {
      price = price.toFixed(2);
      document.getElementById("amount6").innerHTML = "$"+price;}
      else
-     document.getElementById("amount6").innerHTML = "$"+NaN;
+     document.getElementById("amount6").innerHTML = "$"+0;
    }
 //Updates summary
 function update(){
@@ -145,9 +177,6 @@ function update(){
    }
 
 function removeAll(){
-
-
-
      counter= articles.length-1;
      console.log("LIST",articles, "COUNTER", counter);
      document.getElementById("items").innerHTML = 0 ;
@@ -180,6 +209,22 @@ function removeItem(e){
     }
     console.log("items", items, "amount",amount.length );
    }
+
+// function  createArticle(){
+//   document.getElementById("container").appendChild(clone);
+// }
+
+   function saveForLater(e){
+       amountCounter();
+      counter = items -1;
+      node = e.parentNode.parentNode.parentNode.parentNode;
+      clone = Object.assign(node);
+      saved.push(clone);
+      console.log(e.parentNode.parentNode.parentNode.parentNode, clone, articles, saved);
+      e.parentNode.parentNode.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode.parentNode.parentNode);
+
+
+      }
 
    function amountCounter(){
      for (var i = 0; i < amount.length; i++) {
