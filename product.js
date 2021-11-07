@@ -1,3 +1,12 @@
+console.log(localStorage.getItem("UnitPrice"));
+console.log(localStorage.getItem("Quantity"));
+console.log(document.getElementById("price-displayed"));
+
+ChangeQuantity(
+  localStorage.getItem("UnitPrice"),
+  localStorage.getItem("Quantity")
+);
+
 function ShowExtraDetails() {
   var x = document.getElementById("extra-details");
   if (x.style.display === "none") {
@@ -50,7 +59,11 @@ function ChangeQuantityKeyUp(unitPrice) {
 
 function ChangeQuantity(unitPrice, quantity) {
   var price = document.getElementById("price-displayed");
+  console.log(price.innerHTML);
   price.innerHTML = "Pay: " + "$" + unitPrice * quantity;
+  localStorage.setItem("Quantity", quantity);
+  localStorage.setItem("Price", price);
+  localStorage.setItem("UnitPrice", unitPrice);
   //console.log(unitPrice);
   //console.log(quantity);
 }
