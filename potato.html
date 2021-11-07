@@ -94,6 +94,14 @@
           <h3 class="price">Price: $2000</h3>
           <h3 class="price">Pay: $2000</h3>
           <form action="#">
+             <input
+              type="number"
+              name="Add x to cart"
+              size="20"
+              id="quantity"
+              min="1"
+              onkeyup="ChangeQuantityKeyUp(100)"
+            />
             <select>
               <option value="super-axolotl">
                 Extra large potato
@@ -102,9 +110,12 @@
                 Normal potato
               </option>
             </select>
-            <input type="number" min="0" value="1" name="Add x to cart" size="20" />
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
           </form>
+           <div>
+            <button onclick="AddToQuantity(100)">Add</button>
+            <button onclick="SubtractFromQuantity(100)">Subtract</button>
+          </div>
         </div>
       </article>
 

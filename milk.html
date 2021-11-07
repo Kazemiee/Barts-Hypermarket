@@ -10,7 +10,7 @@
       content="Matthew Kazemie ID: 40190450 modified by Rodrigo Sanchez ID: 40090092"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Axolotl</title>
+    <title>Milk</title>
   </head>
   <body>
     <header class="top-header">
@@ -101,19 +101,30 @@
               yogurt or cheese.
             </p>
           </div>
-          <h3>Buy your own galon of mil today!</h3>
-          <h3 class="price">Price: $10000 99% off</h3>
-          <h3 class="price">Pay: $100</h3>
+          <h3>Buy your own galon of milk today!</h3>
+          <h3 class="price" >Price: $10000 99% off</h3>
+          <h3 class="price" >Pay: $<a id="priceDiscount">100</a></h3>
           <form action="#">
             <select>
               <option value="super-axolotl">3.25% milk!</option>
               <option value="normal-axolotl">Skim milk</option>
               <option value="normal-axolotl">1% milk</option>
             </select>
-            <input type="text" name="Add x to cart" size="20" />
-            <input class="add-to-cart" type="submit" value="Add x To Cart" />
+            <input placeholder="1" type="number" name="Add x to cart" size="20" id="amount"
+                    min="1" onchange="update(this.value)" />
+            <input class="add-to-cart" type="submit" value="Add x To Cart" onclick="AddToCart()" />
+            <script type="text/javascript">
+              function update(a){
+                amount = Number(a);
+                document.getElementById('priceDiscount').innerHTML = amount*100;
+
+                console.log(document.getElementById('priceDiscount').value, test, amount);
+              }
+            </script>
           </form>
+
         </div>
+
       </article>
 
        <aside class="aside-great-deals">
@@ -145,6 +156,7 @@
           </ul>
         </div>
       </aside>
+
     </main>
 
     <footer class="bottom-nav">
