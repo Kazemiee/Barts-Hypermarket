@@ -7,12 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Terryl Foryoung ID: 40127596" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script>
+      var page = "-potato";
+      function SelectFunctionAxolotl() {
+        if (localStorage.getItem("Selected" + page) == "super-axolotl") {
+          ChangePriceMultiplier(2);
+          ChangeQuantity(
+            localStorage.getItem("UnitPrice" + page),
+            localStorage.getItem("Quantity" + page)
+          );
+        } else {
+          ChangePriceMultiplier(1);
+          ChangeQuantity(
+            localStorage.getItem("UnitPrice" + page),
+            localStorage.getItem("Quantity" + page)
+          );
+        }
+      }
+    </script>
     <title>Potato</title>
   </head>
   <body>
     <header class="top-header">
       <div class="header-upper-half">
         <div class="name-slogan">
+          <span style="font-size: 7px">Terryl Foryoung ID: 40127596</span>
           <h1 class="shop-name">Bart's Hypermarket</h1>
           <p class="slogan">For the Earth Product Enthusiasts out there</p>
         </div>
@@ -42,6 +61,7 @@
                 <a href="dairy-aisle.html"> Dairy</a>
                 <a href="electronic-aisle.html">Electronics</a>
                 <a href="clothing-aisle.html">Clothing</a>
+                <a href="fruit-aisle.html">Fruit</a>
                 <a href="vegetable.html">Vegetables</a>
               </div>
             </div>
@@ -101,8 +121,12 @@
               id="quantity"
               min="1"
               onkeyup="ChangeQuantityKeyUp(200)"
+              onclick="ChangeQuantityKeyUp(200)"
             />
-            <select>
+            <select
+              id="select-type"
+              onchange="OnChangeSelected(), SelectFunctionAxolotl()"
+             >
               <option value="super-axolotl">
                 Extra large potato
               </option>
