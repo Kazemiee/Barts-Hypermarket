@@ -8,18 +8,19 @@
     <meta name="author" content="Matthew Kazemie ID: 40190450" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
+      var page = "-axolotl";
       function SelectFunctionAxolotl() {
-        if (localStorage.getItem("Selected") == "super-axolotl") {
+        if (localStorage.getItem("Selected" + page) == "super-axolotl") {
           ChangePriceMultiplier(2);
           ChangeQuantity(
-            localStorage.getItem("UnitPrice"),
-            localStorage.getItem("Quantity")
+            localStorage.getItem("UnitPrice" + page),
+            localStorage.getItem("Quantity" + page)
           );
         } else {
           ChangePriceMultiplier(1);
           ChangeQuantity(
-            localStorage.getItem("UnitPrice"),
-            localStorage.getItem("Quantity")
+            localStorage.getItem("UnitPrice" + page),
+            localStorage.getItem("Quantity" + page)
           );
         }
       }

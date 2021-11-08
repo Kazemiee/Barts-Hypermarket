@@ -3,18 +3,22 @@
 //console.log(document.getElementById("price-displayed"));
 
 ChangeQuantity(
-  localStorage.getItem("UnitPrice"),
-  localStorage.getItem("Quantity")
+  localStorage.getItem("UnitPrice" + page),
+  localStorage.getItem("Quantity" + page)
 );
-document.getElementById("quantity").value = localStorage.getItem("Quantity");
-document.getElementById("select-type").value = localStorage.getItem("Selected");
+document.getElementById("quantity").value = localStorage.getItem(
+  "Quantity" + page
+);
+document.getElementById("select-type").value = localStorage.getItem(
+  "Selected" + page
+);
 
 function ChangePriceMultiplier(newMultiplier) {
-  localStorage.setItem("PriceMultiplier", newMultiplier);
+  localStorage.setItem("PriceMultiplier" + page, newMultiplier);
 }
 function OnChangeSelected() {
   var selected = document.getElementById("select-type").value;
-  localStorage.setItem("Selected", selected);
+  localStorage.setItem("Selected" + page, selected);
 }
 
 function ShowExtraDetails() {
@@ -73,17 +77,17 @@ function ChangeQuantity(unitPrice, quantity) {
   price.innerHTML =
     "Pay: " +
     "$" +
-    unitPrice * quantity * localStorage.getItem("PriceMultiplier");
-  localStorage.setItem("Quantity", quantity);
-  localStorage.setItem("Price", price);
-  localStorage.setItem("UnitPrice", unitPrice);
+    unitPrice * quantity * localStorage.getItem("PriceMultiplier" + page);
+  localStorage.setItem("Quantity" + page, quantity);
+  localStorage.setItem("Price" + page, price);
+  localStorage.setItem("UnitPrice" + page, unitPrice);
   price.innerHTML =
     "Pay: " +
     "$" +
     (
       unitPrice *
       quantity *
-      localStorage.getItem("PriceMultiplier")
+      localStorage.getItem("PriceMultiplier" + page)
     ).toLocaleString();
   //console.log(unitPrice);
   //console.log(quantity);
