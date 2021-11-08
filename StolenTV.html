@@ -7,7 +7,7 @@
     <link href="img/Axlot.png" rel="icon" />
     <script type="text/javascript" src="product.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="Alexander  Zabski ID: 40044543" />
+    <meta name="author" content="Alexander Zabski ID: 40044543" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Axolot</title>
   </head>
@@ -79,7 +79,7 @@
       <article class="article-product">
         <h2>Stolen Television</h2>
         <div class="article-container">
-          <img src=img/TV.jpeg width = 40% alt = "Image of airpods">
+          <img src=img/TV.jpeg width = 40% alt = "Image  of airpods">
           <button onclick="ShowExtraDetails()">Show Extra Details</button>
           <!--style="display: none" needs to be there or else it will take 2 clicks to show extra details-->
           <div id="extra-details" style="display: none">
@@ -91,7 +91,23 @@
           </div>
           <h3>Buy your stolen TV today!</h3>
           <h3 class="price">Price: $200.99 </h3>
+          
+          <h3 class="price">
+            <div id="price-displayed">Pay: 200.99$</div>
+          </h3>
+          
           <form action="#">
+            
+             <input
+              type="number"
+              name="Add x to cart"
+              size="20"
+              id="quantity"
+              min="1"
+              onkeyup="ChangeQuantityKeyUp(200.99)"
+              onclick="ChangeQuantityKeyUp(200.99)"
+            />
+            
             <select>
               <option value="super-axolotl">
                 Stolen TV
@@ -101,6 +117,12 @@
             <input type="number" name="Add x to cart" size="20" />
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
           </form>
+          
+           <div>
+            <button onclick="AddToQuantity(200.99)">Add</button>
+            <button onclick="SubtractFromQuantity(200.99)">Subtract</button>
+          </div>
+          
         </div>
       </article>
 
