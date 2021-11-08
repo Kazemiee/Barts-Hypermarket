@@ -88,13 +88,36 @@
           </div>
           <h3>Buy your apple computer today!</h3>
           <h3 class="price">Price: $3,000.00</h3>
+          
+           <h3 class="price">
+            <div id="price-displayed">Pay: 3,000.00$</div>
+          </h3>
+          
           <form action="#">
+            
+            <input
+              type="number"
+              name="Add x to cart"
+              size="20"
+              id="quantity"
+              min="1"
+              onkeyup="ChangeQuantityKeyUp(3000)"
+              onclick="ChangeQuantityKeyUp(3000)"
+            />
+            
+            
             <select>
               <option value="super-axolotl">With Apple</option>
               <option value="normal-axolotl">Without Apple</option>
             </select>
             <input type="number" name="Add x to cart" size="20" />
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
+            
+              <div>
+            <button onclick="AddToQuantity(3000)">Add</button>
+            <button onclick="SubtractFromQuantity(3000)">Subtract</button>
+          </div>
+            
           </form>
         </div>
       </article>
@@ -107,7 +130,7 @@
               <p>
                 <img src=img/airpods.jpeg width = 40% alt = "Image of an
                 Axolotl">
-                <a href="axolotl.html">Airpods from Wish.com</a> 99% off!
+                <a href="axolotl.html">Airpods  from Wish.com</a> 99% off!
               </p>
             </li>
 
