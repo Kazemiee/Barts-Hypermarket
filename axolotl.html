@@ -11,6 +11,15 @@
       localStorage.setItem("UnitPrice", 100);
       localStorage.setItem("PriceMultiplier", 1);
       localStorage.setItem("normal-axolotl", 1);
+      function SelectFunctionAxolotl() {
+        if (localStorage.getItem("Selected") == "super-axolotl") {
+          ChangePriceMultiplier(2);
+          ChangeQuantity(
+            localStorage.getItem("UnitPrice"),
+            localStorage.getItem("Quantity")
+          );
+        }
+      }
     </script>
     <title>Axolotl</title>
   </head>
@@ -120,7 +129,11 @@
               onkeyup="ChangeQuantityKeyUp(100)"
               onclick="ChangeQuantityKeyUp(100)"
             />
-            <select id="select-type" onchange="OnChangeSelected()">
+
+            <select
+              id="select-type"
+              onchange="OnChangeSelected(), SelectFunctionAxolotl()"
+            >
               <option value="normal-axolotl">Normal Axolotl</option>
               <option value="super-axolotl">
                 Genetically Modified Super-Axolotl
