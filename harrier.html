@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
       var page = "-harrier";
+      localStorage.setItem("PriceMultiplier" + page, 1);
     </script>
     <title>Axolotl</title>
   </head>
@@ -110,7 +111,7 @@
               onkeyup="ChangeQuantityKeyUp(20)"
               onclick="ChangeQuantityKeyUp(20)"
             />
-            <select id="select-type">
+            <select id="select-type" onchange="OnChangeSelected()">
               </option>
               <option value="combat-harrier">Combat Harrier</option>
             </select>

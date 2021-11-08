@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
       var page = "-meat-computer";
+      localStorage.setItem("PriceMultiplier" + page, 1);
     </script>
     <title>MEAT Computer X</title>
   </head>
@@ -176,7 +177,7 @@
               onkeyup="ChangeQuantityKeyUp(1000)"
               onclick="ChangeQuantityKeyUp(1000)"
             />
-            <select id="select-type">
+            <select id="select-type" onchange="OnChangeSelected()">
               </option>
               <option value="normal">Normal MEAT Model X</option>
             </select>

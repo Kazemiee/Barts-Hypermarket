@@ -14,10 +14,12 @@ document.getElementById("select-type").value = localStorage.getItem(
 );
 
 function ChangePriceMultiplier(newMultiplier) {
+  console.log("Multiplier: " + newMultiplier);
   localStorage.setItem("PriceMultiplier" + page, newMultiplier);
 }
 function OnChangeSelected() {
   var selected = document.getElementById("select-type").value;
+  console.log("Selected: " + selected);
   localStorage.setItem("Selected" + page, selected);
 }
 
@@ -49,6 +51,7 @@ function AddToQuantity(unitPrice) {
   var qPlus = document.getElementById("quantity").value;
   qPlus++;
   document.getElementById("quantity").value = qPlus;
+  console.log("Q Plus: " + qPlus);
   ChangeQuantity(unitPrice, qPlus);
   //console.log(qPlus);
 }
@@ -57,6 +60,7 @@ function SubtractFromQuantity(unitPrice) {
   if (qMinus > 1) {
     qMinus--;
     document.getElementById("quantity").value = qMinus;
+    console.log("Q Minus: " + qMinus);
     ChangeQuantity(unitPrice, qMinus);
   }
   //console.log(qMinus);
@@ -73,11 +77,14 @@ function ChangeQuantityKeyUp(unitPrice) {
 
 function ChangeQuantity(unitPrice, quantity) {
   var price = document.getElementById("price-displayed");
-  console.log(price.innerHTML);
+  console.log("UnitPrice: " + unitPrice);
+  console.log("Quantity: " + quantity);
+  console.log("Multiplier: " + localStorage.getItem("PriceMultiplier" + page));
   price.innerHTML =
     "Pay: " +
     "$" +
     unitPrice * quantity * localStorage.getItem("PriceMultiplier" + page);
+  console.log("NewPrice: " + price.innerHTML);
   localStorage.setItem("Quantity" + page, quantity);
   localStorage.setItem("Price" + page, price);
   localStorage.setItem("UnitPrice" + page, unitPrice);
