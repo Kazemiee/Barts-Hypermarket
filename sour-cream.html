@@ -7,7 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Rodrigo Sanchez ID: 40090092" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Axolotl</title>
+    <script>
+      localStorage.setItem("UnitPrice", 1000);
+    </script>
+    <title>Sour Cream</title>
   </head>
   <body>
     <header class="top-header">
@@ -96,26 +99,24 @@
           </div>
           <h3>Buy some Sour cream</h3>
           <h3 class="price">Price: 10000 10% off</h3>
-          <h3 class="price">Pay: $<a id="priceDiscount">1000</a></h3>
+          <h3 class="price">
+            <div id="price-displayed">Pay: $1000</div>
+          </h3>
           <form action="#">
+            <input type="number" name="Add x to cart" size="20" id="quantity" min="1"
+                    onkeyup="ChangeQuantityKeyUp(1000)" onclick="ChangeQuantityKeyUp(1000)">
             <select>
               <option value="super-axolotl">
                 Super sour cream
               </option>
               <option value="normal-axolotl">Regular sour cream</option>
             </select>
-            <input placeholder="1" type="number" name="Add x to cart" size="20" id="amount"
-                    min="1" onchange="update(this.value)" />
-            <input class="add-to-cart" type="submit" value="Add x To Cart" onclick="AddToCart()" />
-            <script type="text/javascript">
-              function update(a){
-                amount = Number(a);
-                document.getElementById('priceDiscount').innerHTML = amount*1000;
-
-                console.log(document.getElementById('priceDiscount').value, test, amount);
-              }
-            </script>
+            <input class="add-to-cart" type="submit" value="Add x To Cart"/>
           </form>
+          <div>
+            <button onclick="AddToQuantity(1000)">Add</button>
+            <button onclick="SubtractFromQuantity(1000)">Subtract</button>
+          </div>
         </div>
       </article>
 
