@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <link href="../style.css" rel="stylesheet" />
-    <script type="text/javascript" src="../product.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Boisghur Shishani ID: 40170574" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      localStorage.setItem("UnitPrice",3000);
+    </script>
     <title>T-shirt</title>
   </head>
   <body>
@@ -123,6 +125,7 @@
             id="quantity"
             min="1"
             onkeyup="ChangeQuantityKeyUp(3000)"
+            onclick="ChangeQuantityKeyUp(3000)"
             />
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
           </form>
@@ -179,4 +182,5 @@
       <p class="copyright">Copyright &copy; Today by Me</p>
     </footer>
   </body>
+  <script type="text/javascript" src="../product.js"></script>
 </html>
