@@ -10,8 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dragonfruit</title>
     <script>
-      var page="-dragonfruit";
-      localStorage.setItem("UnitPrice", 60);
+	var page = "-dragonfruit";
+	ChangeQuantity(
+            localStorage.getItem("UnitPrice" + page),
+            localStorage.getItem("Quantity" + page)
+          );
     </script>
   </head>
   <body>
