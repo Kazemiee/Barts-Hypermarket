@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <link href="../style.css" rel="stylesheet" />
-    <script type="text/javascript" src="../product.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Boisghur Shishani ID: 40170574" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      localStorage.setItem("UnitPrice", 500);
+    </script>
     <title>Shoes</title>
   </head>
   <body>
@@ -100,7 +102,7 @@
           </div>
           <h3>Buy your own Shoes today!</h3>
           <h3 class="price">Price: $500</h3>
-          <h3 class="price">Pay: $500</h3>
+          <h3 class="price"><div id="price-displayed">Pay: $500</div></h3>
           <form action="#">
             <label for="size">Size</label>
             <select name="size">
@@ -110,9 +112,21 @@
               <option value="10">10</option>
               <option value="11">11</option>
             </select>
-            <input type="number" min="0" value="1" name="Add x to cart" size="20" />
+            <input 
+            type="number"
+            name="Add x to cart"
+            size="20"
+            id="quantity"
+            min="1"
+            onkeyup="ChangeQuantityKeyUp(500)" 
+            onclick="ChangeQuantityKeyUp(500)" 
+            />
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
           </form>
+          <div>
+            <button onclick="AddToQuantity(500)">Add</button>
+            <button onclick="SubtractFromQuantity(500)">Subtract</button>
+          </div>
         </div>
       </article>
 
@@ -155,4 +169,5 @@
       <p class="copyright">Copyright &copy; Today by Me</p>
     </footer>
   </body>
+  <script type="text/javascript" src="../product.js"></script>
 </html>

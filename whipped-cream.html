@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <link href="style.css" rel="stylesheet" />
-    <script type="text/javascript" src="product.js"></script>
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Rodrigo Sanchez ID: 40090092" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Axolotl</title>
+    <script>
+      localStorage.setItem("UnitPrice", 32000);
+    </script>
+    <title>Whipped cream</title>
   </head>
   <body>
     <header class="top-header">
@@ -95,26 +98,25 @@
           </div>
           <h3>Buy some whipped cream</h3>
           <h3 class="price">Price: $320000 10% off</h3>
-          <h3 class="price">Pay: $<a id="priceDiscount">32000</a></h3>
+          <h3 class="price">
+            <div id="price-displayed">Pay: $32000</div>
+          </h3>
           <form action="#">
+            <input type="number" name="Add x to cart" size="20" id="quantity" min="1"
+                    onkeyup="ChangeQuantityKeyUp(100)" onclick="ChangeQuantityKeyUp(100)">
             <select>
               <option value="super-axolotl">
                 Super whipped cream
               </option>
               <option value="normal-axolotl">Regular whipped cream</option>
             </select>
-            <input placeholder="1" type="number" name="Add x to cart" size="20" id="amount"
-                    min="1" onchange="update(this.value)" />
-            <input class="add-to-cart" type="submit" value="Add x To Cart" />
-            <script type="text/javascript">
-              function update(a){
-                amount = Number(a);
-                document.getElementById('priceDiscount').innerHTML = amount*32000;
 
-                console.log(document.getElementById('priceDiscount').value, test, amount);
-              }
-            </script>
+            <input class="add-to-cart" type="submit" value="Add x To Cart"/>
           </form>
+          <div>
+            <button onclick="AddToQuantity(32000)">Add</button>
+            <button onclick="SubtractFromQuantity(32000)">Subtract</button>
+          </div>
         </div>
       </article>
 
@@ -152,6 +154,7 @@
     </main>
 
     <footer class="bottom-nav">
+      <script type="text/javascript" src="product.js" ></script>
       <nav>
         <a href="#">About Us </a>
         <a href="#">Store Locations </a>

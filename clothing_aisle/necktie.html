@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <link href="../style.css" rel="stylesheet" />
-    <script type="text/javascript" src="../product.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Boisghur Shishani ID: 40170574" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      localStorage.setItem("UnitPrice", 150);
+    </script>
     <title>necktie</title>
   </head>
   <body>
@@ -102,18 +104,25 @@
           </div>
           <h3>Buy your own necktie today!</h3>
           <h3 class="price">Price: $150</h3>
-          <h3 class="price">Pay: $150</h3>
+          <h3 class="price"><div id="price-displayed">Pay: $150
+          </div></h3>
           <h3>One Size Fits All!</h3>
           <form action="#">
             <input
-              type="number"
-              min="0"
-              value="1"
-              name="Add x to cart"
-              size="20"
+            type="number"
+            name="Add x to cart"
+            size="20"
+            id="quantity"
+            min="1"
+            onkeyup="ChangeQuantityKeyUp(150)"
+            onclick="ChangeQuantityKeyUp(150)"
             />
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
           </form>
+          <div>
+            <button onclick="AddToQuantity(150)">Add</button>
+            <button onclick="SubtractFromQuantity(150)">Subtract</button>
+          </div>
         </div>
       </article>
 
@@ -156,4 +165,5 @@
       <p class="copyright">Copyright &copy; Today by Me</p>
     </footer>
   </body>
+  <script type="text/javascript" src="../product.js"></script>
 </html>
