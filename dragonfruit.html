@@ -11,10 +11,12 @@
     <title>Dragonfruit</title>
     <script>
 	var page = "-dragonfruit";
-	ChangeQuantity(
+	function SelectFunctionAxolotl() {
+	 ChangeQuantity(
             localStorage.getItem("UnitPrice" + page),
             localStorage.getItem("Quantity" + page)
-          );
+        );
+	}
     </script>
   </head>
   <body>
@@ -157,6 +159,9 @@
     </main>
     <footer class="bottom-nav">
 	<script src="product.js" charset="utf-8"></script>
+	<script>
+	  SelectFunctionAxolotl();
+	</script>
 	<nav>
         <a href="#">About Us </a>
         <a href="#">Store Locations </a>
