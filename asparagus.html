@@ -7,6 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Terryl Foryoung ID: 40127596" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+	      var page = "-asparagus";
+	      ChangePriceMultiplier(1);
+	      ChangeQuantity(
+            localStorage.getItem("UnitPrice" + page),
+            localStorage.getItem("Quantity" + page)
+        );
+    </script>
     <title>Asparagus</title>
   </head>
   <body>
@@ -88,26 +96,19 @@
             </p>
           </div>
           <h3>Buy your own asparagus today!</h3>
-          <h3 class="price">Price: $2000</h3>
-          <h3 class="price">Pay: $2000</h3>
+          <h3 class="price">Price: $100</h3>
+          <h3 class="price">Pay: $100</h3>
           <form action="#">
-             <input
-              type="number"
-              name="Add x to cart"
-              size="20"
-              id="quantity"
-              min="1"
-              onkeyup="ChangeQuantityKeyUp(100)"
-            />
+            <input type="number" name="Add x to cart" size="20" id="quantity" min="1"
+                    onkeyup="ChangeQuantityKeyUp(100)" onclick="ChangeQuantityKeyUp(100)">
             <select>
               <option value="super-axolotl">
-                Extra large asparagus
+                Super whipped cream
               </option>
-              <option value="normal-axolotl">
-                  Normal asparagus
-                </option>
+              <option value="normal-axolotl">Regular whipped cream</option>
             </select>
-            <input class="add-to-cart" type="submit" value="Add x To Cart" />
+
+            <input class="add-to-cart" type="submit" value="Add x To Cart"/>
           </form>
           <div>
             <button onclick="AddToQuantity(100)">Add</button>
@@ -157,6 +158,7 @@
     </main>
 
     <footer class="bottom-nav">
+	<script type="text/javascript" src="product.js" ></script>
       <nav>
         <a href="#">About Us </a>
         <a href="#">Store Locations </a>
