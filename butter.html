@@ -7,7 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Rodrigo Sanchez ID: 40090092" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Axolotl</title>
+    <script>
+      localStorage.setItem("UnitPrice", 5000);
+    </script>
+    <title>Butter</title>
   </head>
   <body>
     <header class="top-header">
@@ -95,26 +98,24 @@
           </div>
           <h3>Buy some Butter</h3>
           <h3 class="price">Price: 50000 10% off</h3>
-          <h3 class="price">Pay: $<a id="priceDiscount">5000</a></h3>
+          <h3 class="price">
+            <div id="price-displayed">Pay: $5000</div>
+          </h3>
           <form action="#">
+            <input type="number" name="Add x to cart" size="20" id="quantity" min="1"
+                    onkeyup="ChangeQuantityKeyUp(5000)" onclick="ChangeQuantityKeyUp(5000)">
             <select>
               <option value="super-axolotl">
                 Super Butter
               </option>
               <option value="normal-axolotl">Regular Butter</option>
             </select>
-            <input placeholder="1" type="number" name="Add x to cart" size="20" id="amount"
-                    min="1" onchange="update(this.value)" />
-            <input class="add-to-cart" type="submit" value="Add x To Cart" onclick="AddToCart()" />
-            <script type="text/javascript">
-              function update(a){
-                amount = Number(a);
-                document.getElementById('priceDiscount').innerHTML = amount*5000;
-
-                console.log(document.getElementById('priceDiscount').value, test, amount);
-              }
-            </script>
+            <input class="add-to-cart" type="submit" value="Add x To Cart"/>
           </form>
+          <div>
+            <button onclick="AddToQuantity(5000)">Add</button>
+            <button onclick="SubtractFromQuantity(5000)">Subtract</button>
+          </div>
         </div>
       </article>
 
@@ -152,6 +153,7 @@
     </main>
 
     <footer class="bottom-nav">
+      <script src="product.js" charset="utf-8"></script>
       <nav>
         <a href="#">About Us </a>
         <a href="#">Store Locations </a>
