@@ -9,6 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dragonfruit</title>
+    <script>
+      localStorage.setItem("UnitPrice", 60);
+    </script>
   </head>
   <body>
     <header class="top-header">
@@ -95,11 +98,17 @@
 			</div>
 			<h3>Buy your own Dragonfruit today!</h3>
 			<h3 class="price">Price: $6000 99% off</h3>
-			<h3 class="price">Pay: $60</h3>
+			<h3 class="price">
+            			<div id="price-displayed">Pay: $60</div>
+        		</h3>
 			<form action="#">
-				<input type="number" name="Add x to cart"/>
+				<input type="number" name="Add x to cart" size="20" id="quantity" min="1" onkeyup="ChangeQuantityKeyUp(60)" onclick="ChangeQuantityKeyUp(60)"/>
 				<input class="add-to-cart" type="submit" value="Add x To Cart" />
 			</form>
+			<div>
+				<button onClick="AddToQuantity(60)">Add</button>
+				<button onClick="SubtractFromQuantity(60)">Subtract</button>
+			</div>
         </div>
       </article>
 
@@ -143,7 +152,8 @@
       </aside>
     </main>
     <footer class="bottom-nav">
-      <nav>
+	<script src="product.js" charset="utf-8"></script>
+	<nav>
         <a href="#">About Us </a>
         <a href="#">Store Locations </a>
         <a href="#">Careers </a>
