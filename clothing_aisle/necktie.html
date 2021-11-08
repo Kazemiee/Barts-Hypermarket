@@ -7,8 +7,13 @@
     <meta name="author" content="Boisghur Shishani ID: 40170574" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
-      localStorage.setItem("UnitPrice", 150);
-    </script>
+      var page = "-dragonfruit";
+      ChangePriceMultiplier(1);
+      ChangeQuantity(
+                localStorage.getItem("UnitPrice" + page),
+                localStorage.getItem("Quantity" + page)
+            );
+        </script>
     <title>necktie</title>
   </head>
   <body>
@@ -114,6 +119,7 @@
             size="20"
             id="quantity"
             min="1"
+            value="1"
             onkeyup="ChangeQuantityKeyUp(150)"
             onclick="ChangeQuantityKeyUp(150)"
             />
