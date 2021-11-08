@@ -109,7 +109,9 @@
           </div>
           <h3>Buy your own Jeans today!</h3>
           <h3 class="price">Price: $1000</h3>
-          <h3 class="price">Pay: $1000</h3>
+          <h3 class="price"></h3>
+          <div id="price-displayed">Pay: $1000</div>
+          </h3>
           <form action="#">
             <label for="size">Size</label>
             <select name="size">
@@ -119,13 +121,18 @@
             </select>
             <input
               type="number"
-              min="0"
-              value="1"
               name="Add x to cart"
               size="20"
+              id="quantity"
+              min="1"
+              onkeyup="ChangeQuantityKeyUp(1000)"
             />
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
           </form>
+          <div>
+            <button onclick="AddToQuantity(1000)">Add</button>
+            <button onclick="SubtractFromQuantity(1000)">Subtract</button>
+          </div>
         </div>
       </article>
 
