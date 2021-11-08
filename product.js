@@ -6,6 +6,7 @@ ChangeQuantity(
   localStorage.getItem("UnitPrice"),
   localStorage.getItem("Quantity")
 );
+document.getElementById("quantity").value = localStorage.getItem("Quantity");
 
 function ShowExtraDetails() {
   var x = document.getElementById("extra-details");
