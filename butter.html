@@ -8,7 +8,12 @@
     <meta name="author" content="Rodrigo Sanchez ID: 40090092" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
-      localStorage.setItem("UnitPrice", 5000);
+	var page = "-butter";
+	ChangePriceMultiplier(1);
+	ChangeQuantity(
+            localStorage.getItem("UnitPrice" + page),
+            localStorage.getItem("Quantity" + page)
+        );
     </script>
     <title>Butter</title>
   </head>
