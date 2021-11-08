@@ -90,7 +90,23 @@
           </div>
           <h3>Buy your data center today!</h3>
           <h3 class="price">Price: $350,000,000.00</h3>
+          
+           <h3 class="price">
+            <div id="price-displayed">Pay: 350,000,000.00$</div>
+          </h3>
+          
           <form action="#">
+            
+            <input
+              type="number"
+              name="Add x to cart"
+              size="20"
+              id="quantity"
+              min="1"
+              onkeyup="ChangeQuantityKeyUp(350000000.00)"
+              onclick="ChangeQuantityKeyUp(350000000.00)"
+            />
+            
             <select>
               <option value="super-axolotl">Blue Data Center</option>
               <option value="normal-axolotl">Red Data Center</option>
@@ -98,6 +114,12 @@
             <input type="number" name="Add x to cart" size="20" />
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
           </form>
+          
+          <div>
+            <button onclick="AddToQuantity(350000000.00)">Add</button>
+            <button onclick="SubtractFromQuantity(350000000.00)">Subtract</button>
+          </div>
+          
         </div>
       </article>
 
