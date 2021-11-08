@@ -7,6 +7,15 @@ ChangeQuantity(
   localStorage.getItem("Quantity")
 );
 document.getElementById("quantity").value = localStorage.getItem("Quantity");
+document.getElementById("select-type").value = localStorage.getItem("Selected");
+
+function ChangePriceMultiplier(newMultiplier) {
+  localStorage.setItem("PriceMultiplier", newMultiplier);
+}
+function OnChangeSelected() {
+  var selected = document.getElementById("select-type").value;
+  localStorage.setItem("Selected", selected);
+}
 
 function ShowExtraDetails() {
   var x = document.getElementById("extra-details");
@@ -61,11 +70,21 @@ function ChangeQuantityKeyUp(unitPrice) {
 function ChangeQuantity(unitPrice, quantity) {
   var price = document.getElementById("price-displayed");
   console.log(price.innerHTML);
-  price.innerHTML = "Pay: " + "$" + unitPrice * quantity;
+  price.innerHTML =
+    "Pay: " +
+    "$" +
+    unitPrice * quantity * localStorage.getItem("PriceMultiplier");
   localStorage.setItem("Quantity", quantity);
   localStorage.setItem("Price", price);
   localStorage.setItem("UnitPrice", unitPrice);
-  price.innerHTML = "Pay: " + "$" + (unitPrice * quantity).toLocaleString();
+  price.innerHTML =
+    "Pay: " +
+    "$" +
+    (
+      unitPrice *
+      quantity *
+      localStorage.getItem("PriceMultiplier")
+    ).toLocaleString();
   //console.log(unitPrice);
   //console.log(quantity);
 }

@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
       localStorage.setItem("UnitPrice", 100);
+      localStorage.setItem("PriceMultiplier", 1);
+      localStorage.setItem("normal-axolotl", 1);
     </script>
     <title>Axolotl</title>
   </head>
@@ -118,11 +120,11 @@
               onkeyup="ChangeQuantityKeyUp(100)"
               onclick="ChangeQuantityKeyUp(100)"
             />
-            <select>
+            <select id="select-type" onchange="OnChangeSelected()">
+              <option value="normal-axolotl">Normal Axolotl</option>
               <option value="super-axolotl">
                 Genetically Modified Super-Axolotl
               </option>
-              <option value="normal-axolotl">Normal Axolotl</option>
             </select>
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
           </form>
