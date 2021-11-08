@@ -4,17 +4,20 @@
     <meta charset="UTF-8" />
     <link href="style.css" rel="stylesheet" />
     <link href="img/Axlot.png" rel="icon" />
-    <script type="text/javascript" src="product.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Alexander Zabski ID: 40044543" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      var page = "-video-game";
+      localStorage.setItem("PriceMultiplier" + page, 1);
+    </script>
     <title>Axolot</title>
   </head>
   <body>
     <header class="top-header">
       <div class="header-upper-half">
         <div class="name-slogan">
-          <h1 class="shop-name">Bart's  Hypermarket</h1>
+          <h1 class="shop-name">Bart's Hypermarket</h1>
           <p class="slogan">For the Earth Product Enthusiasts out there</p>
         </div>
         <div class="go-to-cart">
@@ -44,7 +47,7 @@
                 <a href="electronic-aisle.html">Electronics</a>
                 <a href="clothing-aisle.html">Clothing</a>
                 <a href="fruit-aisle.html">Fruit</a>
-                 <a href="vegetable-aisle.html">Vegetable</a>
+                <a href="vegetable-aisle.html">Vegetable</a>
               </div>
             </div>
           </section>
@@ -76,28 +79,30 @@
 
     <main class="page-content">
       <article class="article-product">
-        <h2>Disappointed Father: THe video game</h2>    <!-- -->
+        <h2>Disappointed Father: THe video game</h2>
+        <!-- -->
         <div class="article-container">
-          <img src=img/disappointedfathersimulator.jpeg width = 40% alt = "Image of game">
+          <img src=img/disappointedfathersimulator.jpeg width = 40% alt = "Image
+          of game">
           <button onclick="ShowExtraDetails()">Show Extra Details</button>
           <!--style="display: none" needs to be there or else it will take 2 clicks to show extra details-->
           <div id="extra-details" style="display: none">
-            <p>Disappointed Father Simulator has been voted the best video game ever.</p>
-            <br />
             <p>
-              Relive some of your life experience in a nice new video game.
+              Disappointed Father Simulator has been voted the best video game
+              ever.
             </p>
+            <br />
+            <p>Relive some of your life experience in a nice new video game.</p>
           </div>
           <h3>Buy your copy of Disappointed Father Simulator today!</h3>
-          <h3 class="price">Price: $79.99 </h3>
-          
-           <h3 class="price">
+          <h3 class="price">Price: $79.99</h3>
+
+          <h3 class="price">
             <div id="price-displayed">Pay: 79.99$</div>
           </h3>
-          
+
           <form action="#">
-            
-             <input
+            <input
               type="number"
               name="Add x to cart"
               size="20"
@@ -106,22 +111,19 @@
               onkeyup="ChangeQuantityKeyUp(79.99)"
               onclick="ChangeQuantityKeyUp(79.99)"
             />
-            
-            <select>
-              <option value="super-axolotl">
-                New
-              </option>
+
+            <select id="select-type" onchange="OnChangeSelected()">
+              <option value="super-axolotl">New</option>
               <option value="normal-axolotl">Used</option>
             </select>
             <input type="number" name="Add x to cart" size="20" />
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
           </form>
-          
-            <div>
+
+          <div>
             <button onclick="AddToQuantity(79.99)">Add</button>
             <button onclick="SubtractFromQuantity(79.99)">Subtract</button>
           </div>
-          
         </div>
       </article>
 
@@ -131,7 +133,8 @@
           <ul class="new-products-list">
             <li>
               <p>
-                <img src=img/airpods.jpeg width = 40% alt = "Image of an Axolotl">
+                <img src=img/airpods.jpeg width = 40% alt = "Image of an
+                Axolotl">
                 <a href="axolotl.html">Airpods from Wish.com</a> 99% off!
               </p>
             </li>
@@ -177,4 +180,5 @@
       <p class="copyright">Copyright &copy; Today by Me</p>
     </footer>
   </body>
+  <script type="text/javascript" src="product.js"></script>
 </html>
