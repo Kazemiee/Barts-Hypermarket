@@ -15,7 +15,7 @@
 
     <link rel="icon" href="img/Axlot.png" />
   </head>
-  <body onload="amountCounter()" onchange="amountCounter()">
+  <body onload="start()" onchange="start()">
       <script type="text/javascript">
         let qst = 0.07;
         let gst = 0.08;
@@ -96,7 +96,7 @@
                 <h3 class="subtitle">1L</h3>
               </div>
               <div class="counter">
-              <input class="price" placeholder="1" type="number" id="orange" name="orange"
+              <input class="price" placeholder="1" type="number" id="orange" name="orange" value="1"
                         onchange="priceOrange(this.value)" onblur="update()" style="width: 60px; height:30px"  >
               </div>
               <div class="prices">
@@ -122,7 +122,7 @@
                 <h3 class="subtitle">1L</h3>
               </div>
               <div class="counter">
-                <input class="price" placeholder="1" type="number" id="grape" name="grape" onchange="priceGrape(this.value)"
+                <input class="price" placeholder="1" type="number" id="grape" name="grape" value="1" onchange="priceGrape(this.value)"
                   style="width: 60px; height:30px" onblur="update()" >
               </div>
               <div class="prices">
@@ -147,7 +147,7 @@
               </div>
 
               <div class="counter">
-                <input class="price" placeholder="1" type="number" id="apple" name="apple" onchange="priceApple(this.value)"
+                <input class="price" placeholder="1" type="number" id="apple" name="apple" value="1" onchange="priceApple(this.value)"
                   style="width: 60px; height:30px" onblur="update()">
               </div>
               <div class="prices">
@@ -172,7 +172,7 @@
                 <h3 class="subtitle">100g</h3>
               </div>
               <div class="counter">
-                <input class="price" placeholder="1" type="number" id="banana" name="banana" onchange="priceBanana(this.value)"
+                <input class="price" placeholder="1" type="number" id="banana" name="banana" value="1" onchange="priceBanana(this.value)"
                   style="width: 60px; height:30px" onblur="update()" >
               </div>
               <div class="prices">
@@ -198,7 +198,7 @@
               </div>
 
               <div class="counter">
-                <input class="price" placeholder="1" type="number" id="lettuce" name="lettuce" onchange="priceLettuce(this.value)"
+                <input class="price" placeholder="1" type="number" id="lettuce" name="lettuce" value="1" onchange="priceLettuce(this.value)"
                   style="width: 60px; height:30px" onblur="update()" >
               </div>
               <div class="prices">
@@ -224,7 +224,7 @@
               </div>
 
               <div class="counter">
-                <input class="price" placeholder="1" type="number" id="axolotl" name="axolotl"
+                <input class="price" placeholder="1" type="number" id="axolotl" name="axolotl" value="1"
                 onchange="priceAxolotl(this.value)"
                   style="width: 60px; height:30px" onblur="update()" >
               </div>
