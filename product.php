@@ -1,5 +1,5 @@
 <?php
-$xml=simplexml_load_file("../product-xml/products.xml") or die("Something went wrong");
+$xml=simplexml_load_file("product-xml/products.xml") or die("Something went wrong");
 $name = $xml->products[0]->product->name;
 $image = $xml->products[0]->product->image;
 $importantDetails = $xml->products[0]->product->important_details;
@@ -12,8 +12,8 @@ $adjPrice = $xml->products[0]->product->adjusted_price;
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <link href="../style.css" rel="stylesheet" />
-    <link href="../img/Axlot.png" rel="icon" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="img/Axlot.png" rel="icon" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Matthew Kazemie ID: 40190450" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,7 +45,7 @@ $adjPrice = $xml->products[0]->product->adjusted_price;
     </title>
   </head>
 <body>
-<?php include "header.php"?>
+<?php include "php-templates/header.php"?>
 <main class="page-content">
 <article class="article-product">
         <h2>
@@ -105,9 +105,9 @@ $adjPrice = $xml->products[0]->product->adjusted_price;
         </div>
       </article>
 </main>
-<?php include "footer.php"?>
+<?php include "php-templates/footer.php"?>
 </body>
-<script type="text/javascript" src="../product.js"></script>
+<script type="text/javascript" src="product.js"></script>
   <script>
     InitialFunction();
   </script>
