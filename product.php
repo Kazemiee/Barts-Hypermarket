@@ -6,6 +6,7 @@ $importantDetails = $xml->products[0]->product->important_details;
 $extraDetails = $xml->products[0]->product->extra_details;
 $price = $xml->products[0]->product->price;
 $adjPrice = $xml->products[0]->product->adjusted_price;
+print_r($xml);
 ?>
 
 <!DOCTYPE html>
@@ -105,7 +106,7 @@ $adjPrice = $xml->products[0]->product->adjusted_price;
         </div>
     </article>
   </main>
-    <?php include "php-templates/footer.php"?>
+  <?php include "php-templates/footer.php"?>
 </body>
 <script type="text/javascript" src="product.js"></script>
   <script>
