@@ -107,10 +107,10 @@
           </div>
       </article>
     </main>
-    <?php include "php-templates/footer.php"?>
+    <?php //include "php-templates/footer.php"
+    include "php-templates/header.php"
+    ?>
     <!-- <script type="text/javascript" src="product.js"></script> -->
-    <script>
-    InitialFunction();
-    </script>
+    <script>InitialFunction();</script>
   </body>
 </html>
