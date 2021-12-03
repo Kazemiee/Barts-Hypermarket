@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
       <?php
+      error_reporting(0);
       $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wrong");
-      // $name = (string)$xml->products->product->name;
-      // $image = (string)$xml->products->product->image;
-      // $importantDetails = $xml->products->product->important_details;
-      // $extraDetails = $xml->products->product->extra_details;
-      // $price = (string)$xml->products->product->price;
-      // $adjPrice = (int)$xml->products->product->adjusted_price;
+      $name = (string)$xml[0]->products[0]->product[0]->name;
+      $image = (string)$xml[0]->products[0]->product[0]->image;
+      $importantDetails = $xml[0]->products[0]->product[0]->important_details;
+      $extraDetails = $xml[0]->products[0]->product[0]->extra_details;
+      $price = (string)$xml[0]->products[0]->product[0]->price;
+      $adjPrice = (int)$xml[0]->products[0]->product[0]->adjusted_price;
       // print_r($xml);
       ?>
     <meta charset="UTF-8" />
