@@ -45,9 +45,9 @@ $adjPrice = $xml->products[0]->product->adjusted_price;
     </title>
   </head>
 <body>
-<?php include "php-templates/header.php"?>
-<main class="page-content">
-<article class="article-product">
+  <?php include "php-templates/header.php"?>
+  <main class="page-content">
+    <article class="article-product">
         <h2>
         <?php
         echo $name;
@@ -103,9 +103,9 @@ $adjPrice = $xml->products[0]->product->adjusted_price;
             ?>
           </div>
         </div>
-      </article>
-</main>
-<?php include "php-templates/footer.php"?>
+    </article>
+  </main>
+    <?php include "php-templates/footer.php"?>
 </body>
 <script type="text/javascript" src="product.js"></script>
   <script>
