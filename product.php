@@ -51,12 +51,12 @@
       <?php
       error_reporting(0);
       $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wrong");
-      echo $name = (string)$xml[0]->products[0]->product[0]->name;
-      echo $image = (string)$xml[0]->products[0]->product[0]->image;
-      echo $importantDetails = $xml[0]->products[0]->product[0]->important_details;
-      echo$extraDetails = $xml[0]->products[0]->product[0]->extra_details;
-      echo $price = (string)$xml[0]->products[0]->product[0]->price;
-      echo $adjPrice = (int)$xml[0]->products[0]->product[0]->adjusted_price;
+      echo $name = $xml[0]->product[0]->name;
+      echo $image = $xml[0]->product[0]->image;
+      echo $importantDetails = $xml[0]->product[0]->important_details;
+      echo$extraDetails = $xml[0]->product[0]->extra_details;
+      echo $price = $xml[0]->product[0]->price;
+      echo $adjPrice = (int)$xml[0]->product[0]->adjusted_price;
       // print_r($xml);
       ?>
     <article class="article-product">
