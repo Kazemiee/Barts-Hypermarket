@@ -40,6 +40,6 @@
       </type>
     </types>
     <price>Price: $10000 99% off</price>
-    <adjusted-price>100</adjusted-price>
+    <adjusted_price>100</adjusted_price>
   </product>
 </products>

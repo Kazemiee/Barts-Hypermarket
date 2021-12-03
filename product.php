@@ -87,11 +87,11 @@
               min=\"1\"
               onkeyup=\"ChangeQuantityKeyUp(".$adjPrice.")\"
               onclick=\"ChangeQuantityKeyUp(".$adjPrice.")\"
-            />";
+              />";
               ?>
               <select id="select-type" onchange="OnChangeSelected()">
                 <?php
-                foreach($xml->products->product->types->children() as $types) {
+                foreach($xml->product[0]->types[0]->children() as $types) {
                   echo "<option value=\"".$types->type[0]->typeID."\">".$types->type[0]->tname."</option>";
                 }
                 ?>
