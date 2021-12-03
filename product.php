@@ -2,14 +2,15 @@
 <html lang="en">
   <head>
       <?php
+      $id = (int)$_GET["id"];
       error_reporting(0);
       $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wrong");
-      $name = $xml[0]->product[0]->name;
-      $image = $xml[0]->product[0]->image;
-      $importantDetails = $xml[0]->product[0]->important_details;
-      $extraDetails = $xml[0]->product[0]->extra_details;
-      $price = $xml[0]->product[0]->price;
-      $adjPrice = $xml[0]->product[0]->adjusted_price;
+      $name = $xml[0]->product[$id]->name;
+      $image = $xml[0]->product[$id]->image;
+      $importantDetails = $xml[0]->product[$id]->important_details;
+      $extraDetails = $xml[0]->product[$id]->extra_details;
+      $price = $xml[0]->product[$id]->price;
+      $adjPrice = $xml[0]->product[$id]->adjusted_price;
       // // print_r($xml);
       ?>
     <meta charset="UTF-8" />
@@ -23,14 +24,14 @@
       <?php
         echo "var page = \""."-".$name."\";";
         echo "function InitialFunction() {
-          if (localStorage.getItem(\"Selected\" + page) == \"".$xml->product[0]->types[0]->type[1]->typeID."\") {
-            ChangePriceMultiplier(".$xml->product[0]->types[0]->type[1]->multiplier.");
+          if (localStorage.getItem(\"Selected\" + page) == \"".$xml->product[$id]->types[0]->type[1]->typeID."\") {
+            ChangePriceMultiplier(".$xml->product[$id]->types[0]->type[1]->multiplier.");
             ChangeQuantity(
               localStorage.getItem(\"UnitPrice\" + page),
               localStorage.getItem(\"Quantity\" + page)
             );
           } else {
-            ChangePriceMultiplier(".$xml->product[0]->types[0]->type[0]->multiplier.");
+            ChangePriceMultiplier(".$xml->product[$id]->types[0]->type[0]->multiplier.");
             ChangeQuantity(
               localStorage.getItem(\"UnitPrice\" + page),
               localStorage.getItem(\"Quantity\" + page)
@@ -89,10 +90,10 @@
               onclick=\"ChangeQuantityKeyUp(".$adjPrice.")\"
               />";
               ?>
-              <select id="select-type" onchange="OnChangeSelected()">
+              <select id="select-type" onchange="OnChangeSelected(), InitialFunction()">
                 <?php
-                foreach($xml->product[0]->types[0]->children() as $types) {
-                  echo "<option value=\"".$types->type[0]->typeID."\">".$types->type[0]->tname."</option>";
+                foreach($xml->product[$id]->types[0]->children() as $types) {
+                  echo "<option value=\"".$types->typeID."\">".$types->tname."</option>";
                 }
                 ?>
               </select>
