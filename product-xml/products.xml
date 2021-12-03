@@ -1,5 +1,6 @@
+<?xml version='1.0' standalone='yes'?>
 <products>
-  <product id = "001">
+  <product>
     <name>Axolotl</name>
     <image>../img/Axlot.png</image>
     <important_details></important_details>

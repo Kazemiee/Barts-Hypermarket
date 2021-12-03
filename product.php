@@ -1,11 +1,11 @@
 <?php
 $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wrong");
-$name = $xml->products->product[0]->name;
-$image = $xml->products->product[0]->image;
-$importantDetails = $xml->products->product[0]->important_details;
-$extraDetails = $xml->products->product[0]->extra_details;
-$price = $xml->products->product[0]->price;
-$adjPrice = $xml->products->product[0]->adjusted_price;
+$name = $xml->products[0]->product[0]->name;
+$image = $xml->products[0]->product[0]->image;
+$importantDetails = $xml->products[0]->product[0]->important_details;
+$extraDetails = $xml->products[0]->product[0]->extra_details;
+$price = $xml->products[0]->product[0]->price;
+$adjPrice = $xml->products[0]->product[0]->adjusted_price;
 print_r($xml);
 ?>
 
@@ -22,14 +22,14 @@ print_r($xml);
       <?php
         echo "var page = \""."-".$name."\";";
         echo "function InitialFunction() {
-          if (localStorage.getItem(\"Selected\" + page) == \"".$xml->products[0]->product->types->type[1]->typeID."\") {
-            ChangePriceMultiplier(".$xml->products[0]->product->types->type[1]->multiplier.");
+          if (localStorage.getItem(\"Selected\" + page) == \"".$xml->products[0]->product[0]->types[0]->type[1]->typeID."\") {
+            ChangePriceMultiplier(".$xml->products[0]->product[0]->types[0]->type[1]->multiplier.");
             ChangeQuantity(
               localStorage.getItem(\"UnitPrice\" + page),
               localStorage.getItem(\"Quantity\" + page)
             );
           } else {
-            ChangePriceMultiplier(".$xml->products[0]->product->types->type[0]->multiplier.");
+            ChangePriceMultiplier(".$xml->products[0]->product[0]->types[0]->type[0]->multiplier.");
             ChangeQuantity(
               localStorage.getItem(\"UnitPrice\" + page),
               localStorage.getItem(\"Quantity\" + page)
@@ -91,7 +91,7 @@ print_r($xml);
             <select id="select-type" onchange="OnChangeSelected()">
               <?php
               foreach($xml->products[0]->product->types->children() as $types) {
-                echo "<option value=\"".$types->type->typeID."\">".$types->type->tname."</option>";
+                echo "<option value=\"".$types->type[0]->typeID."\">".$types->type[0]->tname."</option>";
               }
               ?>
             </select>
