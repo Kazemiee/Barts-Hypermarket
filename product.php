@@ -3,7 +3,8 @@
   <head>
       <?php
       error_reporting(0);
-      $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wrong");
+      // $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wrong");
+      $xml=simplexml_load_file("product-xml/products.xml");
       $name = $xml[0]->product[0]->name;
       $image = $xml[0]->product[0]->image;
       $importantDetails = $xml[0]->product[0]->important_details;
