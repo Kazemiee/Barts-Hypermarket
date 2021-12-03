@@ -1,17 +1,16 @@
-<?php
-$xml=simplexml_load_file("product-xml/products.xml") or die("Something went wrong");
-$name = $xml->products->product->name;
-$image = $xml->products->product->image;
-$importantDetails = $xml->products->product->important_details;
-$extraDetails = $xml->products->product->extra_details;
-$price = $xml->products->product->price;
-$adjPrice = $xml->products->product->adjusted_price;
-print_r($xml);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
+      <?php
+      $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wrong");
+      $name = $xml->products->product->name;
+      $image = $xml->products->product->image;
+      $importantDetails = $xml->products->product->important_details;
+      $extraDetails = $xml->products->product->extra_details;
+      $price = $xml->products->product->price;
+      $adjPrice = $xml->products->product->adjusted_price;
+      print_r($xml);
+      ?>
     <meta charset="UTF-8" />
     <link href="style.css" rel="stylesheet" />
     <link href="img/Axlot.png" rel="icon" />

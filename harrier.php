@@ -11,7 +11,7 @@
       var page = "-harrier";
       localStorage.setItem("PriceMultiplier" + page, 1);
     </script>
-    <title>Axolotl</title>
+    <title>Harrier</title>
   </head>
   <body>
     <?php include "php-templates/header.php"?>
