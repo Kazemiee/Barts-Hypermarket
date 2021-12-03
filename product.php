@@ -5,11 +5,11 @@
       error_reporting(0);
       $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wrong");
       $name = $xml[0]->product[0]->name;
-       $image = $xml[0]->product[0]->image;
+      $image = $xml[0]->product[0]->image;
       $importantDetails = $xml[0]->product[0]->important_details;
       $extraDetails = $xml[0]->product[0]->extra_details;
       $price = $xml[0]->product[0]->price;
-      $adjPrice = (int)$xml[0]->product[0]->adjusted_price;
+      $adjPrice = $xml[0]->product[0]->adjusted_price;
       // // print_r($xml);
       ?>
     <meta charset="UTF-8" />
@@ -23,14 +23,14 @@
       <?php
         echo "var page = \""."-".$name."\";";
         echo "function InitialFunction() {
-          if (localStorage.getItem(\"Selected\" + page) == \"".$xml->products->product->types->type->typeID."\") {
-            ChangePriceMultiplier(".$xml->products->product->types->type[1]->multiplier.");
+          if (localStorage.getItem(\"Selected\" + page) == \"".$xml->product[0]->types[0]->type[1]->typeID."\") {
+            ChangePriceMultiplier(".$xml->product[0]->types[0]->type[1]->multiplier.");
             ChangeQuantity(
               localStorage.getItem(\"UnitPrice\" + page),
               localStorage.getItem(\"Quantity\" + page)
             );
           } else {
-            ChangePriceMultiplier(".$xml->products->product->types->type[0]->multiplier.");
+            ChangePriceMultiplier(".$xml->product[0]->types[0]->type[0]->multiplier.");
             ChangeQuantity(
               localStorage.getItem(\"UnitPrice\" + page),
               localStorage.getItem(\"Quantity\" + page)
@@ -46,71 +46,71 @@
         ?>
     </title>
   </head>
-<body>
-  <?php include "php-templates/header.php"?>
-  <main class="page-content">
-    <article class="article-product">
-        <h2>
-        <?php
-        echo $name;
-        ?>
-        </h2>
-        <div class="article-container">
+  <body>
+    <?php include "php-templates/header.php"?>
+    <main class="page-content">
+      <article class="article-product">
+          <h2>
           <?php
-          echo "<img src=".$image." width = 40%>";
-          echo $importantDetails;
+          echo $name;
           ?>
-          <button onclick="ShowExtraDetails()">Show Extra Details</button>
-          <!--style="display: none" needs to be there or else it will take 2 clicks to show extra details-->
-          <?php
-          echo $extraDetails;
-          echo "<h3>Buy your own ".$name." today!</h3>";
-          ?>
-          <h3 class="price">
-          <?php
-          echo $price;
-          ?>
-          </h3>
-          <h3 class="price">
-            <div id="price-displayed">
+          </h2>
+          <div class="article-container">
             <?php
-            echo "Pay: ".$adjPrice."$";
+            echo "<img src=".$image." width = 40%>";
+            echo $importantDetails;
             ?>
-            </div>
-          </h3>
-          <form action="#">
+            <button onclick="ShowExtraDetails()">Show Extra Details</button>
+            <!--style="display: none" needs to be there or else it will take 2 clicks to show extra details-->
             <?php
-            echo "<input type=\"number\"
-            name=\"Add x to cart\"
-            size=\"20\"
-            id=\"quantity\"
-            min=\"1\"
-            onkeyup=\"ChangeQuantityKeyUp(".$adjPrice.")\"
-            onclick=\"ChangeQuantityKeyUp(".$adjPrice.")\"
-          />";
+            echo $extraDetails;
+            echo "<h3>Buy your own ".$name." today!</h3>";
             ?>
-            <select id="select-type" onchange="OnChangeSelected()">
+            <h3 class="price">
+            <?php
+            echo $price;
+            ?>
+            </h3>
+            <h3 class="price">
+              <div id="price-displayed">
               <?php
-              foreach($xml->products->product->types->children() as $types) {
-                echo "<option value=\"".$types->type[0]->typeID."\">".$types->type[0]->tname."</option>";
-              }
+              echo "Pay: ".$adjPrice."$";
               ?>
-            </select>
-            <input class="add-to-cart" type="submit" value="Add x To Cart" />
-          </form>
-          <div>
-            <?php
-            echo "<button onclick=\"AddToQuantity(".$adjPrice.")\">Add</button>";
-            echo "<button onclick=\"SubtractFromQuantity(".$adjPrice.")\">Subtract</button>";
-            ?>
+              </div>
+            </h3>
+            <form action="#">
+              <?php
+              echo "<input type=\"number\"
+              name=\"Add x to cart\"
+              size=\"20\"
+              id=\"quantity\"
+              min=\"1\"
+              onkeyup=\"ChangeQuantityKeyUp(".$adjPrice.")\"
+              onclick=\"ChangeQuantityKeyUp(".$adjPrice.")\"
+            />";
+              ?>
+              <select id="select-type" onchange="OnChangeSelected()">
+                <?php
+                foreach($xml->products->product->types->children() as $types) {
+                  echo "<option value=\"".$types->type[0]->typeID."\">".$types->type[0]->tname."</option>";
+                }
+                ?>
+              </select>
+              <input class="add-to-cart" type="submit" value="Add x To Cart" />
+            </form>
+            <div>
+              <?php
+              echo "<button onclick=\"AddToQuantity(".$adjPrice.")\">Add</button>";
+              echo "<button onclick=\"SubtractFromQuantity(".$adjPrice.")\">Subtract</button>";
+              ?>
+            </div>
           </div>
-        </div>
-    </article>
-  </main>
-  <?php include "php-templates/footer.php"?>
-</body>
-<!-- <script type="text/javascript" src="product.js"></script> -->
-  <script>
+      </article>
+    </main>
+    <?php include "php-templates/footer.php"?>
+    <!-- <script type="text/javascript" src="product.js"></script> -->
+    <script>
     InitialFunction();
-  </script>
+    </script>
+  </body>
 </html>
