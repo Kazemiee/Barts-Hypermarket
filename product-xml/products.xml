@@ -1,9 +1,9 @@
-<product>
-  <p-0001>
+<products>
+  <product id = "001">
     <name>Axolotl</name>
-    <image>img/Axlot.png</image>
-    <product-details></product-details>
-    <extra-details>
+    <image>../img/Axlot.png</image>
+    <important_details></important_details>
+    <extra_details>
       <![CDATA[
       <div id="extra-details" style="display: none">
         <p>Taste: Tastes like freshwater fish</p>
@@ -25,18 +25,20 @@
         </p>
       </div>
        ]]>
-    </extra-details>
-    <product-values>
-      <type>Genetically Modified Super-Axolotl</type>
-      <price>Price: $10000 99% off</price>
-      <adjusted-price>100</adjusted-price>
-      <price-multiplier>2</price-multiplier>
-    </product-values>
-    <product-values>
-      <type>Normal Axolotl</type>
-      <price>Price: $10000 99% off</price>
-      <adjusted-price>100</adjusted-price>
-      <price-multiplier>1</price-multiplier>
-    </product-values>
-  </p-0001>
-</product>
+    </extra_details>
+    <types>
+      <type>
+        <typeID>normal-axolotl</typeID>
+        <tname>Normal Axolotl</tname>
+        <multiplier>1</multiplier>
+      </type>
+      <type>
+        <typeID>super-axolotl</typeID>
+        <tname>Genetically Modified Super-Axolotl</tname>
+        <multiplier>2</multiplier>
+      </type>
+    </types>
+    <price>Price: $10000 99% off</price>
+    <adjusted-price>100</adjusted-price>
+  </product>
+</products>

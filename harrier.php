@@ -49,7 +49,6 @@
               onclick="ChangeQuantityKeyUp(20)"
             />
             <select id="select-type" onchange="OnChangeSelected()">
-              </option>
               <option value="combat-harrier">Combat Harrier</option>
             </select>
             <input class="add-to-cart" type="submit" value="Add x To Cart" />
