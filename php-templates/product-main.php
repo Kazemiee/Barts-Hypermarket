@@ -12,8 +12,8 @@ $adjPrice = $xml->products[0]->product->adjusted_price;
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <link href="style.css" rel="stylesheet" />
-    <link href="img/Axlot.png" rel="icon" />
+    <link href="../style.css" rel="stylesheet" />
+    <link href="../img/Axlot.png" rel="icon" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Matthew Kazemie ID: 40190450" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,7 +45,7 @@ $adjPrice = $xml->products[0]->product->adjusted_price;
     </title>
   </head>
 <body>
-<?php include "php-templates/header.php"?>
+<?php include "header.php"?>
 <main class="page-content">
 <article class="article-product">
         <h2>
@@ -54,7 +54,6 @@ $adjPrice = $xml->products[0]->product->adjusted_price;
         ?>
         </h2>
         <div class="article-container">
-          <img src=../img/HarrierA.png width = 40% alt = "Image of a Harrier">
           <?php
           echo "<img src=".$image." width = 40%>";
           echo $importantDetails;
@@ -106,7 +105,7 @@ $adjPrice = $xml->products[0]->product->adjusted_price;
         </div>
       </article>
 </main>
-<?php include "php-templates/footer.php"?>
+<?php include "footer.php"?>
 </body>
 <script type="text/javascript" src="../product.js"></script>
   <script>
