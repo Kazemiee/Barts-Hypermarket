@@ -4,12 +4,12 @@
       <?php
       error_reporting(0);
       $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wrong");
-      echo $name = $xml[0]->product[0]->name;
-      echo $image = $xml[0]->product[0]->image;
-      echo $importantDetails = $xml[0]->product[0]->important_details;
-      echo$extraDetails = $xml[0]->product[0]->extra_details;
-      echo $price = $xml[0]->product[0]->price;
-      echo $adjPrice = (int)$xml[0]->product[0]->adjusted_price;
+      $name = $xml[0]->product[0]->name;
+       $image = $xml[0]->product[0]->image;
+      $importantDetails = $xml[0]->product[0]->important_details;
+      $extraDetails = $xml[0]->product[0]->extra_details;
+      $price = $xml[0]->product[0]->price;
+      $adjPrice = (int)$xml[0]->product[0]->adjusted_price;
       // // print_r($xml);
       ?>
     <meta charset="UTF-8" />
@@ -18,6 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Matthew Kazemie ID: 40190450" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="product.js"></script>
     <script>
       <?php
         echo "var page = \""."-".$name."\";";
@@ -108,7 +109,7 @@
   </main>
   <?php include "php-templates/footer.php"?>
 </body>
-<script type="text/javascript" src="product.js"></script>
+<!-- <script type="text/javascript" src="product.js"></script> -->
   <script>
     InitialFunction();
   </script>
