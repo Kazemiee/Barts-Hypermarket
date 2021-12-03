@@ -48,7 +48,11 @@
   </head>
   <body>
     <?php include "php-templates/header.php"?>
-    <h1>Please Work</h1>
+    <main class="page-content">
+      <article class="article-product">
+        
+      </article>
+    </main>
     <?php include "php-templates/footer.php"?>
     <!-- <script type="text/javascript" src="product.js"></script> -->
     <script>InitialFunction();</script>
