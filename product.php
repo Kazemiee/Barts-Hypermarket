@@ -71,7 +71,11 @@
             echo $importantDetails;
             ?>
             </div>
-            <button onclick="ShowExtraDetails()">Show Extra Details</button>
+            <div style="
+            display: flex;
+            justify-content: center;">
+              <button onclick="ShowExtraDetails()">Show Extra Details</button>
+            </div>
             <!--style="display: none" needs to be there or else it will take 2 clicks to show extra details-->
             <div id="extra-details" style="display: none">
             <?php
