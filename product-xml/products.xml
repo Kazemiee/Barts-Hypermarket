@@ -1,6 +1,7 @@
 <?xml version='1.0' standalone='yes'?>
 <products>
   <product>
+    <aisle>Meat</aisle>
     <name>Axolotl</name>
     <image>img/Axlot.png</image>
     <important_details></important_details>
@@ -43,6 +44,7 @@
     <adjusted_price>100</adjusted_price>
   </product>
   <product>
+    <aisle>Meat</aisle>
     <name>Meat Computer</name>
     <image>img/MeatModelX.png</image>
     <important_details>
@@ -140,6 +142,7 @@
     <adjusted_price>1000</adjusted_price>
   </product>
   <product>
+    <aisle>Meat</aisle>
     <name>Harrier</name>
     <image>img/HarrierA.png</image>
     <important_details></important_details>

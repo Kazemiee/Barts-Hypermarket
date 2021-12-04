@@ -1,0 +1,10 @@
+<?php
+$id;
+$aisle;
+$name;
+$important_details;
+$extra_details;
+$typeID;
+$tname;
+$multiplier;
+?>
