@@ -51,6 +51,11 @@
     </title>
   </head>
   <body>
+    <div id="page-id" style="display: none;">
+    <?php
+    echo $id;
+    ?>
+    </div>
     <?php include "php-templates/header.php"?>
     <main class="page-content">
       <article class="article-product">
