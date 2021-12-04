@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pierre Chevalier  ID 40098342">
+    <link href="back.css" rel="stylesheet">
+    <link href="img/Axlot.png" rel="icon">
+    <title>Edit Product</title>
+  </head>
+  <body>
+    <header class="top-header">
+       <div class="top-header-top">
+        <h1>Edit Product Information</h1>
+        <a href="index.html">Store Front Page</a>
+      </div>
+      <h4>Username</h4>
+      <nav class="top-nav">
+        <a href="product_list.html">Product List</a>
+        <a href="edit-product.html">Edit a Product</a>
+        <a href="user-list.html">User List</a>
+        <a href="edit-user-profile.html">Edit a User Profile</a>
+        <a href="order-list.html">Orders</a>
+        <a href="edit-order-profile.html">Edit an Order</a>
+      </nav>
+    </header>
+	<main class="page-content">
+	<h2>Enter Values Below</h2>
+	<br></br>
+	<div class="product-form">
+		<form action="php-utility/addProduct.php" method="post">
+			<div>
+			 <!-- Current Product Image:
+			 <img src="img/Axlot.png" width="14%" alt="Image of an Axolotl">
+			 <br></br> -->
+             Product Image:
+             <input type="text" name="new-image" width="1%">
+			</div>
+      <div>
+        Product Aisle:
+        <input type="text" name="new-aisle" size="60">
+       </div>
+			<div>
+			 Product Name:
+			 <input type="text" name="new-name" size="60">
+			</div>
+      <div>
+        Important Details: 
+        <textarea class="input" name="i-details" rows="5" cols="64"></textarea>
+       </div>
+			<div>
+			 Extra Details: 
+			 <textarea class="input" name="e-details" rows="5" cols="64"></textarea>
+			</div>
+      <div>
+        Product TypeID:
+        <input type="text" name="typeid" size="60">
+       </div>
+       <div>
+        Product Price Multiplier:
+        <input type="text" name="p-multiplier" size="60">
+       </div>
+       <div>
+        Product Type Name:
+        <input type="text" name="tname" size="60">
+       </div>
+      <div>
+        Price (CAD):
+        <input type="number" name="price">
+       </div>
+			<div>
+			 Adjusted Price (CAD):
+			 <input type="number" name="a-price">
+			</div>
+			<br></br>
+			<input class="save" type="submit" value="Save Changes">
+		</form>
+     </div>
+  </body>
+</html>
