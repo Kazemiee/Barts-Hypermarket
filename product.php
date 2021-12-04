@@ -23,21 +23,40 @@
     <script>
       <?php
         echo "var page = \""."-".$name."\";";
-        echo "function InitialFunction() {
-          if (localStorage.getItem(\"Selected\" + page) == \"".$xml->product[$id]->types[0]->type[1]->typeID."\") {
-            ChangePriceMultiplier(".$xml->product[$id]->types[0]->type[1]->multiplier.");
+        echo "function InitialFunction() {";
+        foreach($xml->product[$id]->types[0]->children() as $types) {
+          // echo "<option value=\"".$types->typeID."\">".$types->tname."</option>";
+          echo "if (localStorage.getItem(\"Selected\" + page) == \"".$types->typeID."\") {
+            ChangePriceMultiplier(".$types->multiplier.");
             ChangeQuantity(
               localStorage.getItem(\"UnitPrice\" + page),
               localStorage.getItem(\"Quantity\" + page)
             );
-          } else {
-            ChangePriceMultiplier(".$xml->product[$id]->types[0]->type[0]->multiplier.");
-            ChangeQuantity(
-              localStorage.getItem(\"UnitPrice\" + page),
-              localStorage.getItem(\"Quantity\" + page)
-            );
-          }
+          }";
+        }
+        echo "else {
+          ChangePriceMultiplier(1);
+          ChangeQuantity(
+            localStorage.getItem(\"UnitPrice\" + page),
+            localStorage.getItem(\"Quantity\" + page)
+          );
         }";
+        echo "}";
+        // echo "function InitialFunction() {
+        //   if (localStorage.getItem(\"Selected\" + page) == \"".$xml->product[$id]->types[0]->type[1]->typeID."\") {
+        //     ChangePriceMultiplier(".$xml->product[$id]->types[0]->type[1]->multiplier.");
+        //     ChangeQuantity(
+        //       localStorage.getItem(\"UnitPrice\" + page),
+        //       localStorage.getItem(\"Quantity\" + page)
+        //     );
+        //   } else {
+        //     ChangePriceMultiplier(".$xml->product[$id]->types[0]->type[0]->multiplier.");
+        //     ChangeQuantity(
+        //       localStorage.getItem(\"UnitPrice\" + page),
+        //       localStorage.getItem(\"Quantity\" + page)
+        //     );
+        //   }
+        // }";
         ?>
       //localStorage.setItem("PriceMultiplier" + page, 1);
     </script>
