@@ -139,4 +139,38 @@
     <price>Price: $100000 99% off</price>
     <adjusted_price>1000</adjusted_price>
   </product>
+  <product>
+    <name>Harrier</name>
+    <image>img/HarrierA.png</image>
+    <important_details></important_details>
+    <extra_details>
+      <![CDATA[
+      <div id="extra-details" style="display: none">
+        <p>Taste: Feathers, Disgusting</p>
+        <p>1 Harrier Mass: 400gr</p>
+        <p>1 Harrier Carbohyrate: 0gr</p>
+        <br />
+        <p>
+          An ancient bird with murderous tendencies. Trained to kill any pest that makes the mistake of passing by your home. 
+          After you purchase your very own harrier, red will rain from the sky and the short lives of any pests or 
+          babies will be savagely violent!
+        </p>
+      </div>
+       ]]>
+    </extra_details>
+    <types>
+      <type>
+        <typeID>normal-harrier</typeID>
+        <tname>Normal Harrier</tname>
+        <multiplier>1</multiplier>
+      </type>
+      <type>
+        <typeID>combat-harrier</typeID>
+        <tname>Combat Harrier</tname>
+        <multiplier>16</multiplier>
+      </type>
+    </types>
+    <price>Price: $20</price>
+    <adjusted_price>20</adjusted_price>
+  </product>
 </products>
