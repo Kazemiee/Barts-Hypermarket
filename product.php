@@ -14,7 +14,7 @@
       // // print_r($xml);
       ?>
     <meta charset="UTF-8" />
-    <link href="style.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" id = "style"/>
     <link href="img/Axlot.png" rel="icon" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Matthew Kazemie ID: 40190450" />

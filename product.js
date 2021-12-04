@@ -40,10 +40,12 @@ function TogglePsychosis() {
     sch1.style.display = "block";
     sch2.style.display = "none";
     style.href = "grimdark-style.css";
+    console.log("Style: Grimdark");
   } else {
     sch2.style.display = "block";
     sch1.style.display = "none";
     style.href = "style.css";
+    console.log("Style: Amiablebright");
   }
 }
 
