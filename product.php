@@ -65,14 +65,20 @@
           ?>
           </h2>
           <div class="article-container">
+            <div>
             <?php
             echo "<img src=".$image." width = 40%>";
             echo $importantDetails;
             ?>
+            </div>
             <button onclick="ShowExtraDetails()">Show Extra Details</button>
             <!--style="display: none" needs to be there or else it will take 2 clicks to show extra details-->
+            <div id="extra-details" style="display: none">
             <?php
             echo $extraDetails;
+            ?>
+            </div>
+            <?php
             echo "<h3>Buy your own ".$name." today!</h3>";
             ?>
             <h3 class="price">
