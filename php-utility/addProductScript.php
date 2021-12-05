@@ -37,5 +37,5 @@ $types->addChild("multiplier", $multiplier);
 $xml->saveXML($file);
 
 
-header('Location: ../index.html');
+header('Location: ../product-list.php');
 ?>

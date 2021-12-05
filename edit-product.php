@@ -1,12 +1,5 @@
 <?php
 $id = $_GET["p-id"];
-
-// if($id == ""){
-//   include "UUUUUadd-product.php";
-// }
-// else{
-//   include "UUUUedit-product.php";
-// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,8 +39,6 @@ $id = $_GET["p-id"];
   ?>
   <?php
   error_reporting(0);
-  $id = $_POST["id"];
-
   if($id == ""){
     // header('Location: addProductScript.php');
     echo "<form action=\"php-utility/addProductScript.php\" method=\"post\">";

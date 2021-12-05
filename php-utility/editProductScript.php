@@ -1,7 +1,7 @@
 <?php
 
 $file = "../product-xml/products.xml";
-$id = (int)$Get["id"];
+$id = (int)$_POST["new-id"];
 $nAisle = $_POST["new-aisle"];
 $nName = $_POST["new-name"];
 $nImage = $_POST["new-image"];
@@ -16,7 +16,7 @@ $nAdjusted_price = $_POST["a-price"];
 
 
 $xml = simplexml_load_file($file);
-$product = $xml[$ID];
+$product = $xml[$id];
 $product->name = $nName;
 $product->image = $nImage;
 $product->aisle = $nAisle;
@@ -38,5 +38,5 @@ $xml->saveXML($file);
 // $formatted = $dom->saveXML();
 
 
-header('Location: ../index.html');
+header('Location: ../product-list.php');
 ?>
