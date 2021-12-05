@@ -14,9 +14,10 @@ $nPrice = $_POST["price"];
 $nAdjusted_price = $_POST["a-price"];
 
 
-
+// echo $xml->book[1]->title;
 $xml = simplexml_load_file($file);
-$product = $xml[$id];
+// $product = $xml[$id];
+$product = $xml->product[$id];
 $product->name = $nName;
 $product->image = $nImage;
 $product->aisle = $nAisle;
@@ -27,6 +28,8 @@ $product->adjusted_price = $nAdjusted_price;
 $product->types->typeID = $nTypeID;
 $product->types->tname = $nTname;
 $product->types->aisle = $nMultiplier;
+
+// print_r($product);
 
 // $xml->preserveWhiteSpace = false;
 // $xml->formatOutput = true;
