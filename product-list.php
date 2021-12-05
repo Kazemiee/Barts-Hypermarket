@@ -31,7 +31,6 @@ $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wron
             <?php
             $counter = 0;
             foreach($xml->children() as $prods){
-              $counter++;
               echo "<tr>";
               echo "<td style=\"width: auto;\"><img src=".$prods->image." style=\"width: 100%;\"></td>";
               echo "<td>".$prods->name.", ID = ".$counter."</td>";
@@ -39,6 +38,7 @@ $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wron
               echo "<td>".$prods->adjusted_price."</td>";
               echo "<td><a href=\"edit-product.php?id=".$counter."\">Edit</a> <a onclick=\"DeleteProduct(1)\">Delete</a></td>";
               echo "</tr>";
+              $counter++;
             }
             ?>
             </tr>

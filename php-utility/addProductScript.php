@@ -29,9 +29,10 @@ $product->addChild("adjusted_price", $adjusted_price);
 $types = $product->addChild("types");
 $types->addChild("typeID", $typeID);
 $types->addChild("tname", $tname);
+$types->addChild("multiplier", $multiplier);
 
-$xml->preserveWhiteSpace = false;
-$xml->formatOutput = true;
+// $xml->preserveWhiteSpace = false;
+// $xml->formatOutput = true;
 
 $xml->saveXML($file);
 

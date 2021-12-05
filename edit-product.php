@@ -1,12 +1,12 @@
 <?php
 $id = $_GET["p-id"];
 
-if($id == ""){
-  include "UUUUUadd-product.php";
-}
-else{
-  include "UUUUedit-product.php";
-}
+// if($id == ""){
+//   include "UUUUUadd-product.php";
+// }
+// else{
+//   include "UUUUedit-product.php";
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,10 +21,44 @@ else{
   <body>
   <?php include "php-templates/back-header.php"?>
 	<main class="page-content">
-	<h2>Enter Values Below</h2>
+	<h2>Enter Values</h2>
 	<br></br>
 	<div class="product-form">
-		<form action="php-utility/addProduct.php" method="post">
+  <?php
+  if($id != ""){
+    echo "<form action=\"php-utility/addProductType.php?id=".$id."\" method=\"post\">
+    <h2>Create new type</h2>
+      <div>
+        Type Name:
+        <input type=\"text\" name=\"t-name\" size=\"60\">
+      </div>
+      <div>
+        Type Id:
+        <input type=\"text\" name=\"t-id\" size=\"60\">
+      </div>
+      <div>
+        Type Id:
+        <input type=\"number\" name=\"t-multiplier\" size=\"60\">
+      </div>
+      <input class=\"save\" type=\"submit\" value=\"Save Changes\">
+    </form>";
+  }
+  ?>
+  <?php
+  error_reporting(0);
+  $id = $_POST["id"];
+
+  if($id == ""){
+    // header('Location: addProductScript.php');
+    echo "<form action=\"php-utility/addProductScript.php\" method=\"post\">";
+  }
+  else{
+    // header('Location: editProductScript.php?id='.$id.'');
+    echo "<form action=\"php-utility/editProductScript.php\" method=\"post\">";
+  }
+  ?>
+		<!-- <form action="php-utility/addProduct.php" method="post"> -->
+    <h2>Enter Product Values</h2>
 			<div>
 			 <!-- Current Product Image:
 			 <img src="img/Axlot.png" width="14%" alt="Image of an Axolotl">
@@ -40,6 +74,12 @@ else{
 			<div>
 			 Product Name:
 			 <input type="text" name="new-name" size="60">
+			</div>
+      <div style="display: none;">
+			 Product ID:
+        <?php
+        echo "<input type=\"text\" name=\"new-id\" size=\"60\" value=\"".$id."\">";
+        ?>
 			</div>
       <div>
         Important Details: 
@@ -66,7 +106,7 @@ else{
         <input type="number" name="price">
        </div>
 			<div>
-			 Adjusted Price (CAD):
+			 Adjusted Price After Sale(CAD):
 			 <input type="number" name="a-price">
 			</div>
 			<br></br>
