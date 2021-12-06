@@ -82,10 +82,10 @@ $id = $_GET["p-id"];
 			</div>
       <?php
       if($id == ""){
-        echo "<div style=\"display: none;\">";
+        echo "<div>";
       }
       else{
-        echo "<div>";
+        echo "<div style=\"display: none;\">";
       }
       ?>
         Product TypeID:
@@ -93,10 +93,10 @@ $id = $_GET["p-id"];
        </div>
        <?php
       if($id == ""){
-        echo "<div style=\"display: none;\">";
+        echo "<div>";
       }
       else{
-        echo "<div>";
+        echo "<div style=\"display: none;\">";
       }
       ?>
         Product Price Multiplier:
@@ -104,10 +104,10 @@ $id = $_GET["p-id"];
        </div>
        <?php
       if($id == ""){
-        echo "<div style=\"display: none;\">";
+        echo "<div>";
       }
       else{
-        echo "<div>";
+        echo "<div style=\"display: none;\">";
       }
       ?>
         Product Type Name:
