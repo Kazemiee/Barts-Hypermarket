@@ -1,7 +1,7 @@
 <header class="top-header">
        <div class="top-header-top">
         <h1>Edit Product Information</h1>
-        <a href="index.html">Store Front Page</a>
+        <a href="index.php">Store Front Page</a>
       </div>
       <h4>Username</h4>
       <nav class="top-nav">
