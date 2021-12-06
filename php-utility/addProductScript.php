@@ -24,12 +24,13 @@ $product->addChild("important_details", $important_details);
 // $product->$important_details->addCData($important_details);
 $product->addChild("extra_details", $extra_details);
 // $product->$extra_details->addCData($extra_details);
-$product->addChild("price", "Price: $".$price);
+$product->addChild("price", "Price: $".$price." ".(100*($price-$adjusted_price)/$price)."% off");
 $product->addChild("adjusted_price", $adjusted_price);
 $types = $product->addChild("types");
-$types->addChild("typeID", $typeID);
-$types->addChild("tname", $tname);
-$types->addChild("multiplier", $multiplier);
+$type = $types->addChild("type");
+$type->addChild("typeID", $typeID);
+$type->addChild("tname", $tname);
+$type->addChild("multiplier", $multiplier);
 
 // $xml->preserveWhiteSpace = false;
 // $xml->formatOutput = true;

@@ -1,15 +1,15 @@
 <?php
 
 $file = "../product-xml/products.xml";
-$id = (int)$_POST["new-id"];
+$id = (int)$_GET["new-id"];
 $nAisle = $_POST["new-aisle"];
 $nName = $_POST["new-name"];
 $nImage = $_POST["new-image"];
 $nImportant_details = $_POST["i-details"];
 $nExtra_details = $_POST["e-details"];
-$nTypeID = $_POST["typeid"];
-$nTname = $_POST["tname"];
-$nMultiplier = $_POST["p-multiplier"];
+$nTypeID = $_POST["t-id"];
+$nTname = $_POST["t-name"];
+$nMultiplier = $_POST["t-multiplier"];
 $nPrice = $_POST["price"];
 $nAdjusted_price = $_POST["a-price"];
 
@@ -18,16 +18,10 @@ $nAdjusted_price = $_POST["a-price"];
 $xml = simplexml_load_file($file);
 // $product = $xml[$id];
 $product = $xml->product[$id];
-$product->name = $nName;
-$product->image = $nImage;
-$product->aisle = $nAisle;
-$product->important_details = $nImportant_details;
-$product->extra_details = $nExtra_details;
-$product->price = $nPrice;
-$product->adjusted_price = $nAdjusted_price;
-// $product->types->type->typeID = $nTypeID;
-// $product->types->type->tname = $nTname;
-// $product->types->type->aisle = $nMultiplier;
+$type = $product->types->addChild("type");
+$type->addChild("typeID", $typeID);
+$type->addChild("tname", $tname);
+$type->addChild("multiplier", $multiplier);
 
 // print_r($product);
 
@@ -41,5 +35,5 @@ $xml->saveXML($file);
 // $formatted = $dom->saveXML();
 
 
-header('Location: ../product-list.php');
+header('Location: ../product.php?id='.$id);
 ?>

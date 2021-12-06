@@ -19,7 +19,7 @@ $id = $_GET["p-id"];
 	<div class="product-form">
   <?php
   if($id != ""){
-    echo "<form action=\"php-utility/addProductType.php?id=".$id."\" method=\"post\">
+    echo "<form action=\"php-utility/addProductTypeScript.php?id=".$id."\" method=\"post\">
     <h2>Create new type</h2>
       <div>
         Type Name:
@@ -30,7 +30,7 @@ $id = $_GET["p-id"];
         <input type=\"text\" name=\"t-id\" size=\"60\">
       </div>
       <div>
-        Type Id:
+        Type Multiplier:
         <input type=\"number\" name=\"t-multiplier\" size=\"60\">
       </div>
       <input class=\"save\" type=\"submit\" value=\"Save Changes\">
@@ -80,15 +80,36 @@ $id = $_GET["p-id"];
 			 Extra Details: 
 			 <textarea class="input" name="e-details" rows="5" cols="64"></textarea>
 			</div>
-      <div>
+      <?php
+      if($id == ""){
+        echo "<div style=\"display: none;\">";
+      }
+      else{
+        echo "<div>";
+      }
+      ?>
         Product TypeID:
         <input type="text" name="typeid" size="60">
        </div>
-       <div>
+       <?php
+      if($id == ""){
+        echo "<div style=\"display: none;\">";
+      }
+      else{
+        echo "<div>";
+      }
+      ?>
         Product Price Multiplier:
         <input type="text" name="p-multiplier" size="60">
        </div>
-       <div>
+       <?php
+      if($id == ""){
+        echo "<div style=\"display: none;\">";
+      }
+      else{
+        echo "<div>";
+      }
+      ?>
         Product Type Name:
         <input type="text" name="tname" size="60">
        </div>
