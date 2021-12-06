@@ -59,7 +59,6 @@ $id = $_GET["p-id"];
              <p>Example: img/MeatModelX.png</p>
              <p>Example: img/Axlot.png</p>
              <p>Example: img/Harrier.png</p>
-             <p>Example: img/EatPant.png</p>
              <p>Example: img/Triangle.png</p>
              <input type="text" name="new-image" width="1%">
 			</div>
