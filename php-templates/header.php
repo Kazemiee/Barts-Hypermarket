@@ -26,7 +26,7 @@
             <div class="drop-menu">
               <a href="#">Aisles</a>
               <div class="drop-content">
-                <a href="meat-aisle.html">Meat</a>
+                <a href="aisle.php?aisle=Meat">Meat</a>
                 <a href="bread-aisle.html">Bread</a>
                 <a href="dairy-aisle.html"> Dairy</a>
                 <a href="electronic-aisle.html">Electronics</a>

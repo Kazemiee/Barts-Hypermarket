@@ -23,6 +23,7 @@ $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wron
             <tr>
                 <th>Image</th>
                 <th>Product</th>
+                <th>Aisle</th>
                 <th>Price</th>
                 <th>Adjusted Price</th>
                 <th>Actions</th>
@@ -34,6 +35,7 @@ $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wron
               echo "<tr>";
               echo "<td style=\"width: auto;\"><img src=".$prods->image." style=\"width: 100%;\"></td>";
               echo "<td>".$prods->name.", ID = ".$counter."</td>";
+              echo "<td>".$prods->aisle."</td>";
               echo "<td>".$prods->price."</td>";
               echo "<td>".$prods->adjusted_price."</td>";
               echo "<td><a href=\"edit-product.php?p-id=".$counter."\">Edit</a> <a href=\"php-utility/deleteProductScript.php?id=".$counter."\">Delete</a></td>";
