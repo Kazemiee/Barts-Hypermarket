@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 $id = $_GET["p-id"];
 ?>
 <!DOCTYPE html>
@@ -56,6 +57,10 @@ $id = $_GET["p-id"];
 			 <br></br> -->
              Product Image:
              <p>Example: img/MeatModelX.png</p>
+             <p>Example: img/Axlot.png</p>
+             <p>Example: img/Harrier.png</p>
+             <p>Example: img/EatPant.png</p>
+             <p>Example: img/Triangle.png</p>
              <input type="text" name="new-image" width="1%">
 			</div>
       <div>

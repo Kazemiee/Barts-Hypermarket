@@ -38,7 +38,10 @@ $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wron
               echo "<td>".$prods->aisle."</td>";
               echo "<td>".$prods->price."</td>";
               echo "<td>".$prods->adjusted_price."</td>";
-              echo "<td><a href=\"edit-product.php?p-id=".$counter."\">Edit</a> <a href=\"php-utility/deleteProductScript.php?id=".$counter."\">Delete</a></td>";
+              echo "<td><a href=\"edit-product.php?p-id=".$counter."\">Edit</a>
+              <a href=\"php-utility/deleteProductScript.php?id=".$counter."\">Delete</a>
+              <a href=\"product.php?id=".$counter."\">View</a>
+              </td>";
               echo "</tr>";
               $counter++;
             }
