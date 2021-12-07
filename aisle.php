@@ -52,7 +52,7 @@
                 echo "
               <li>
                 <p>
-                  <img src=".$prods->image." width = 40%>
+                  <a href=\"product.php?id=".$counter."\"><img src=".$prods->image." width=40% ></a>
                   <a href=\"product.php?id=".$counter."\">".$prods->name."</a> ".$prods->price_text."
                 </p>
               </li>";
