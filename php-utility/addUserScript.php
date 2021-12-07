@@ -22,7 +22,7 @@ $user->addChild("password", $password);
 $user->addChild("admin", $admin);
 
 // $xml->preserveWhiteSpace = false;
-$xml->formatOutput = true;
+//$xml->formatOutput = true;
 
 $xml->saveXML($file);
 
