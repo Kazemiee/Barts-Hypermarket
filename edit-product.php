@@ -35,7 +35,7 @@
 	<br></br>
 	<div class="product-form">
   <?php
-  if($id == "" && $id != 0){
+  if($id != ""){
     echo "<form action=\"php-utility/addProductTypeScript.php?id=".$id."\" method=\"post\">
     <h2>Create new type</h2>
       <div>
