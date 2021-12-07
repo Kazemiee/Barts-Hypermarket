@@ -24,8 +24,13 @@
           <ul class="great-deals-list">
           <?php
           $counter = 0;
-          $currentAisle;
-          for($x = 0; $x <= 10; $x++){
+          foreach($xml->children() as $prods){
+            $counter++;
+          }
+          if($counter > 10){
+            $counter = 10;
+          }
+          for($x = 0; $x <= $counter; $x++){
             echo "<li>
                     <p>
                       <a href=\"product.php?id=".$x."\"><img src=".$xml[0]->product[$x]->image." width=20% ></a>
