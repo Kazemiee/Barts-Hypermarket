@@ -13,7 +13,7 @@ $nAdmin = $_POST["new-admin"];
 // echo $xml->book[1]->title;
 $xml = simplexml_load_file($file);
 // $product = $xml[$id];
-$user = $xml->product[$id];
+$user = $xml->user[$id];
 $user->user_id = $id;
 $user->first_name = $nFirst_name;
 $user->last_name = $nLast_name;
