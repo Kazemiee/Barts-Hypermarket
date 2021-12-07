@@ -21,12 +21,12 @@ $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wron
       <div class="user-list">
         <table style="table-layout:fixed; width: 100%;">
             <tr>
-                <th>Image</th>
-                <th>Product</th>
-                <th>Aisle</th>
-                <th>Price</th>
-                <th>Adjusted Price</th>
-                <th>Actions</th>
+                <th style="font-size: 80%;">Image</th>
+                <th style="font-size: 80%;">Product</th>
+                <th style="font-size: 80%;">Aisle</th>
+                <th style="font-size: 80%;">Price</th>
+                <th style="font-size: 80%;">Adjusted Price</th>
+                <th style="font-size: 80%;">Actions</th>
             </tr>
             <tr>
             <?php
@@ -34,11 +34,11 @@ $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wron
             foreach($xml->children() as $prods){
               echo "<tr>";
               echo "<td style=\"width: auto;\"><img src=".$prods->image." style=\"width: 100%;\"></td>";
-              echo "<td>".$prods->name.", ID = ".$counter."</td>";
+              echo "<td style=\"font-size: 80%;\">".$prods->name.", ID = ".$counter."</td>";
               echo "<td>".$prods->aisle."</td>";
-              echo "<td>".$prods->price."</td>";
+              echo "<td style=\"font-size: 80%;\">".$prods->price."</td>";
               echo "<td>".$prods->adjusted_price."</td>";
-              echo "<td><a href=\"edit-product.php?p-id=".$counter."\">Edit</a>
+              echo "<td style=\"font-size: 80%;\"><a href=\"edit-product.php?p-id=".$counter."\">Edit</a>
               <a href=\"php-utility/deleteProductScript.php?id=".$counter."\">Delete</a>
               <a href=\"product.php?id=".$counter."\">View</a>
               </td>";
