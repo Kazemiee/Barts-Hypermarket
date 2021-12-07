@@ -35,7 +35,7 @@ $xml=simplexml_load_file("user-xml/users.xml") or die("Something went wrong");
             $counter = 0;
             foreach($xml->children() as $prods){
               echo "<tr>";
-              echo "<td style=\"font-size: 80%;\">".$prods->user_id.", ID = ".$counter."</td>";
+              echo "<td style=\"font-size: 80%;\">".$counter."</td>";
               echo "<td>".$prods->first_name."</td>";
               echo "<td>".$prods->last_name."</td>";
               echo "<td>".$prods->phone_number."</td>";
@@ -50,7 +50,7 @@ $xml=simplexml_load_file("user-xml/users.xml") or die("Something went wrong");
             ?>
             </tr>
         </table>
-        <a href="edit-User.php?p-id=-1"><button>Add a User</button></a><!--add link to P10 -->
+        <a href="edit-user.php?p-id=-1"><button>Add a User</button></a><!--add link to P10 -->
       </div>
     </main>
     <footer></footer>

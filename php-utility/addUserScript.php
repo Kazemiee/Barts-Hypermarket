@@ -13,7 +13,7 @@ $admin = $_POST["new-admin"];
 
 
 $xml = simplexml_load_file($file);
-$user = $xml->addChild("User");
+$user = $xml->addChild("user");
 $user->addChild("user_id", $user_id);
 $user->addChild("first_name", $first_name);
 $user->addChild("last_name", $last_name);
@@ -22,7 +22,7 @@ $user->addChild("password", $password);
 $user->addChild("admin", $admin);
 
 // $xml->preserveWhiteSpace = false;
-// $xml->formatOutput = true;
+$xml->formatOutput = true;
 
 $xml->saveXML($file);
 
