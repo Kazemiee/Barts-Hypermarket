@@ -1,6 +1,16 @@
 <?php
 error_reporting(0);
 $id = $_GET["p-id"];
+$xml=simplexml_load_file("product-xml/products.xml") or die("Something went wrong");
+$name = $xml[0]->product[$id]->name;
+$author = $xml[0]->product[$id]->author;
+$image = $xml[0]->product[$id]->image;
+$aisle = $xml[0]->product[$id]->aisle;
+$importantDetails = $xml[0]->product[$id]->important_details;
+$extraDetails = $xml[0]->product[$id]->extra_details;
+$price = $xml[0]->product[$id]->price;
+$adjPrice = $xml[0]->product[$id]->adjusted_price;
+$author = $xml[0]->product[$id]->author;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,15 +71,23 @@ $id = $_GET["p-id"];
              <p>Example: img/Axlot.png</p>
              <p>Example: img/Harrier.png</p>
              <p>Example: img/Triangle.png</p>
-             <input type="text" name="new-image" width="1%">
+             <?php
+              echo "<input type=\"text\" name=\"new-image\" width=\"1%\" value=\"".$image."\">";
+              ?>
 			</div>
       <div>
         Product Aisle:
-        <input type="text" name="new-aisle" size="60">
+        <?php
+        echo "<input type=\"text\" name=\"new-aisle\" size=\"60\" value=\"".$aisle."\">";
+        ?>
+        <!-- <input type="text" name="new-aisle" size="60"> -->
        </div>
 			<div>
 			 Product Name:
-			 <input type="text" name="new-name" size="60">
+       <?php
+        echo "<input type=\"text\" name=\"new-name\" size=\"60\" value=\"".$name."\">";
+        ?>
+			 <!-- <input type="text" name="new-name" size="60"> -->
 			</div>
       <?php
       if($id == ""){
@@ -80,7 +98,10 @@ $id = $_GET["p-id"];
       }
       ?>
 			 Product Author:
-			 <input type="text" name="new-author" size="60">
+       <?php
+        echo "<input type=\"text\" name=\"new-author\" size=\"60\" value=\"".$author."\">";
+        ?>
+			 <!-- <input type="text" name="new-author" size="60"> -->
 			</div>
       <div style="display: none;">
 			 Product ID:
@@ -89,12 +110,18 @@ $id = $_GET["p-id"];
         ?>
 			</div>
       <div>
-        Important Details: 
-        <textarea class="input" name="i-details" rows="5" cols="64"></textarea>
+        Important Details:
+        <?php
+        echo "<textarea class=\"input\" name=\"i-details\" rows=\"5\" cols=\"64\" value=\"".$importantDetails."\"></textarea>";
+        ?>
+        <!-- <textarea class="input" name="i-details" rows="5" cols="64"></textarea> -->
        </div>
 			<div>
-			 Extra Details: 
-			 <textarea class="input" name="e-details" rows="5" cols="64"></textarea>
+			 Extra Details:
+       <?php
+        echo "<textarea class=\"input\" name=\"e-details\" rows=\"5\" cols=\"64\" value=\"".$extraDetails."\"></textarea>";
+        ?>
+			 <!-- <textarea class="input" name="e-details" rows="5" cols="64"></textarea> -->
 			</div>
       <?php
       if($id == ""){
@@ -131,10 +158,16 @@ $id = $_GET["p-id"];
        </div>
       <div>
         Price (CAD):
-        <input type="number" name="price">
+        <?php
+        echo "<input type=\"number\" name=\"price\" value=\"".$price."\">";
+        ?>
+        <!-- <input type="number" name="price"> -->
        </div>
 			<div>
 			 Adjusted Price After Sale(CAD):
+       <?php
+        echo "<input type=\"number\" name=\"a-price\" value=\"".$adjPrice."\">";
+        ?>
 			 <input type="number" name="a-price">
 			</div>
 			<br></br>
