@@ -1,11 +1,11 @@
-<?xml version='1.0' standalone='yes'?>
+<?xml version="1.0" standalone="yes"?>
 <products>
   <product>
     <aisle>Meat</aisle>
     <name>Axolotl</name>
     <author>Matthew Kazemie ID: 40190450</author>
     <image>img/Axlot.png</image>
-    <important_details></important_details>
+    <important_details/>
     <extra_details>
       <![CDATA[
       <p>Taste: Tastes like freshwater fish</p>
@@ -146,7 +146,7 @@
     <name>Harrier</name>
     <author>Matthew Kazemie ID: 40190450</author>
     <image>img/HarrierA.png</image>
-    <important_details></important_details>
+    <important_details/>
     <extra_details>
       <![CDATA[
       <p>Taste: Feathers, Disgusting</p>
@@ -177,46 +177,173 @@
     <adjusted_price>20</adjusted_price>
   </product>
   <product>
-    <aisle>Meat</aisle>
-    <name>Evil Axolotl</name>
-    <author>Matthew Kazemie ID: 40190450</author>
-    <image>img/Axlot.png</image>
-    <important_details>It commits tax evasion :(</important_details>
+    <aisle>Clothing</aisle>
+    <name>Jeans</name>
+    <author>Boisghur Shishani ID: 40170574</author>
+    <image>img/Jeans.jpg</image>
+    <important_details/>
     <extra_details>
       <![CDATA[
-      <p>Taste: Tastes like freshwater fish</p>
-        <p>1 Axolotl Mass: 300gr</p>
-        <p>1 Axolotl Carbohyrate: 0gr</p>
-        <br />
-        <p>
-          By 2020 <strong>Anno Domini</strong>, these creatures were
-          considered critically endangered but thanks to cloning technology
-          created by<mark>DO NOT READ THIS</mark> in the earth year<mark
-            >THIS YEAR HAS MANY DIGITS</mark
-          >, we can now deliver to you the experience of Axolotl. Anybody
-          with an interest in ancient human cuisine will be very happy
-          preparing their own Axolotl.
-        </p>
-        <p>
-          These creatures have talents that include regenerating body parts
-          and being inbred.
-        </p>
+      <p>
+              Human believed that this item would grant them strength and
+              protection in battle. The material is only 1mm (human measurement)
+              thick however it is tough enough to protect against the primitive
+              human weapons such as nuclear bombs and guns. Some humans would
+              wear jeans that were ripped as a symbol of their strength and
+              courage. This was done to prove that noone could defeat them in
+              battle even with their obvious weakness.
+            </p>
+            <p>
+              It is believed that the more rips you had in your jeans the more
+              powerful and respected you were within your society. Our products
+              do not come with rips, however you can easily add some rips at
+              home by using your lightsaber.
+            </p>
        ]]>
     </extra_details>
     <types>
       <type>
-        <typeID>normal-axolotl</typeID>
-        <tname>Normal Axolotl</tname>
+        <typeID>jeans</typeID>
+        <tname>Jeans</tname>
         <multiplier>1</multiplier>
       </type>
+    </types>
+    <price>1000</price>
+    <price_text>Price: $1000</price_text>
+    <adjusted_price>1000</adjusted_price>
+  </product>
+
+<product>
+    <aisle>Clothing</aisle>
+    <name>Necktie</name>
+    <author>Boisghur Shishani ID: 40170574</author>
+    <image>img/Tie.jpg</image>
+    <important_details/>
+    <extra_details>
+      <![CDATA[
+      <p>
+              The necktie was a thin piece of fabric which humans wore around
+              their upper vertebrae. In cases of emergency they would use this
+              fabric as a makeshift rope or even as a whip for self defense.
+              Wearing a necktie was a symbol of a persons dominance and
+              aggression for humans.
+            </p>
+            <p>
+              The necktie was primarily worn by the male gender, the current
+              theory on this is that it was originially used to hide the adam's
+              apple which only appears in the males of the species.
+            </p>
+       ]]>
+    </extra_details>
+    <types>
       <type>
-        <typeID>super-axolotl</typeID>
-        <tname>Genetically Modified Super-Axolotl</tname>
-        <multiplier>2</multiplier>
+        <typeID>necktie</typeID>
+        <tname>Necktie</tname>
+        <multiplier>1</multiplier>
       </type>
     </types>
-    <price>10000</price>
-    <price_text>Price: $10000 99% off</price_text>
-    <adjusted_price>100</adjusted_price>
+    <price>150</price>
+    <price_text>Price: $150</price_text>
+    <adjusted_price>150</adjusted_price>
   </product>
+
+  <product>
+    <aisle>Clothing</aisle>
+    <name>Shoes</name>
+    <author>Boisghur Shishani ID: 40170574</author>
+    <image>img/Shoes.jpg</image>
+    <important_details/>
+    <extra_details>
+      <![CDATA[
+       <p>
+              This product must be ordered in pairs where each shoe will be a mirror image of its pair. This is because of the strange form of human feet.
+              Shoes were an important cultural aspect of humans around the world. Some humans, such as Michael Jordan, were named after shoes as the humans believed
+               this would grant them special powers and abilities in athletic competitions. These shoes were made to protect human feet, however these can still be 
+               used by tentacled species by simply placing your tentacles inside the shoe's hole and tightening and tying the straps attached. 
+            </p>
+            <p>
+              During the Humans final century on earth creasing a pair of shoes was considered an act of terrorism and was punishable by life-time imprisonment. However, it is important to remember that the average human
+               lifetime was only around 150 years.
+            </p>
+       ]]>
+    </extra_details>
+    <types>
+      <type>
+        <typeID>shoes</typeID>
+        <tname>Shoes</tname>
+        <multiplier>1</multiplier>
+      </type>
+    </types>
+    <price>500</price>
+    <price_text>Price: $500</price_text>
+    <adjusted_price>500</adjusted_price>
+  </product>
+
+  <product>
+    <aisle>Clothing</aisle>
+    <name>T-shirt</name>
+    <author>Boisghur Shishani ID: 40170574</author>
+    <image>img/tShirt.jpg</image>
+    <important_details/>
+    <extra_details>
+      <![CDATA[
+       <p>
+              Despite being a bipedal species, the humans wore this item with
+              only one opening for both of their legs. This item was thought to
+              be highly sought after during the humans rule over the planet
+              Earth C-137. Many intergalactic species can still fit in this item
+              thanks to the multiple holes. For all tripedal species and above,
+              do not worry, This item will fit you as well provided you put the
+              majority of your limbs through the largest hole in the bottom.
+            </p>
+            <p>
+              The T-shirt was worn by all genders, however it is believed that
+              this item was only available to the socioeconomic elites and
+              therefore is a very valuable collectors item
+            </p>
+       ]]>
+    </extra_details>
+    <types>
+      <type>
+        <typeID>tshirt</typeID>
+        <tname>T-shirt</tname>
+        <multiplier>1</multiplier>
+      </type>
+    </types>
+    <price>3000</price>
+    <price_text>Price: $3000</price_text>
+    <adjusted_price>3000</adjusted_price>
+  </product>
+
+  <product>
+    <aisle>Clothing</aisle>
+    <name>Skirt</name>
+    <author>Boisghur Shishani ID: 40170574</author>
+    <image>img/Skirt.jpg</image>
+    <important_details/>
+    <extra_details>
+      <![CDATA[
+       <p>
+              Despite being a bipedal species, the humans wore this item with
+              only one opening for both of their legs. This clothing greatly
+              improved agility, which was useful for the species to evade
+              predators when attacked. This item was one of the main reasons the
+              human species survived for as long as they did despite their small
+              size and low level of intellect.
+            </p>
+            <p>The skirt was worn primarily by the female gender.</p>
+       ]]>
+    </extra_details>
+    <types>
+      <type>
+        <typeID>skirt</typeID>
+        <tname>Skirt</tname>
+        <multiplier>1</multiplier>
+      </type>
+    </types>
+    <price>200</price>
+    <price_text>Price: $200</price_text>
+    <adjusted_price>200</adjusted_price>
+  </product>
+
 </products>

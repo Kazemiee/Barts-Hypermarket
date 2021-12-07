@@ -83,9 +83,7 @@
        <div>
       <h3>User Admin:</h3>
         <?php
-        if ($admin){
             echo "<input type=\"checkbox\" name=\"new-admin\" size=\"60\" value=\"".$admin."\">";
-        }
         ?>
        </div>
 
