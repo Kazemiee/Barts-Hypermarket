@@ -90,10 +90,11 @@
        </div>
 
 
-      <?php
+       <?php
       if($id == -1){
         echo "<div>";
       }
+       ?>
 			<br></br>
 			<input class="save" type="submit" value="Save Changes">
 		</form>
