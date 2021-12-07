@@ -176,4 +176,47 @@
     <price_text>Price: $20</price_text>
     <adjusted_price>20</adjusted_price>
   </product>
+  <product>
+    <aisle>Meat</aisle>
+    <name>Evil Axolotl</name>
+    <author>Matthew Kazemie ID: 40190450</author>
+    <image>img/Axlot.png</image>
+    <important_details>It commits tax evasion :(</important_details>
+    <extra_details>
+      <![CDATA[
+      <p>Taste: Tastes like freshwater fish</p>
+        <p>1 Axolotl Mass: 300gr</p>
+        <p>1 Axolotl Carbohyrate: 0gr</p>
+        <br />
+        <p>
+          By 2020 <strong>Anno Domini</strong>, these creatures were
+          considered critically endangered but thanks to cloning technology
+          created by<mark>DO NOT READ THIS</mark> in the earth year<mark
+            >THIS YEAR HAS MANY DIGITS</mark
+          >, we can now deliver to you the experience of Axolotl. Anybody
+          with an interest in ancient human cuisine will be very happy
+          preparing their own Axolotl.
+        </p>
+        <p>
+          These creatures have talents that include regenerating body parts
+          and being inbred.
+        </p>
+       ]]>
+    </extra_details>
+    <types>
+      <type>
+        <typeID>normal-axolotl</typeID>
+        <tname>Normal Axolotl</tname>
+        <multiplier>1</multiplier>
+      </type>
+      <type>
+        <typeID>super-axolotl</typeID>
+        <tname>Genetically Modified Super-Axolotl</tname>
+        <multiplier>2</multiplier>
+      </type>
+    </types>
+    <price>10000</price>
+    <price_text>Price: $10000 99% off</price_text>
+    <adjusted_price>100</adjusted_price>
+  </product>
 </products>
