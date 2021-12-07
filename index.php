@@ -23,14 +23,14 @@
         <div class="article-container">
           <ul class="great-deals-list">
           <?php
-          $counter = 1;
+          $counter = 0;
           foreach($xml->children() as $prods){
             $counter++;
           }
           if($counter > 10){
             $counter = 10;
           }
-          for($x = 0; $x <= $counter; $x++){
+          for($x = 0; $x <= $counter-1; $x++){
             echo "<li>
                     <p>
                       <a href=\"product.php?id=".$x."\"><img src=".$xml[0]->product[$x]->image." width=20% ></a>
