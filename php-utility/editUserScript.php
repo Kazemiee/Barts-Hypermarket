@@ -13,17 +13,14 @@ $nAdmin = $_POST["new-admin"];
 // echo $xml->book[1]->title;
 $xml = simplexml_load_file($file);
 // $product = $xml[$id];
-$product = $xml->product[$id];
-$product->user_id = $id;
-$product->first_name = $nFirst_name;
-$product->last_name = $nLast_name;
-$product->phone_number = $nPhone_number;
-$product->email = $nEmail;
-$product->password = $nPassword;
-$product->admin = $nAdmin;
-// $product->types->type->typeID = $nTypeID;
-// $product->types->type->tname = $nTname;
-// $product->types->type->aisle = $nMultiplier;
+$user = $xml->product[$id];
+$user->user_id = $id;
+$user->first_name = $nFirst_name;
+$user->last_name = $nLast_name;
+$user->phone_number = $nPhone_number;
+$user->email = $nEmail;
+$user->password = $nPassword;
+$user->admin = $nAdmin;
 
 // print_r($product);
 

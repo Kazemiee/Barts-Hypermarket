@@ -13,13 +13,13 @@ $admin = $_POST["new-admin"];
 
 
 $xml = simplexml_load_file($file);
-$product = $xml->addChild("User");
-$product->addChild("user_id", $user_id);
-$product->addChild("first_name", $first_name);
-$product->addChild("last_name", $last_name);
-$product->addChild("email", $email);
-$product->addChild("password", $password);
-$product->addChild("admin", $admin);
+$user = $xml->addChild("User");
+$user->addChild("user_id", $user_id);
+$user->addChild("first_name", $first_name);
+$user->addChild("last_name", $last_name);
+$user->addChild("email", $email);
+$user->addChild("password", $password);
+$user->addChild("admin", $admin);
 
 // $xml->preserveWhiteSpace = false;
 // $xml->formatOutput = true;
