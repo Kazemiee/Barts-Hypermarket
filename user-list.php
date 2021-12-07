@@ -43,7 +43,6 @@ $xml=simplexml_load_file("user-xml/users.xml") or die("Something went wrong");
               echo "<td>".$prods->password."</td>";
               echo "<td style=\"font-size: 80%;\"><a href=\"edit-user.php?p-id=".$counter."\">Edit</a>
               <a href=\"php-utility/deleteUserScript.php?id=".$counter."\">Delete</a>
-              <a href=\"product.php?id=".$counter."\">View</a>
               </td>";
               echo "</tr>";
               $counter++;
