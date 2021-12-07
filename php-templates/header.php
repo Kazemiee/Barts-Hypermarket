@@ -1,3 +1,15 @@
+<?php
+      // $aisle = $_GET["aisle"];
+      error_reporting(0);
+      $xml=simplexml_load_file("product-xml/products.xml");
+      // $name = $xml[0]->product[$id]->name;
+      // $image = $xml[0]->product[$id]->image;
+      // $importantDetails = $xml[0]->product[$id]->important_details;
+      // $extraDetails = $xml[0]->product[$id]->extra_details;
+      // $price = $xml[0]->product[$id]->price;
+      // $adjPrice = $xml[0]->product[$id]->adjusted_price;
+      // // print_r($xml);
+      ?>
 <header class="top-header">
       <div class="header-upper-half">
         <div class="name-slogan">
@@ -27,12 +39,12 @@
               <a href="#">Aisles</a>
               <div class="drop-content">
                 <a href="aisle.php?aisle=Meat">Meat</a>
-                <a href="bread-aisle.html">Bread</a>
-                <a href="dairy-aisle.html"> Dairy</a>
-                <a href="electronic-aisle.html">Electronics</a>
-                <a href="clothing-aisle.html">Clothing</a>
-                <a href="fruit-aisle.html">Fruit</a>
-                <a href="vegetable.html">Vegetables</a>
+                <a href="aisle.php?aisle=Bread">Bread</a>
+                <a href="aisle.php?aisle=Dairy"> Dairy</a>
+                <a href="aisle.php?aisle=Electronics">Electronics</a>
+                <a href="aisle.php?aisle=Clothing">Clothing</a>
+                <a href="aisle.php?aisle=Fruit">Fruit</a>
+                <a href="aisle.php?aisle=Vegetable">Vegetables</a>
               </div>
             </div>
           </section>
@@ -40,11 +52,17 @@
             <div class="drop-menu">
               <a href="#">Popular</a>
               <div class="drop-content">
-                <a href="clothing_aisle/jeans.html">Jeans</a>
+              <?php
+              for($x = 0; $x <= 4; $x++){
+                echo "<a href=\"product.php?id=".$x."\">".$xml[0]->product[$x]->name."</a>";
+              }
+              ?>
+                <!-- <a href="clothing_aisle/jeans.html">Jeans</a>
                 <a href="bread_aisle/baguette.html">Baguette</a>
                 <a href="milk.html">Milk</a>
                 <a href="axolotl.html">Axolotl</a>
                 <a href="meat-computer.html">MEAT Computer Model X</a>
+                <a href="meat-computer.html">MEAT Computer Model X</a> -->
               </div>
             </div>
           </section>

@@ -1,3 +1,9 @@
+<?php
+      // $aisle = $_GET["aisle"];
+      error_reporting(0);
+      $xml=simplexml_load_file("product-xml/products.xml");
+
+      ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,7 +22,19 @@
         <h2>Great Deals</h2>
         <div class="article-container">
           <ul class="great-deals-list">
-            <li>
+          <?php
+          $counter = 0;
+          $currentAisle;
+          for($x = 0; $x <= 10; $x++){
+            echo "<li>
+                    <p>
+                      <a href=\"product.php?id=".$x."\"><img src=".$xml[0]->product[$x]->image." width=20% ></a>
+                      <a href=\"product.php?id=".$x."\">".$xml[0]->product[$x]->name."</a>".$xml[0]->product[$x]->price_text."
+                    </p>
+                  </li>";
+          }
+          ?>
+            <!-- <li>
               <p>
                 <a href="clothing_aisle/jeans.html"><img src=img/Jeans.jpg width=20% alt="Image of a pair of
                   jeans"></a>
@@ -55,7 +73,7 @@
                 </a>
                 <a href="meat-computer.html">MEAT Computer Model X</a> 99% off!
               </p>
-            </li>
+            </li> -->
           </ul>
         </div>
       </article>
