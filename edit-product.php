@@ -42,11 +42,11 @@ $id = $_GET["p-id"];
   error_reporting(0);
   if($id == ""){
     // header('Location: addProductScript.php');
-    echo "<form action=\"php-utility/addProductScript.php\" method=\"post\">";
+    echo "<form action=\"php-utility/addProductScript.php\" method=\"post\" style = \"font-size: 200%;\">";
   }
   else{
     // header('Location: editProductScript.php?id='.$id.'');
-    echo "<form action=\"php-utility/editProductScript.php\" method=\"post\">";
+    echo "<form action=\"php-utility/editProductScript.php\" method=\"post\" style = \"font-size: 200%;\">";
   }
   ?>
 		<!-- <form action="php-utility/addProduct.php" method="post"> -->
