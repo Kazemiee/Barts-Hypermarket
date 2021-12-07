@@ -13,7 +13,7 @@ $xml=simplexml_load_file("user-xml/users.xml") or die("Something went wrong");
     <meta name="author" content="Boisghur Shishani  ID: 40170574" />
     <meta name="WP3-author" content="Matthew Kazemie  ID 40190450">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product List</title>
+    <title>User List</title>
   </head>
   <body>
   <?php include "php-templates/back-header.php"?>
