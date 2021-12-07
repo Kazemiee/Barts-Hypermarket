@@ -35,7 +35,7 @@
 	<br></br>
 	<div class="product-form">
   <?php
-  if($id != ""){
+  if($id == "" && $id != 0){
     echo "<form action=\"php-utility/addProductTypeScript.php?id=".$id."\" method=\"post\">
     <h2>Create new type</h2>
       <div>
@@ -55,7 +55,7 @@
   }
   ?>
   <?php
-  if($id == ""){
+  if($id == "" && $id != 0){
     // header('Location: addProductScript.php');
     echo "<form action=\"php-utility/addProductScript.php\" method=\"post\" style = \"font-size: 200%;\">";
   }
@@ -94,7 +94,7 @@
 			 <!-- <input type="text" name="new-name" size="60"> -->
 			</div>
       <?php
-      if($id == ""){
+      if($id == "" && $id != 0){
         echo "<div>";
       }
       else{
@@ -128,7 +128,7 @@
 			 <!-- <textarea class="input" name="e-details" rows="5" cols="64"></textarea> -->
 			</div>
       <?php
-      if($id == ""){
+      if($id == "" && $id != 0){
         echo "<div>";
       }
       else{
@@ -139,7 +139,7 @@
         <input type="text" name="typeid" size="60">
        </div>
        <?php
-      if($id == ""){
+      if($id == "" && $id != 0){
         echo "<div>";
       }
       else{
@@ -150,7 +150,7 @@
         <input type="text" name="p-multiplier" size="60">
        </div>
        <?php
-      if($id == ""){
+      if($id == "" && $id != 0){
         echo "<div>";
       }
       else{
