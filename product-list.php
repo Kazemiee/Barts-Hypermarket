@@ -11,6 +11,7 @@ $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wron
     <script type="text/javascript" src="product.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Mark Kandaleft and  Alexander Zabski  ID: 40126013 and 40044543" />
+    <meta name="WP3-author" content="Matthew Kazemie  ID 40190450">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product List</title>
   </head>

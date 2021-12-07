@@ -6,6 +6,7 @@
       error_reporting(0);
       $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wrong");
       $name = $xml[0]->product[$id]->name;
+      $author = $xml[0]->product[$id]->author;
       $image = $xml[0]->product[$id]->image;
       $importantDetails = $xml[0]->product[$id]->important_details;
       $extraDetails = $xml[0]->product[$id]->extra_details;
@@ -17,7 +18,10 @@
     <link href="style.css" rel="stylesheet" id = "style"/>
     <link href="img/Axlot.png" rel="icon" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="Matthew Kazemie ID: 40190450" />
+    <?php
+    echo "<meta name=\"product-author\" content=\"".$author."\" />";
+    ?>
+    <meta name="auto-generation-author" content="Matthew Kazemie ID: 40190450" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="text/javascript" src="product.js"></script>
     <script>

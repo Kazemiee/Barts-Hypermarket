@@ -8,6 +8,7 @@ $id = $_GET["p-id"];
     <meta charset="utf-8">
     <meta content="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Pierre Chevalier  ID 40098342">
+    <meta name="WP3-author" content="Matthew Kazemie  ID 40190450">
     <link href="back.css" rel="stylesheet">
     <link href="img/Axlot.png" rel="icon">
     <title>Edit Product</title>
@@ -69,6 +70,17 @@ $id = $_GET["p-id"];
 			<div>
 			 Product Name:
 			 <input type="text" name="new-name" size="60">
+			</div>
+      <?php
+      if($id == ""){
+        echo "<div>";
+      }
+      else{
+        echo "<div style=\"display: none;\">";
+      }
+      ?>
+			 Product Author:
+			 <input type="text" name="new-author" size="60">
 			</div>
       <div style="display: none;">
 			 Product ID:

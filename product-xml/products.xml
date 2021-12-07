@@ -3,6 +3,7 @@
   <product>
     <aisle>Meat</aisle>
     <name>Axolotl</name>
+    <author>Matthew Kazemie ID: 40190450</author>
     <image>img/Axlot.png</image>
     <important_details></important_details>
     <extra_details>
@@ -44,6 +45,7 @@
   <product>
     <aisle>Meat</aisle>
     <name>Meat Computer</name>
+    <author>Matthew Kazemie ID: 40190450</author>
     <image>img/MeatModelX.png</image>
     <important_details>
       <![CDATA[
@@ -140,6 +142,7 @@
   <product>
     <aisle>Meat</aisle>
     <name>Harrier</name>
+    <author>Matthew Kazemie ID: 40190450</author>
     <image>img/HarrierA.png</image>
     <important_details></important_details>
     <extra_details>
