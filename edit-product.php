@@ -35,7 +35,7 @@
 	<br></br>
 	<div class="product-form">
   <?php
-  if($id != ""){
+  if($id != -1){
     echo "<form action=\"php-utility/addProductTypeScript.php?id=".$id."\" method=\"post\">
     <h2>Create new type</h2>
       <div>
@@ -55,7 +55,7 @@
   }
   ?>
   <?php
-  if($id == "" && $id != 0){
+  if($id == -1){
     // header('Location: addProductScript.php');
     echo "<form action=\"php-utility/addProductScript.php\" method=\"post\" style = \"font-size: 200%;\">";
   }
@@ -70,7 +70,7 @@
 			 <!-- Current Product Image:
 			 <img src="img/Axlot.png" width="14%" alt="Image of an Axolotl">
 			 <br></br> -->
-             Product Image:
+       <h3>Product Image:</h3>
              <p>Example: img/MeatModelX.png</p>
              <p>Example: img/Axlot.png</p>
              <p>Example: img/Harrier.png</p>
@@ -80,95 +80,96 @@
               ?>
 			</div>
       <div>
-        Product Aisle:
+      <h3>Product Aisle:</h3>
         <?php
         echo "<input type=\"text\" name=\"new-aisle\" size=\"60\" value=\"".$aisle."\">";
         ?>
         <!-- <input type="text" name="new-aisle" size="60"> -->
        </div>
 			<div>
-			 Product Name:
+        <h3>Product Name:</h3>
+			 
        <?php
         echo "<input type=\"text\" name=\"new-name\" size=\"60\" value=\"".$name."\">";
         ?>
 			 <!-- <input type="text" name="new-name" size="60"> -->
 			</div>
       <?php
-      if($id == "" && $id != 0){
+      if($id == -1){
         echo "<div>";
       }
       else{
         echo "<div style=\"display: none;\">";
       }
       ?>
-			 Product Author:
+      <h3>Product Author:</h3>
        <?php
         echo "<input type=\"text\" name=\"new-author\" size=\"60\" value=\"".$author."\">";
         ?>
 			 <!-- <input type="text" name="new-author" size="60"> -->
 			</div>
       <div style="display: none;">
-			 Product ID:
+      <h3>Product ID:</h3>
         <?php
         echo "<input type=\"text\" name=\"new-id\" size=\"60\" value=\"".$id."\">";
         ?>
 			</div>
       <div>
-        Important Details:
+      <h3>Important Details:</h3>
         <?php
-        echo "<textarea class=\"input\" name=\"i-details\" rows=\"5\" cols=\"64\" value=\"".(String)$importantDetails."\"></textarea>";
+        echo "<textarea class=\"input\" name=\"i-details\" rows=\"5\" cols=\"64\">".(String)$importantDetails."</textarea>";
         ?>
         <!-- <textarea class="input" name="i-details" rows="5" cols="64"></textarea> -->
        </div>
 			<div>
-			 Extra Details:
+      <h3>Extra Details:</h3>
        <?php
-        echo "<textarea class=\"input\" name=\"e-details\" rows=\"5\" cols=\"64\" value=\"".(String)$extraDetails."\"></textarea>";
+        echo "<textarea class=\"input\" name=\"e-details\" rows=\"5\" cols=\"64\">".(String)$extraDetails."</textarea>";
         ?>
 			 <!-- <textarea class="input" name="e-details" rows="5" cols="64"></textarea> -->
 			</div>
       <?php
-      if($id == "" && $id != 0){
+      if($id == -1){
         echo "<div>";
       }
       else{
         echo "<div style=\"display: none;\">";
       }
       ?>
-        Product TypeID:
+      <h3>Product TypeID:</h3>
         <input type="text" name="typeid" size="60">
        </div>
        <?php
-      if($id == "" && $id != 0){
+      if($id == -1){
         echo "<div>";
       }
       else{
         echo "<div style=\"display: none;\">";
       }
       ?>
-        Product Price Multiplier:
+      <h3>Product Price Multiplier:</h3>
         <input type="text" name="p-multiplier" size="60">
        </div>
        <?php
-      if($id == "" && $id != 0){
+      if($id == -1){
         echo "<div>";
       }
       else{
         echo "<div style=\"display: none;\">";
       }
       ?>
-        Product Type Name:
+      <h3>Product Type Name:</h3>
         <input type="text" name="tname" size="60">
        </div>
       <div>
-        Price (CAD):
+      <h3>Price (CAD):</h3>
         <?php
         echo "<input type=\"number\" name=\"price\" value=\"".$price."\">";
         ?>
         <!-- <input type="number" name="price"> -->
        </div>
 			<div>
-			 Adjusted Price After Sale(CAD):
+      <h3>Adjusted Price After Sale(CAD):</h3>
        <?php
         echo "<input type=\"number\" name=\"a-price\" value=\"".$adjPrice."\">";
         ?>

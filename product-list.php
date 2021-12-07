@@ -49,7 +49,7 @@ $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wron
             ?>
             </tr>
         </table>
-        <a href="edit-product.php"><button>Add a Product</button></a><!--add link to P10 -->
+        <a href="edit-product.php?p-id=-1"><button>Add a Product</button></a><!--add link to P10 -->
       </div>
     </main>
     <footer></footer>
