@@ -23,7 +23,7 @@
         <div class="article-container">
           <ul class="great-deals-list">
           <?php
-          $counter = 0;
+          $counter = 1;
           foreach($xml->children() as $prods){
             $counter++;
           }
