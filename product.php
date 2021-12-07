@@ -10,7 +10,7 @@
       $image = $xml[0]->product[$id]->image;
       $importantDetails = $xml[0]->product[$id]->important_details;
       $extraDetails = $xml[0]->product[$id]->extra_details;
-      $price = $xml[0]->product[$id]->price;
+      $price = $xml[0]->product[$id]->price_text;
       $adjPrice = $xml[0]->product[$id]->adjusted_price;
       // // print_r($xml);
       ?>

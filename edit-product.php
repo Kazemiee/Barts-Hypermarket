@@ -1,20 +1,25 @@
-<?php
-error_reporting(0);
-$id = $_GET["p-id"];
-$xml=simplexml_load_file("product-xml/products.xml") or die("Something went wrong");
-$name = $xml[0]->product[$id]->name;
-$author = $xml[0]->product[$id]->author;
-$image = $xml[0]->product[$id]->image;
-$aisle = $xml[0]->product[$id]->aisle;
-$importantDetails = $xml[0]->product[$id]->important_details;
-$extraDetails = $xml[0]->product[$id]->extra_details;
-$price = $xml[0]->product[$id]->price;
-$adjPrice = $xml[0]->product[$id]->adjusted_price;
-$author = $xml[0]->product[$id]->author;
-?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <?php
+    error_reporting(0);
+    $id = (int)$_GET["p-id"];
+    $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wrong");
+    // $product = $xml[0]->product[$id];
+    // print_r($xml[0]);
+    // echo $product;
+    $name = $xml->product[$id]->name;
+    $author = $xml->product[$id]->author;
+    $image = $xml->product[$id]->image;
+    $aisle = $xml->product[$id]->aisle;
+    $importantDetails = $xml->product[$id]->important_details;
+    $extraDetails = $xml->product[$id]->extra_details;
+    $price = $xml->product[$id]->price;
+    $adjPrice = $xml->product[$id]->adjusted_price;
+    $author = $xml->product[$id]->author;
+    ?>
+
     <meta charset="utf-8">
     <meta content="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Pierre Chevalier  ID 40098342">
@@ -50,7 +55,6 @@ $author = $xml[0]->product[$id]->author;
   }
   ?>
   <?php
-  error_reporting(0);
   if($id == ""){
     // header('Location: addProductScript.php');
     echo "<form action=\"php-utility/addProductScript.php\" method=\"post\" style = \"font-size: 200%;\">";
@@ -112,14 +116,14 @@ $author = $xml[0]->product[$id]->author;
       <div>
         Important Details:
         <?php
-        echo "<textarea class=\"input\" name=\"i-details\" rows=\"5\" cols=\"64\" value=\"".$importantDetails."\"></textarea>";
+        echo "<textarea class=\"input\" name=\"i-details\" rows=\"5\" cols=\"64\" value=\"".(String)$importantDetails."\"></textarea>";
         ?>
         <!-- <textarea class="input" name="i-details" rows="5" cols="64"></textarea> -->
        </div>
 			<div>
 			 Extra Details:
        <?php
-        echo "<textarea class=\"input\" name=\"e-details\" rows=\"5\" cols=\"64\" value=\"".$extraDetails."\"></textarea>";
+        echo "<textarea class=\"input\" name=\"e-details\" rows=\"5\" cols=\"64\" value=\"".(String)$extraDetails."\"></textarea>";
         ?>
 			 <!-- <textarea class="input" name="e-details" rows="5" cols="64"></textarea> -->
 			</div>
@@ -168,7 +172,7 @@ $author = $xml[0]->product[$id]->author;
        <?php
         echo "<input type=\"number\" name=\"a-price\" value=\"".$adjPrice."\">";
         ?>
-			 <input type="number" name="a-price">
+			 <!-- <input type="number" name="a-price"> -->
 			</div>
 			<br></br>
 			<input class="save" type="submit" value="Save Changes">

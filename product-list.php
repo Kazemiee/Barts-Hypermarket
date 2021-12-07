@@ -37,7 +37,7 @@ $xml=simplexml_load_file("product-xml/products.xml") or die("Something went wron
               echo "<td style=\"width: auto;\"><img src=".$prods->image." style=\"width: 100%;\"></td>";
               echo "<td style=\"font-size: 80%;\">".$prods->name.", ID = ".$counter."</td>";
               echo "<td>".$prods->aisle."</td>";
-              echo "<td style=\"font-size: 80%;\">".$prods->price."</td>";
+              echo "<td style=\"font-size: 80%;\">".$prods->price_text."</td>";
               echo "<td>".$prods->adjusted_price."</td>";
               echo "<td style=\"font-size: 80%;\"><a href=\"edit-product.php?p-id=".$counter."\">Edit</a>
               <a href=\"php-utility/deleteProductScript.php?id=".$counter."\">Delete</a>

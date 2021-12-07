@@ -39,7 +39,8 @@
         <multiplier>2</multiplier>
       </type>
     </types>
-    <price>Price: $10000 99% off</price>
+    <price>10000</price>
+    <price_text>Price: $10000 99% off</price_text>
     <adjusted_price>100</adjusted_price>
   </product>
   <product>
@@ -136,7 +137,8 @@
         <multiplier>1</multiplier>
       </type>
     </types>
-    <price>Price: $100000 99% off</price>
+    <price>100000</price>
+    <price_text>Price: $100000 99% off</price_text>
     <adjusted_price>1000</adjusted_price>
   </product>
   <product>
@@ -170,7 +172,8 @@
         <multiplier>16</multiplier>
       </type>
     </types>
-    <price>Price: $20</price>
+    <price>20</price>
+    <price_text>Price: $20</price_text>
     <adjusted_price>20</adjusted_price>
   </product>
 </products>
