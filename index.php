@@ -34,7 +34,7 @@
             echo "<li>
                     <p>
                       <a href=\"product.php?id=".$x."\"><img src=".$xml[0]->product[$x]->image." width=20% ></a>
-                      <a href=\"product.php?id=".$x."\">".$xml[0]->product[$x]->name."</a>".$xml[0]->product[$x]->price_text."
+                      <a href=\"product.php?id=".$x."\">".$xml[0]->product[$x]->name."</a> ".$xml[0]->product[$x]->price_text."
                     </p>
                   </li>";
           }
