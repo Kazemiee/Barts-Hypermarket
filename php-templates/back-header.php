@@ -10,7 +10,7 @@
       <nav class="top-nav">
         <a href="product-list.php">Product List</a>
         <a href="user-list.php">User List</a>
-        <a href="order-list.html">Orders</a>
+        <a href="order-list.php">Orders</a>
         <a href="index.php">Store Front Page</a>
       </nav>
     </header>
