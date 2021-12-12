@@ -1,4 +1,4 @@
 <?xml version="1.0" standalone="yes"?>
 <users>
   
-<User><user_id/><first_name>Boisghur1</first_name><last_name>Shishani</last_name><email>bois@gmail.com</email><password>password</password><admin>true</admin></User><user><user_id/><first_name/><last_name/><email/><password/><admin/></user><user><user_id>1</user_id><first_name>1</first_name><last_name/><email/><password/><admin/><phone_number></phone_number></user></users>
+<User><user_id>0<user_id/><first_name>Boisghur1</first_name><last_name>Shishani</last_name><email>bois@gmail.com</email><password>password</password><admin>true</admin></User><user><user_id><user_id/><first_name/><last_name/><email/><password/><admin/></user><user><user_id>1</user_id><first_name>1</first_name><last_name/><email/><password/><admin/><phone_number></phone_number></user></users>
