@@ -1,0 +1,103 @@
+<?xml version="1.0" standalone="yes"?>
+//Structure of the order list: this is a list of all products ordered. Each product has an order_number, that is the only way of grouping together all the products from one order
+//For each order, this list needs to be built with multiple <order> entries: one for each product within the order
+//the field <id> should be different for each <order entry>, to make the deleteOrder script work
+
+<orders>
+	<order>
+		<id>
+			0
+		<id/>
+		<order_number>
+			0
+		</order_number>
+		<product_type_name>
+			Genetically Modified Super Axolotl
+		</product_type_name>
+		<type_id>
+			super-axolotl
+		</type_id>
+		<quantity>
+			8
+		</quantity>
+		<user_id>
+			0
+		</user_id>
+		<first_name>
+			Boisghur1
+		</first_name>
+		<last_name>
+			Shishani
+		</last_name>
+		<email>
+			bois@gmail.com
+		</email>
+		<adress>
+			123 John Street, Montreal, QC, H4J 1E3
+		</adress>
+	</order>
+	<order>
+		<id>
+			1
+		<id/>
+		<order_number>
+			0
+		</order_number>
+		<product_type_name>
+			Jeans
+		</product_type_name>
+		<type_id>
+			jeans
+		</type_id>
+		<quantity>
+			1
+		</quantity>
+		<user_id>
+			0
+		</user_id>
+		<first_name>
+			Boisghur1
+		</first_name>
+		<last_name>
+			Shishani
+		</last_name>
+		<email>
+			bois@gmail.com
+		</email>
+		<adress>
+			123 John Street, Montreal, QC, H4J 1E3
+		</adress>
+	</order>
+	<order>
+		<id>
+			3
+		<id/>
+		<order_number>
+			0
+		</order_number>
+		<product_type_name>
+			Dragonfruit
+		</product_type_name>
+		<type_id>
+			dragonfruit
+		</type_id>
+		<quantity>
+			3
+		</quantity>
+		<user_id>
+			0
+		</user_id>
+		<first_name>
+			Boisghur1
+		</first_name>
+		<last_name>
+			Shishani
+		</last_name>
+		<email>
+			bois@gmail.com
+		</email>
+		<adress>
+			123 John Street, Montreal, QC, H4J 1E3
+		</adress>
+	</order>
+</orders>
