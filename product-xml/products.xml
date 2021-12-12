@@ -346,4 +346,35 @@
     <adjusted_price>200</adjusted_price>
   </product>
 
+  <product>
+    <aisle>Fruit</aisle>
+    <name>Dragonfruit</name>
+    <author>Pierre Chevalier ID: 40098342</author>
+    <image>img/dragonfruit.png</image>
+    <important_details/>
+    <extra_details>
+      <![CDATA[
+       <p>
+        <p>Taste: mildly sweet, refreshing</p>
+		<p>1 Dragonfruit weighs from 200 g to 1 kg</p>
+		<p>Carbohydrates in 1 average Dragonfruit: 50g</p>
+		<br></br>
+		<p>
+			Humans developed an obsession with this fruit that is as of yet unexplained. Its taste has been
+			described as "mild" and even "lame", but it has been rumored to have stamina enhancing abilities,
+			and it doubtlessly has an appearance as cool as its name.
+		</p>
+       ]]>
+    </extra_details>
+    <types>
+      <type>
+        <typeID>dragonfruit</typeID>
+        <tname>Dragonfruit</tname>
+        <multiplier>1</multiplier>
+      </type>
+    </types>
+    <price>200</price>
+    <price_text>Price: $200</price_text>
+    <adjusted_price>200</adjusted_price>
+  </product>
 </products>
