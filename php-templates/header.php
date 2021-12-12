@@ -13,7 +13,10 @@
 <header class="top-header">
       <div class="header-upper-half">
         <div class="name-slogan">
-          <span style="font-size: 7px">Matthew Kazemie ID: 40190450</span>
+        <?php
+        echo "<span style=\"font-size: 7px\">".$xml[0]->product[$id]->author."</span>";
+        ?>
+          <!-- <span style="font-size: 7px">Matthew Kazemie ID: 40190450</span> -->
           <h1 class="shop-name">Bart's Hypermarket</h1>
           <p class="slogan">For the Earth Product Enthusiasts out there</p>
         </div>
