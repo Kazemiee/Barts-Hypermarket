@@ -1,6 +1,6 @@
 <?php
 
-$file = "../User-xml/users.xml";
+$file = "../user-xml/users.xml";
 $user_id = $_POST["new-userid"];
 $first_name = $_POST["new-firstname"];
 $last_name = $_POST["new-lastname"];
