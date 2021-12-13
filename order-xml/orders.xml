@@ -6,7 +6,7 @@
 	<order>
 		<id>
 			0
-		<id/>
+		</id>
 		<order_number>
 			0
 		</order_number>
@@ -38,7 +38,7 @@
 	<order>
 		<id>
 			1
-		<id/>
+		</id>
 		<order_number>
 			0
 		</order_number>
@@ -70,7 +70,7 @@
 	<order>
 		<id>
 			3
-		<id/>
+		</id>
 		<order_number>
 			0
 		</order_number>
