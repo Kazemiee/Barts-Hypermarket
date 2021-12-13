@@ -1,5 +1,5 @@
 <?php
-$xml=simplexml_load_file("../order-xml/orders.xml") or die("Something went wrong");
+$xml=simplexml_load_file("order-xml/orders.xml") or die("Something went wrong");
 ?>
 
 
