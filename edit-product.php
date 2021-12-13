@@ -40,15 +40,15 @@
     <h2>Create new type</h2>
       <div>
         Type Name:
-        <input type=\"text\" name=\"t-name\" size=\"60\">
+        <input type=\"text\" name=\"t-name\" size=\"100%\">
       </div>
       <div>
         Type Id:
-        <input type=\"text\" name=\"t-id\" size=\"60\">
+        <input type=\"text\" name=\"t-id\" size=\"100%\">
       </div>
       <div>
         Type Multiplier:
-        <input type=\"number\" name=\"t-multiplier\" size=\"60\">
+        <input type=\"number\" name=\"t-multiplier\" size=\"100%\">
       </div>
       <input class=\"save\" type=\"submit\" value=\"Save Changes\">
     </form>";
@@ -76,13 +76,13 @@
              <p>Example: img/Harrier.png</p>
              <p>Example: img/Triangle.png</p>
              <?php
-              echo "<input type=\"text\" name=\"new-image\" width=\"1%\" value=\"".$image."\">";
+              echo "<input type=\"text\" name=\"new-image\" width=\"1%\" value=\"".$image."\" size=\"100%\">";
               ?>
 			</div>
       <div>
       <h3>Product Aisle:</h3>
         <?php
-        echo "<input type=\"text\" name=\"new-aisle\" size=\"60\" value=\"".$aisle."\">";
+        echo "<input type=\"text\" name=\"new-aisle\" size=\"100%\" value=\"".$aisle."\">";
         ?>
         <!-- <input type="text" name="new-aisle" size="60"> -->
        </div>
@@ -90,7 +90,7 @@
         <h3>Product Name:</h3>
 			 
        <?php
-        echo "<input type=\"text\" name=\"new-name\" size=\"60\" value=\"".$name."\">";
+        echo "<input type=\"text\" name=\"new-name\" size=\"100%\" value=\"".$name."\">";
         ?>
 			 <!-- <input type="text" name="new-name" size="60"> -->
 			</div>
@@ -104,14 +104,14 @@
       ?>
       <h3>Product Author:</h3>
        <?php
-        echo "<input type=\"text\" name=\"new-author\" size=\"60\" value=\"".$author."\">";
+        echo "<input type=\"text\" name=\"new-author\" size=\"100%\" value=\"".$author."\">";
         ?>
 			 <!-- <input type="text" name="new-author" size="60"> -->
 			</div>
       <div style="display: none;">
       <h3>Product ID:</h3>
         <?php
-        echo "<input type=\"text\" name=\"new-id\" size=\"60\" value=\"".$id."\">";
+        echo "<input type=\"text\" name=\"new-id\" size=\"100%\" value=\"".$id."\">";
         ?>
 			</div>
       <div>
@@ -137,7 +137,7 @@
       }
       ?>
       <h3>Product TypeID:</h3>
-        <input type="text" name="typeid" size="60">
+        <input type="text" name="typeid" size="100%">
        </div>
        <?php
       if($id == -1){
@@ -148,7 +148,7 @@
       }
       ?>
       <h3>Product Price Multiplier:</h3>
-        <input type="text" name="p-multiplier" size="60">
+        <input type="text" name="p-multiplier" size="100%">
        </div>
        <?php
       if($id == -1){
@@ -159,7 +159,7 @@
       }
       ?>
       <h3>Product Type Name:</h3>
-        <input type="text" name="tname" size="60">
+        <input type="text" name="tname" size="100%">
        </div>
       <div>
       <h3>Price (CAD):</h3>
