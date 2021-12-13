@@ -1,8 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
-//Structure of the order list: this is a list of all products ordered. Each product has an order_number, that is the only way of grouping together all the products from one order
-//For each order, this list needs to be built with multiple <order> entries: one for each product within the order
-//the field <id> should be different for each <order entry>, to make the deleteOrder script work
 
+ <!-- //Structure of the order list: this is a list of all products ordered. Each product has an order_number, that is the only way of grouping together all the products from one order. For each order, this list needs to be built with multiple <order> entries: one for each product within the order. The field <id> should be different for each <order entry>, to make the deleteOrder script work -->
+	
 <orders>
 	<order>
 		<id>
