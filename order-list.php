@@ -35,7 +35,8 @@ $xml=simplexml_load_file("../order-xml/orders.xml") or die("Something went wrong
 				$counter = 0;
 				foreach($xml->children() as $prods){
 				  echo "<tr>";
-				  echo "<td style=\"font-size: 80%;\">".$prods->order_number. $counter = ($prods->order_number)"</td>";
+				  echo "<td style=\"font-size: 80%;\">".$prods->order_number."</td>";
+					$counter = ($prods->order_number);
 				  echo "<td style=\"font-size: 80%;\">".$prods->product_type_name."</td>";
 				  echo "<td style=\"font-size: 80%;\">".$prods->quantity."</td>";
 				  echo "<td style=\"font-size: 80%;\">".$prods->user_id."</td>";
