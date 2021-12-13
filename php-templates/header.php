@@ -84,7 +84,7 @@
               <div class="drop-content">
                 <a href="product-list.php">Products</a>
                 <a href="user-list.php">Users</a>
-                <a href="order-list.html">Orders</a>
+                <a href="order-list.php">Orders</a>
               </div>
             </div>
           </section>
